@@ -9,6 +9,7 @@
   "dependencies": {
     "game": "1.7.2",
     "survival": "1.7.2",
+    "creative": "1.7.2",
     "vsquest": "0.0.4"
   },
   "website": "http://www.elsewhere.games"

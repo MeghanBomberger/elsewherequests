@@ -97,10 +97,15 @@
         "code": "nametag",
         "showtagonlywhentargeted": true,
         "selectFromRandomName": [
-          "Izac",
-          "Rosto",
-          "Bardolph",
-          "Solom"
+          "Aphid",
+          "Erik",
+          "Adachi",
+          "Farhad",
+          "Pegalesharro",
+          "Floyd",
+          "Temper",
+          "En Repos",
+          "Zadak"
         ]
       },
       {
@@ -117,8 +122,8 @@
       },
       {
         "code": "health",
-        "currenthealth": 9000,
-        "maxhealth": 9000
+        "currenthealth": 25,
+        "maxhealth": 25
       },
       {
         "code": "emotionstates",
@@ -148,7 +153,7 @@
             "code": "meleeattack",
             "entityCodes": ["player"],
             "priority": 2,
-            "damage": 500,
+            "damage": 5,
             "mincooldown": 2500,
             "maxcooldown": 3500,
             "attackDurationMs": 900,
@@ -206,10 +211,14 @@
       {
         "code": "questgiver",
         "quests": [
-          "elsewherequests:acorninnfirewood"
+          "vsquestexample:quest1",
+          "vsquestexample:quest2",
+          "vsquestexample:kill1drifter",
+          "vsquestexample:kill1deepdrifter",
+          "vsquest:quest-freeghost"
         ],
-        "selectrandom": false,
-        "selectrandomcount": 1
+        "selectrandom": true,
+        "selectrandomcount": 4
       }
     ]
   },
