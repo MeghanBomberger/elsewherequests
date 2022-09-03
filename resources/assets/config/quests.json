@@ -1,0 +1,22 @@
+[
+  {
+    "id": "elsewherequests:acorninnfirewood",
+    "cooldown": 1,
+    "perPlayer": true,
+    "actionObjectives": [],
+    "gatherObjectives": [
+      {
+        "validCodes": ["game:firewood"],
+        "demand": 32
+      }
+    ],
+    "killObjectives": [],
+    "actionRewards": [],
+    "itemRewards": [
+      {
+        "itemCode": "game:gear-rusty",
+        "amount": 3
+      }
+    ]
+  }
+]
