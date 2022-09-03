@@ -5,18 +5,16 @@
   "variantgroups": [
     {
       "code": "type",
-      "states": [
-        "acorninnkeeper"
-      ]
+      "states": ["npc"]
     }
   ],
   "shapeByType": {
-    "*-questgiver": {
+    "*-npc": {
       "base": "game:entity/humanoid/trader"
     }
   },
   "texturesByType": {
-    "*-questgiver": {
+    "*-npc": {
       "skin": {
         "base": "game:entity/humanoid/trader"
       }
@@ -29,7 +27,7 @@
   },
   "materialDensity": 600,
   "guiTransformByType": {
-    "*-questgiver*": {
+    "*-npc*": {
       "rotate": true,
       "rotation": {
         "x": 0,
@@ -44,7 +42,7 @@
     }
   },
   "tpHandTransformByType": {
-    "*-questgiver*": {
+    "*-npc*": {
       "translation": {
         "x": -0.6,
         "y": -1.1,
@@ -64,7 +62,7 @@
     }
   },
   "fpHandTransformByType": {
-    "*-questgiver*": {
+    "*-npc*": {
       "translation": {
         "x": 0.05,
         "y": -0.3,

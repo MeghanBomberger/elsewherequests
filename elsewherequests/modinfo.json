@@ -1,15 +1,13 @@
 {
   "type": "content",
-  "modid": "elsewherequests",
-  "name": "Elsewhere Quests",
-  "description": "This is a mod for the quest content for the Elsewhere server.",
+  "modid": "elsewhere",
+  "name": "Elsewhere Server Content",
+  "description": "This is a mod for the quests and handbook content for the Elsewhere server.",
   "side": "universal",
   "authors": ["Amigurumi"],
-  "version": "0.1",
+  "version": "0.0.11",
   "dependencies": {
-    "game": "1.7.2",
-    "survival": "1.7.2",
-    "creative": "1.7.2",
+    "game": "1.17.2",
     "vsquest": "0.0.4"
   },
   "website": "http://www.elsewhere.games"

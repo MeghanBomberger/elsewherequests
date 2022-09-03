@@ -1,5 +1,5 @@
 {
-  "code": "questgiver",
+  "code": "npc",
   "class": "EntityAgent",
   "canClimb": true,
   "hitboxSize": {
@@ -60,28 +60,28 @@
         "animation": "die",
         "animationSpeed": 1.75,
         "weight": 10,
-        "blendMode": "AddAverage"
+        "blendMode": "addAverage"
       },
       {
         "code": "hurt",
         "animation": "hurt",
         "animationSpeed": 2,
-        "blendMode": "AddAverage"
+        "blendMode": "addAverage"
       },
       {
         "code": "rowdywelcome",
         "animation": "rowdywelcome",
-        "blendMode": "AddAverage"
+        "blendMode": "addAverage"
       },
       {
         "code": "lazywelcome",
         "animation": "lazywelcome",
-        "blendMode": "AddAverage"
+        "blendMode": "addAverage"
       },
       {
         "code": "lazynod",
         "animation": "lazynod",
-        "blendMode": "AddAverage"
+        "blendMode": "addAverage"
       }
     ]
   },
@@ -96,17 +96,7 @@
       {
         "code": "nametag",
         "showtagonlywhentargeted": true,
-        "selectFromRandomName": [
-          "Aphid",
-          "Erik",
-          "Adachi",
-          "Farhad",
-          "Pegalesharro",
-          "Floyd",
-          "Temper",
-          "En Repos",
-          "Zadak"
-        ]
+        "selectRandomName": ["Solom", "Rosto", "Bardolph"]
       },
       {
         "code": "repulseagents"
@@ -117,13 +107,13 @@
       },
       {
         "code": "reviveondeath",
-        "minHours": 24,
-        "maxHours": 72
+        "minHours": 1,
+        "maxHours": 1
       },
       {
         "code": "health",
-        "currenthealth": 25,
-        "maxhealth": 25
+        "currenthealth": 50,
+        "maxhealth": 50
       },
       {
         "code": "emotionstates",
@@ -153,7 +143,7 @@
             "code": "meleeattack",
             "entityCodes": ["player"],
             "priority": 2,
-            "damage": 5,
+            "damage": 100,
             "mincooldown": 2500,
             "maxcooldown": 3500,
             "attackDurationMs": 900,
@@ -210,15 +200,9 @@
       },
       {
         "code": "questgiver",
-        "quests": [
-          "vsquestexample:quest1",
-          "vsquestexample:quest2",
-          "vsquestexample:kill1drifter",
-          "vsquestexample:kill1deepdrifter",
-          "vsquest:quest-freeghost"
-        ],
-        "selectrandom": true,
-        "selectrandomcount": 4
+        "quests": ["elsewhere:quest-acorninnfirewood"],
+        "selectRandom": false,
+        "selectrandomcount": 1
       }
     ]
   },
