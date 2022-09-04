@@ -1,0 +1,124 @@
+[
+  {
+    "id": "vsquestexample:quest-acorninnwelcome",
+    "cooldown": 999999,
+    "perPlayer": true,
+    "gatherObjectives": [
+      {
+        "validCodes": ["storagevesselcolored-blue"],
+        "demand": 32
+      }
+    ],
+    "itemRewards": [
+      {
+        "itemCode": "game:bed-hay-head-north",
+        "amount": 1
+      },
+      {
+        "itemCode": "game:linensack",
+        "amount": 4
+      },
+      {
+        "itemCode": "game:knife-copper",
+        "amount": 1
+      },
+      {
+        "itemCode": "game:axe-copper",
+        "amount": 1
+      },
+      {
+        "itemCode": "bread-spelt-perfect",
+        "amount": 32
+      },
+      {
+        "itemCode": "glazedbowl-burnt-clear-blue-plain",
+        "amount": 1
+      },
+      {
+        "itemCode": "glazedoillamp-clear-blue-up",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": "vsquestexample:quest-acorninnfirewood",
+    "cooldown": 20,
+    "perPlayer": true,
+    "gatherObjectives": [
+      {
+        "validCodes": ["firewood"],
+        "demand": 32
+      }
+    ],
+    "itemRewards": [
+      {
+        "itemCode": "game:gear-rusty",
+        "amount": 1
+      }
+    ],
+    "predecessor": "vsquestexample:quest-acorninnwelcome"
+  },
+  {
+    "id": "vsquestexample:quest-acorninningredients",
+    "cooldown": 20,
+    "perPlayer": true,
+    "gatherObjectives": [
+      {
+        "validCodes": ["redmeat-raw"],
+        "demand": 16
+      },
+      {
+        "validCodes": ["fruit-cranberry"],
+        "demand": 16
+      }
+    ],
+    "itemRewards": [
+      {
+        "itemCode": "game:gear-rusty",
+        "amount": 2
+      },
+      {
+        "itemCode": "game:bread-flax-perfect",
+        "amount": 2
+      }
+    ],
+    "predecessor": "vsquestexample:quest-acorninnwelcome"
+  },
+
+  {
+    "id": "vsquestexample:quest-tavernpuppersmallsnack",
+    "cooldown": 20,
+    "perPlayer": true,
+    "gatherObjectives": [
+      {
+        "validCodes": ["bone"],
+        "demand": 8
+      }
+    ],
+    "itemRewards": [
+      {
+        "itemCode": "wolftaming:dogtoy",
+        "amount": 1
+      }
+    ],
+    "predecessor": "vsquestexample:quest-acorninnwelcome"
+  },
+  {
+    "id": "vsquestexample:quest-tavernpuppermissingpuppy",
+    "cooldown": 20,
+    "perPlayer": true,
+    "gatherObjectives": [
+      {
+        "validCodes": ["creature-tame-wolf-pup"],
+        "demand": 1
+      }
+    ],
+    "itemRewards": [
+      {
+        "itemCode": "game:gear-rusty",
+        "amount": 12
+      }
+    ],
+    "predecessor": "vsquestexample:quest-acorninnwelcome"
+  }
+]

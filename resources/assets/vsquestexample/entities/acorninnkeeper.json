@@ -1,5 +1,5 @@
 {
-  "code": "npc",
+  "code": "acorninnkeeper",
   "class": "EntityAgent",
   "canClimb": true,
   "hitboxSize": {
@@ -60,28 +60,28 @@
         "animation": "die",
         "animationSpeed": 1.75,
         "weight": 10,
-        "blendMode": "addAverage"
+        "blendMode": "AddAverage"
       },
       {
         "code": "hurt",
         "animation": "hurt",
         "animationSpeed": 2,
-        "blendMode": "addAverage"
+        "blendMode": "AddAverage"
       },
       {
         "code": "rowdywelcome",
         "animation": "rowdywelcome",
-        "blendMode": "addAverage"
+        "blendMode": "AddAverage"
       },
       {
         "code": "lazywelcome",
         "animation": "lazywelcome",
-        "blendMode": "addAverage"
+        "blendMode": "AddAverage"
       },
       {
         "code": "lazynod",
         "animation": "lazynod",
-        "blendMode": "addAverage"
+        "blendMode": "AddAverage"
       }
     ]
   },
@@ -96,7 +96,17 @@
       {
         "code": "nametag",
         "showtagonlywhentargeted": true,
-        "selectRandomName": ["Solom", "Rosto", "Bardolph"]
+        "selectFromRandomName": [
+          "Aphid",
+          "Erik",
+          "Adachi",
+          "Farhad",
+          "Pegalesharro",
+          "Floyd",
+          "Temper",
+          "En Repos",
+          "Zadak"
+        ]
       },
       {
         "code": "repulseagents"
@@ -107,13 +117,13 @@
       },
       {
         "code": "reviveondeath",
-        "minHours": 1,
-        "maxHours": 1
+        "minHours": 24,
+        "maxHours": 72
       },
       {
         "code": "health",
-        "currenthealth": 50,
-        "maxhealth": 50
+        "currenthealth": 25,
+        "maxhealth": 25
       },
       {
         "code": "emotionstates",
@@ -143,7 +153,7 @@
             "code": "meleeattack",
             "entityCodes": ["player"],
             "priority": 2,
-            "damage": 100,
+            "damage": 5,
             "mincooldown": 2500,
             "maxcooldown": 3500,
             "attackDurationMs": 900,
@@ -200,9 +210,13 @@
       },
       {
         "code": "questgiver",
-        "quests": ["elsewhere:quest-acorninnfirewood"],
-        "selectRandom": false,
-        "selectrandomcount": 1
+        "quests": [
+          "vsquestexample:quest-acorninnwelcome",
+          "vsquestexample:quest-acorninnfirewood",
+          "vsquestexample:quest-acorninningredients"
+        ],
+        "selectrandom": false,
+        "selectrandomcount": 3
       }
     ]
   },
