@@ -24,8 +24,7 @@
         { "base": "game:entity/wolf/wolf5" },
         { "base": "game:entity/wolf/wolf6" },
         { "base": "game:entity/wolf/wolf7" },
-        { "base": "game:entity/wolf/wolf8" },
-        { "base": "game:entity/wolf/wolf9" }
+        { "base": "game:entity/wolf/wolf8" }
       ]
     },
     "behaviors": [

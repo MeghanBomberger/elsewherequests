@@ -6,34 +6,34 @@
   "variantgroups": [
     {
       "code": "type",
-      "states": ["npc", "acorninnkeeper", "tavernpupper"]
+      "states": ["acorninnkeeper", "tavernpupper", "valleycampguardcaptain"]
     }
   ],
 
   "shapeByType": {
-    "*-npc": {
-      "base": "game:entity/humanoid/trader"
-    },
     "*-acorninnkeeper": {
       "base": "game:entity/humanoid/trader"
     },
     "*-tavernpupper": {
+      "base": "game:entity/humanoid/trader"
+    },
+    "*-valleycampguardcaptain": {
       "base": "game:entity/humanoid/trader"
     }
   },
 
   "texturesByType": {
-    "*-npc": {
-      "skin": {
-        "base": "game:entity/humanoid/trader"
-      }
-    },
     "*-acorninnkeeper": {
       "skin": {
         "base": "game:entity/humanoid/trader"
       }
     },
     "*-tavernpupper": {
+      "skin": {
+        "base": "game:entity/humanoid/trader"
+      }
+    },
+    "*-valleycampguardcaptain": {
       "skin": {
         "base": "game:entity/humanoid/trader"
       }
@@ -49,19 +49,6 @@
   "materialDensity": 600,
 
   "guiTransformByType": {
-    "*-npc*": {
-      "rotate": true,
-      "rotation": {
-        "x": 0,
-        "y": -90,
-        "z": -178
-      },
-      "origin": {
-        "x": 0.6,
-        "y": 0.78,
-        "z": 0.5
-      }
-    },
     "*-acorninnkeeper*": {
       "rotate": true,
       "rotation": {
@@ -76,6 +63,19 @@
       }
     },
     "*-tavernpupper*": {
+      "rotate": true,
+      "rotation": {
+        "x": 0,
+        "y": -90,
+        "z": -178
+      },
+      "origin": {
+        "x": 0.6,
+        "y": 0.78,
+        "z": 0.5
+      }
+    },
+    "*-valleycampguardcaptain*": {
       "rotate": true,
       "rotation": {
         "x": 0,
@@ -91,24 +91,6 @@
   },
 
   "tpHandTransformByType": {
-    "*-npc*": {
-      "translation": {
-        "x": -0.6,
-        "y": -1.1,
-        "z": -0.4
-      },
-      "rotation": {
-        "x": -85,
-        "y": -11,
-        "z": 89
-      },
-      "origin": {
-        "x": 0.5,
-        "y": 1,
-        "z": 0.5
-      },
-      "scale": 0.7
-    },
     "*-acorninnkeeper*": {
       "translation": {
         "x": -0.6,
@@ -128,6 +110,24 @@
       "scale": 0.7
     },
     "*-tavernpupper*": {
+      "translation": {
+        "x": -0.6,
+        "y": -1.1,
+        "z": -0.4
+      },
+      "rotation": {
+        "x": -85,
+        "y": -11,
+        "z": 89
+      },
+      "origin": {
+        "x": 0.5,
+        "y": 1,
+        "z": 0.5
+      },
+      "scale": 0.7
+    },
+    "*-valleycampguardcaptain*": {
       "translation": {
         "x": -0.6,
         "y": -1.1,
@@ -148,18 +148,6 @@
   },
 
   "fpHandTransformByType": {
-    "*-npc*": {
-      "translation": {
-        "x": 0.05,
-        "y": -0.3,
-        "z": 0
-      },
-      "rotation": {
-        "x": 165,
-        "y": 76,
-        "z": -180
-      }
-    },
     "*-acorninnkeeper*": {
       "translation": {
         "x": 0.05,
@@ -173,6 +161,18 @@
       }
     },
     "*-tavernpupper*": {
+      "translation": {
+        "x": 0.05,
+        "y": -0.3,
+        "z": 0
+      },
+      "rotation": {
+        "x": 165,
+        "y": 76,
+        "z": -180
+      }
+    },
+    "*-valleycampguardcaptain*": {
       "translation": {
         "x": 0.05,
         "y": -0.3,
