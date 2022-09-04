@@ -90,15 +90,8 @@
         "code": "nametag",
         "showtagonlywhentargeted": true,
         "selectFromRandomName": [
-          "Aphid",
-          "Erik",
-          "Adachi",
-          "Farhad",
-          "Pegalesharro",
-          "Floyd",
-          "Temper",
-          "En Repos",
-          "Zadak"
+          "Acho",
+          "Jump"
         ]
       },
       {
@@ -115,8 +108,8 @@
       },
       {
         "code": "health",
-        "currenthealth": 25,
-        "maxhealth": 25
+        "currenthealth": 100,
+        "maxhealth": 100
       },
       {
         "code": "emotionstates",
@@ -146,7 +139,7 @@
             "code": "meleeattack",
             "entityCodes": ["player"],
             "priority": 2,
-            "damage": 5,
+            "damage": 1000,
             "mincooldown": 2500,
             "maxcooldown": 3500,
             "attackDurationMs": 900,
