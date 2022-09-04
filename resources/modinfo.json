@@ -5,7 +5,7 @@
   "side": "universal",
   "authors": ["Amigurumi", "G3rste"],
   "description": "Quests for the Elsewhere server.",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "dependencies": {
     "bricklayers": "1.0.0-pre.6",
     "game": "1.17.0-pre.1",

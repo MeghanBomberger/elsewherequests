@@ -4,7 +4,7 @@
   "item-creature-valleycampguardcaptain": "Valley Camp Guard Captain",
 
   "vsquestexample:quest-acorninnwelcome-title": "Welcome to Elsewhere",
-  "vsquestexample:quest-acorninnwelcome-desc": "Welcome!<br><br> Did you just come through the rift?<br><br> Feeling okay?... Good. <br><br> Well, why don't I help you get settled. Did you manage to bring anything through with you?<br><br><i>Type <b> /starterkit</b> with your inventory bar empty.</i><br><b>If you haven't already, <a href='https://discord.gg/wATvxWmudD'>join our Discord</a> to get play permissions set up.</b><br>See our <a href='http://elsewhere.games'>website</a> for more info about the server.",
+  "vsquestexample:quest-acorninnwelcome-desc": "Welcome!<br><br>Did you just come through the rift?<br><br> Feeling okay?... Good.<br><br>Well, why don't I help you get settled. Did you manage to bring anything through with you?<br><br><i>Type forward slash starterkit with your inventory bar empty to see what you were able to bring with you through the rift.</i>",
   "vsquestexample:quest-acorninnwelcome-obj": "Give inn keeper the blue vessel: {0}/1",
 
   "vsquestexample:quest-acorninnfirewood-title": "Keeping the Acorn Cozy",

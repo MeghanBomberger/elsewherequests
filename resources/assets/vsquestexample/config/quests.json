@@ -5,8 +5,8 @@
     "perPlayer": true,
     "gatherObjectives": [
       {
-        "validCodes": ["storagevesselcolored-blue"],
-        "demand": 32
+        "validCodes": ["storagevesselcolored-burnt-blurple"],
+        "demand": 1
       }
     ],
     "itemRewards": [
