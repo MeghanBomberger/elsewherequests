@@ -42,6 +42,7 @@
   },
   {
     "id": "vsquestexample:quest-acorninnfirewood",
+    "predecessor": "vsquestexample:quest-acorninnwelcome",
     "cooldown": 20,
     "perPlayer": true,
     "gatherObjectives": [
@@ -55,11 +56,11 @@
         "itemCode": "game:gear-rusty",
         "amount": 1
       }
-    ],
-    "predecessor": "vsquestexample:quest-acorninnwelcome"
+    ]
   },
   {
     "id": "vsquestexample:quest-acorninningredients",
+    "predecessor": "vsquestexample:quest-acorninnwelcome",
     "cooldown": 20,
     "perPlayer": true,
     "gatherObjectives": [
@@ -81,12 +82,12 @@
         "itemCode": "game:bread-flax-perfect",
         "amount": 2
       }
-    ],
-    "predecessor": "vsquestexample:quest-acorninnwelcome"
+    ]
   },
 
   {
     "id": "vsquestexample:quest-tavernpuppersmallsnack",
+    "predecessor": "vsquestexample:quest-acorninnwelcome",
     "cooldown": 20,
     "perPlayer": true,
     "gatherObjectives": [
@@ -100,11 +101,11 @@
         "itemCode": "wolftaming:dogtoy",
         "amount": 1
       }
-    ],
-    "predecessor": "vsquestexample:quest-acorninnwelcome"
+    ]
   },
   {
     "id": "vsquestexample:quest-tavernpuppermissingpuppy",
+    "predecessor": "vsquestexample:quest-acorninnwelcome",
     "cooldown": 20,
     "perPlayer": true,
     "gatherObjectives": [
@@ -118,7 +119,6 @@
         "itemCode": "game:gear-rusty",
         "amount": 12
       }
-    ],
-    "predecessor": "vsquestexample:quest-acorninnwelcome"
+    ]
   }
 ]
