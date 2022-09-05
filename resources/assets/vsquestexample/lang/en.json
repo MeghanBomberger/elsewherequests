@@ -11,6 +11,10 @@
   "vsquestexample:quest-acorninnfirewood-desc": "We're high enough up that the fire needs to be lit around the clock. I've been far too busy to go down and gather firewood with all the new travelers about. Would you mind fetching some? I'll pay you for your time, of course.",
   "vsquestexample:quest-acorninnfirewood-obj": "Gather firewood: {0}/32",
 
+  "vsquestexample:quest-acorninnmoreingredients-title": "Mushroom Stew",
+  "vsquestexample:quest-acorninnmoreingredients-desc": "I need some ingredients for the evening meal. Was thinking of making some mushroom stew. Can you fetch the ingredients for me?",
+  "vsquestexample:quest-acorninnmoreingredients-obj": "Gather edible mushrooms: {0}/16",
+
   "vsquestexample:quest-acorninningredients-title": "Cranberry Potroast",
   "vsquestexample:quest-acorninningredients-desc": "I need some ingredients for the evening meal. Was thinking of making some roast with cranberry sauce. Can you fetch the ingredients for me?",
   "vsquestexample:quest-acorninningredients-obj": "Gather red meat: {0}/16<br>Gather cranberries: {0}/16",

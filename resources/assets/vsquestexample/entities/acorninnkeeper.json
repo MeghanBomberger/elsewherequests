@@ -206,7 +206,8 @@
         "quests": [
           "vsquestexample:quest-acorninnwelcome",
           "vsquestexample:quest-acorninnfirewood",
-          "vsquestexample:quest-acorninningredients"
+          "vsquestexample:quest-acorninningredients",
+          "vsquestexample:quest-acorninnmoreingredients"
         ],
         "selectrandom": false,
         "selectrandomcount": 3
