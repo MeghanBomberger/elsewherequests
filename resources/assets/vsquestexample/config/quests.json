@@ -133,6 +133,28 @@
       }
     ]
   },
+  {
+    "id": "vsquestexample:quest-acorninngettingsettled",
+    "predecessor": "vsquestexample:quest-acorninnwelcome",
+    "cooldown": 999999,
+    "perPlayer": true,
+    "gatherObjectives": [
+      {
+        "validCodes": ["linen-diamond-down"],
+        "demand": 16
+      }
+    ],
+    "itemRewards": [
+      {
+        "itemCode": "game:gear-rusty",
+        "amount": 12
+      },
+      {
+        "itemCode": "game:bread-flax-perfect",
+        "amount": 2
+      }
+    ]
+  },
 
   {
     "id": "vsquestexample:quest-tavernpuppersmallsnack",
@@ -167,6 +189,99 @@
       {
         "itemCode": "game:gear-rusty",
         "amount": 12
+      }
+    ]
+  },
+
+  {
+    "id": "vsquestexample:quest-valleycampfirstaide",
+    "cooldown": 20,
+    "perPlayer": true,
+    "gatherObjectives": [
+      {
+        "validCodes": ["cattailtops"],
+        "demand": 2
+      },
+      {
+        "validCodes": ["flower-horsetail-free"],
+        "demand": 4
+      }
+    ],
+    "itemRewards": [
+      {
+        "itemCode": "game:poultice-reed-horsetail",
+        "amount": 4
+      }
+    ]
+  },
+  {
+    "id": "vsquestexample:quest-valleycampmakingcamp1",
+    "cooldown": 999999,
+    "perPlayer": true,
+    "gatherObjectives": [
+      {
+        "validCodes": ["drygrass"],
+        "demand": 10
+      }
+    ],
+    "itemRewards": [
+      {
+        "itemCode": "game:linen-diamond-down",
+        "amount": 10
+      }
+    ]
+  },
+  {
+    "id": "vsquestexample:quest-valleycampmakingcamp2",
+    "cooldown": 999999,
+    "predecessor": "vsquestexample:quest-valleycampmakingcamp1",
+    "perPlayer": true,
+    "gatherObjectives": [
+      {
+        "validCodes": ["log-placed-pine-ud"],
+        "demand": 8
+      }
+    ],
+    "itemRewards": [
+      {
+        "itemCode": "game:woodenfencegate-pine-n-closed",
+        "amount": 2
+      },
+      {
+        "itemCode": "game:woodenfence-pine-ew-free",
+        "amount": 22
+      },
+      {
+        "itemCode": "primitivesurvival:woodenlantern-pine-up",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": "vsquestexample:quest-valleycampmakingcamp3",
+    "cooldown": 999999,
+    "predecessor": "vsquestexample:quest-valleycampmakingcamp2",
+    "perPlayer": true,
+    "gatherObjectives": [
+      {
+        "validCodes": ["hide-raw-medium"],
+        "demand": 8
+      }
+    ],
+    "killObjectives": [
+      {
+        "validCodes": ["creature-wolf"],
+        "demand": 4
+      }
+    ],
+    "itemRewards": [
+      {
+        "itemCode": "game:woodenfence-pine-ew-free",
+        "amount": 4
+      },
+      {
+        "itemCode": "lichen:hideroof-light-up-north-free",
+        "amount": 24
       }
     ]
   }

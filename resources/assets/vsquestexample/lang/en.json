@@ -19,11 +19,31 @@
   "vsquestexample:quest-acorninningredients-desc": "I need some ingredients for the evening meal. Was thinking of making some roast with cranberry sauce. Can you fetch the ingredients for me?",
   "vsquestexample:quest-acorninningredients-obj": "Gather red meat: {0}/16<br>Gather cranberries: {0}/16",
 
+  "vsquestexample:quest-acorninngettingsettled-title": "Getting Settled",
+  "vsquestexample:quest-acorninngettingsettled-desc": "You're welcome to stay in one of the available rooms upstairs, but if you're looking for something more permanent I'd go talk to the guard captain in the camp down in the valley. He's got plenty of work to go around, and will help you set up a decent place to stay in the camp.<br><br>While you're down there, can you ask if my ale shipment has come in yet? The traders were suppose to be here with it days ago.",
+  "vsquestexample:quest-acorninngettingsettled-obj": "Get order of diamond stitch linen from camp: {0}/10",
+
   "vsquestexample:quest-tavernpuppersmallsnack-title": "A Small Snack",
   "vsquestexample:quest-tavernpuppersmallsnack-desc": "<i>The dog looks at you and then pointedly at their empty bowl. The innkeeper seems pretty busy. Maybe you should just go grab the dog a snack.</i>",
   "vsquestexample:quest-tavernpuppersmallsnack-obj": "Gather bones: {0}/8",
 
   "vsquestexample:quest-tavernpuppermissingpuppy-title": "Missing Puppy",
   "vsquestexample:quest-tavernpuppermissingpuppy-desc": "<i>The dog looks very sad. You ask the tavern keeper what is wrong with her. They tell you they sold the dog's litter to one of the traders that passed through and thinks she misses them.</i>",
-  "vsquestexample:quest-tavernpuppermissingpuppy-obj": "Return puppy: {0}/1"
+  "vsquestexample:quest-tavernpuppermissingpuppy-obj": "Return puppy: {0}/1",
+
+  "vsquestexample:quest-valleycampfirstaide-title": "First Aide",
+  "vsquestexample:quest-valleycampfirstaide-desc": "You'd think some of these folks had never held anything sharp before. We're running low on poultices. Bring back some horsetail and reeds would you?",
+  "vsquestexample:quest-valleycampfirstaide-obj": "Gather reeds: {0}/2<br>Gather horsetails: {0}/4",
+
+  "vsquestexample:quest-valleycampmakingcamp1-title": "Making Camp - Part 1",
+  "vsquestexample:quest-valleycampmakingcamp1-desc": "The inn keeper at the Acorn sent you, huh?<br><br>Well, we've still got space down here, and I could use another pair of hands.<br><br>Why don't you clear a plot of the extra grass while I go look for the Acorn's shipment?",
+  "vsquestexample:quest-valleycampmakingcamp1-obj": "Gather dried grass: {0}/10",
+
+  "vsquestexample:quest-valleycampmakingcamp2-title": "Making Camp - Part 2",
+  "vsquestexample:quest-valleycampmakingcamp2-desc": "Plot looks good. You're going to need a fence to mark out your section of the camp. If you go get some wood you can use my tools to make some fence.",
+  "vsquestexample:quest-valleycampmakingcamp2-obj": "Gather pine logs: {0}/8",
+
+  "vsquestexample:quest-valleycampmakingcamp3-title": "Making Camp - Part 3",
+  "vsquestexample:quest-valleycampmakingcamp3-desc": "We're going to need to get some more leather to make you a real tent. The wolves are getting out of hand up on the cliff anyway. Thin out the pack and bring me the hides.",
+  "vsquestexample:quest-valleycampmakingcamp3-obj": "Gather medium hide: {0}/8<br>Kill wolves: {0}/4"
 }

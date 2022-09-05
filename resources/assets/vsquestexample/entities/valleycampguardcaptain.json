@@ -200,7 +200,12 @@
       },
       {
         "code": "questgiver",
-        "quests": [],
+        "quests": [
+          "vsquestexample:quest-valleycampfirstaide",
+          "vsquestexample:quest-valleycampmakingcamp1",
+          "vsquestexample:quest-valleycampmakingcamp2",
+          "vsquestexample:quest-valleycampmakingcamp3"
+        ],
         "selectrandom": false,
         "selectrandomcount": 3
       }

@@ -207,7 +207,8 @@
           "vsquestexample:quest-acorninnwelcome",
           "vsquestexample:quest-acorninnfirewood",
           "vsquestexample:quest-acorninningredients",
-          "vsquestexample:quest-acorninnmoreingredients"
+          "vsquestexample:quest-acorninnmoreingredients",
+          "vsquestexample:quest-acorninngettingsettled"
         ],
         "selectrandom": false,
         "selectrandomcount": 3
