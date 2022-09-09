@@ -1,5 +1,5 @@
 {
-  "code": "tavernpupper",
+  "code": "lumberjack",
   "class": "EntityAgent",
   "canClimb": true,
   "hitboxSize": {
@@ -13,18 +13,26 @@
   "client": {
     "renderer": "Shape",
     "shape": {
-      "base": "game:entity/land/wolf-female"
+      "base": "game:entity/humanoid/trader"
     },
     "texture": {
-      "base": "game:entity/land/wolf-female",
+      "base": "game:entity/humanoid/trader",
       "alternates": [
-        { "base": "game:entity/wolf/wolf2" },
-        { "base": "game:entity/wolf/wolf3" },
-        { "base": "game:entity/wolf/wolf4" },
-        { "base": "game:entity/wolf/wolf5" },
-        { "base": "game:entity/wolf/wolf6" },
-        { "base": "game:entity/wolf/wolf7" },
-        { "base": "game:entity/wolf/wolf8" }
+        {
+          "base": "game:entity/humanoid/traderclothes/set1"
+        },
+        {
+          "base": "game:entity/humanoid/traderclothes/set2"
+        },
+        {
+          "base": "game:entity/humanoid/traderclothes/set3"
+        },
+        {
+          "base": "game:entity/humanoid/traderclothes/set4"
+        },
+        {
+          "base": "game:entity/humanoid/traderclothes/set5"
+        }
       ]
     },
     "behaviors": [
@@ -61,27 +69,19 @@
         "blendMode": "addAverage"
       },
       {
-        "code": "idle",
-        "animation": "idle",
-        "blendMode": "addAverage",
-        "easeOutSpeed": 4,
-        "triggeredBy": {
-          "defaultAnim": true
-        }
+        "code": "rowdywelcome",
+        "animation": "rowdywelcome",
+        "blendMode": "addAverage"
       },
       {
-        "code": "sleep",
-        "animation": "sleep",
-        "easeInSpeed": 4,
-        "easeOutSpeed": 4,
-        "blendMode": "average"
+        "code": "lazywelcome",
+        "animation": "lazywelcome",
+        "blendMode": "addAverage"
       },
       {
-        "code": "sit",
-        "animation": "sit",
-        "easeInSpeed": 4,
-        "easeOutSpeed": 4,
-        "blendMode": "average"
+        "code": "lazynod",
+        "animation": "lazynod",
+        "blendMode": "addAverage"
       }
     ]
   },
@@ -96,7 +96,7 @@
       {
         "code": "nametag",
         "showtagonlywhentargeted": true,
-        "selectFromRandomName": ["Acho", "Jump"]
+        "selectFromRandomName": ["Callum", "Anders", "Ivath"]
       },
       {
         "code": "repulseagents"
@@ -200,12 +200,9 @@
       },
       {
         "code": "questgiver",
-        "quests": [
-          "vsquestexample:quest-tavernpuppersmallsnack",
-          "vsquestexample:quest-tavernpuppermissingpuppy"
-        ],
+        "quests": [],
         "selectrandom": false,
-        "selectrandomcount": 1
+        "selectrandomcount": 3
       }
     ]
   },

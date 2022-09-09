@@ -60,28 +60,28 @@
         "animation": "die",
         "animationSpeed": 1.75,
         "weight": 10,
-        "blendMode": "AddAverage"
+        "blendMode": "addAverage"
       },
       {
         "code": "hurt",
         "animation": "hurt",
         "animationSpeed": 2,
-        "blendMode": "AddAverage"
+        "blendMode": "addAverage"
       },
       {
         "code": "rowdywelcome",
         "animation": "rowdywelcome",
-        "blendMode": "AddAverage"
+        "blendMode": "addAverage"
       },
       {
         "code": "lazywelcome",
         "animation": "lazywelcome",
-        "blendMode": "AddAverage"
+        "blendMode": "addAverage"
       },
       {
         "code": "lazynod",
         "animation": "lazynod",
-        "blendMode": "AddAverage"
+        "blendMode": "addAverage"
       }
     ]
   },

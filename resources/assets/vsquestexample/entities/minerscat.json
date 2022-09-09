@@ -1,5 +1,5 @@
 {
-  "code": "tavernpupper",
+  "code": "minerscat",
   "class": "EntityAgent",
   "canClimb": true,
   "hitboxSize": {
@@ -13,18 +13,32 @@
   "client": {
     "renderer": "Shape",
     "shape": {
-      "base": "game:entity/land/wolf-female"
+      "base": "cats:entity/land/cat-female"
     },
     "texture": {
-      "base": "game:entity/land/wolf-female",
+      "base": "entity/cat/cat-male02",
       "alternates": [
-        { "base": "game:entity/wolf/wolf2" },
-        { "base": "game:entity/wolf/wolf3" },
-        { "base": "game:entity/wolf/wolf4" },
-        { "base": "game:entity/wolf/wolf5" },
-        { "base": "game:entity/wolf/wolf6" },
-        { "base": "game:entity/wolf/wolf7" },
-        { "base": "game:entity/wolf/wolf8" }
+        {
+          "base": "entity/cat/cat-male04"
+        },
+        {
+          "base": "entity/cat/cat-male05"
+        },
+        {
+          "base": "entity/cat/cat-male06"
+        },
+        {
+          "base": "entity/cat/cat-male07"
+        },
+        {
+          "base": "entity/cat/cat-male08"
+        },
+        {
+          "base": "entity/cat/cat-male09"
+        },
+        {
+          "base": "entity/cat/cat-male10"
+        }
       ]
     },
     "behaviors": [
@@ -200,10 +214,7 @@
       },
       {
         "code": "questgiver",
-        "quests": [
-          "vsquestexample:quest-tavernpuppersmallsnack",
-          "vsquestexample:quest-tavernpuppermissingpuppy"
-        ],
+        "quests": [],
         "selectrandom": false,
         "selectrandomcount": 1
       }

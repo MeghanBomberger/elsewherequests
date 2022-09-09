@@ -1,5 +1,5 @@
 {
-  "code": "tavernpupper",
+  "code": "minersdog",
   "class": "EntityAgent",
   "canClimb": true,
   "hitboxSize": {
@@ -200,10 +200,7 @@
       },
       {
         "code": "questgiver",
-        "quests": [
-          "vsquestexample:quest-tavernpuppersmallsnack",
-          "vsquestexample:quest-tavernpuppermissingpuppy"
-        ],
+        "quests": [],
         "selectrandom": false,
         "selectrandomcount": 1
       }
