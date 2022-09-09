@@ -1,5 +1,5 @@
 {
-  "code": "travelingmerchantarchaelogist",
+  "code": "travelingmerchantdigging",
   "class": "EntityAgent",
   "canClimb": true,
   "hitboxSize": {
