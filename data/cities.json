@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Spawn",
+    "role": "Spawn"
+  },
+  {
+    "name": "Jul",
+    "role": "Metal Working"
+  },
+  {
+    "name": "Akatin",
+    "role": "Mining"
+  },
+  {
+    "name": "Andosa",
+    "role": "Cooking"
+  },
+  {
+    "name": "Bribus",
+    "role": "Pottery"
+  },
+  {
+    "name": "Hialing",
+    "role": "Farming"
+  },
+  {
+    "name": "Prashire",
+    "role": "Forestry"
+  },
+  {
+    "name": "Ucresa",
+    "role": "Digging"
+  },
+  {
+    "name": "Wens",
+    "role": "Husbandry"
+  }
+]

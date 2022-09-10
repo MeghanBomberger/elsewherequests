@@ -1,0 +1,16 @@
+{
+  "questGivers": [
+    {
+      "id": "acorninnkeeper",
+      "name": "Acorn Inn Keeper"
+    }
+  ],
+  "questGiverShapes": [
+    {
+      "displayName": "Trader",
+      "mod": "game",
+      "name": "trader",
+      "type": "humanoid"
+    }
+  ]
+}

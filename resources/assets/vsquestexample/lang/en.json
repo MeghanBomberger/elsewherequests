@@ -87,7 +87,7 @@
   "item-creature-treasurehunter": "Treasure Hunter",
 
   "item-creature-valleycampguardcaptain": "Valley Camp Guard Captain",
-    "vsquestexample:quest-valleycampfirstaide-title": "First Aide",
+  "vsquestexample:quest-valleycampfirstaide-title": "First Aide",
   "vsquestexample:quest-valleycampfirstaide-desc": "You'd think some of these folks had never held anything sharp before. We're running low on poultices. Bring back some horsetail and reeds would you?",
   "vsquestexample:quest-valleycampfirstaide-obj": "Gather reeds: {0}/2<br>Gather horsetails: {0}/4",
   "vsquestexample:quest-valleycampmakingcamp1-title": "Making Camp - Part 1",

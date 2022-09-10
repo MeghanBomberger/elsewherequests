@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/MeghanBomberger/elsewherequests/issues"
   },
-  "homepage": "https://github.com/MeghanBomberger/elsewherequests#readme"
+  "homepage": "https://github.com/MeghanBomberger/elsewherequests#readme",
+  "dependencies": {
+    "fs-extra": "^10.1.0"
+  }
 }
