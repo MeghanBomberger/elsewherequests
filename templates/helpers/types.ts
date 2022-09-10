@@ -84,7 +84,7 @@ export interface Item {
   id: string;
   name: string;
   mod: string;
-  attribute: string[];
+  attributes: string[];
 }
 
 export enum AccumType {
