@@ -8,10 +8,10 @@ import {
   EntityShape,
   MinMaxHours,
   Textures,
-} from "./types"
-import * as behaviors from './behaviors'
-import * as aiTasks from './ai-tasks'
-import * as emotionStates from './emotion-states'
+} from "./helpers/types"
+import * as behaviors from './helpers/behaviors'
+import * as aiTasks from './helpers/ai-tasks'
+import * as emotionStates from './helpers/emotion-states'
 
 interface QuestGiverObj {
   code: string;
