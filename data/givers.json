@@ -2,7 +2,8 @@
   "questGivers": [
     {
       "id": "acorninnkeeper",
-      "name": "Acorn Inn Keeper"
+      "name": "Acorn Inn Keeper",
+      "shape": "trader"
     }
   ],
   "questGiverShapes": [
@@ -10,7 +11,19 @@
       "displayName": "Trader",
       "mod": "game",
       "name": "trader",
-      "type": "humanoid"
+      "type": "humanoid",
+      "textureAlternatives": [
+        {
+          "type": "traderclothes",
+          "subTypes": [
+            "set1", 
+            "set2", 
+            "set3",
+            "set4",
+            "set5"
+          ]
+        }
+      ]
     }
   ]
 }

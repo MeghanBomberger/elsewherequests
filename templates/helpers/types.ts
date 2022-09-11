@@ -171,3 +171,9 @@ export interface QuestGiverBehavior {
   canSelectRandom?: boolean;
   selectRandomCount?: number;
 }
+
+export interface QuestGiverData {
+  id: string;
+  name: string;
+  shape: string;
+}

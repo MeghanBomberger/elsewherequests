@@ -5,6 +5,8 @@ import express from 'express'
 import path from 'path'
 import serveStatic from 'serve-static'
 
+import questGiverRouter from './routes/quest-giver-route'
+
 const app = express()
 
 const options: cors.CorsOptions = {
@@ -33,6 +35,9 @@ app.get("/", (req, res) => {
 app.get("/api/hello", (req, res) => {
   res.send({ message: "Hello World!" })
 }) 
+
+// API routes
+app.use("/api/questgiver", questGiverRouter)
 
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, 'client/build')))

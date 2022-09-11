@@ -2,8 +2,12 @@ require('dotenv').config()
 
 import express from 'express'
 
+const questGiverData = require("../data/givers.json")
+
 const questGiverRouter = express.Router()
 
-questGiverRouter.post("/", async (req, res, next) => {
-  res.send("Quest Giver Post Route Coming Soon...")
+questGiverRouter.get("/", async (req, res, next) => {
+  res.send(questGiverData)
 })
+
+export default questGiverRouter
