@@ -1,6 +1,7 @@
 require('dotenv').config()
 
 import express from 'express'
+import fse from 'fs-extra'
 
 const questGiverData = require("../data/givers.json")
 
