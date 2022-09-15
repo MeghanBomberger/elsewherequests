@@ -1,0 +1,123 @@
+import { useCallback, useEffect, useState } from 'react'
+import './QuestGiverForm.scss'
+
+export const QuestGiverForm = ({
+  selectedQuestGiver,
+  entityShapes,
+  questGiverIds,
+}) => {
+  const [name, setName] = useState("")
+  const [id, setId] = useState("")
+  const [damage, setDamage] = useState(500)
+  const [health, setHealth] = useState(1000)
+  const [reviveHours, setReviveHours] = useState(1)
+  const [randomizedNames, setRandomizedNames] = useState([])
+  const [shapeId, setShapeId] = useState("trader")
+
+  const updateForm = useCallback(() => {
+    setName(selectedQuestGiver.name)
+    setId(selectedQuestGiver.id)
+    setDamage(selectedQuestGiver.damage)
+    setHealth(selectedQuestGiver.health)
+    setReviveHours(selectedQuestGiver.reviveHours)
+    setRandomizedNames(selectedQuestGiver.randomizedName)
+    setShapeId(selectedQuestGiver.shape)
+  }, [selectedQuestGiver])
+
+  useEffect(() => {
+    if (!!selectedQuestGiver) {
+      updateForm()
+    }
+  }, [selectedQuestGiver, updateForm])
+
+  return (
+    <form className="quest-giver-form">
+      <label
+        for="name"
+      >
+        Display Name:
+        <input
+          required
+          value={name}
+          type="text"
+          onChange={e => setId(e.target.value)}
+        />
+      </label>
+
+      <label
+        for="id"
+      >
+        VS ID:
+        <input
+          required
+          pattern={'/[^a-z0-9]/'}
+          value={id}
+          type="text"
+          onChange={e => setName(e.target.value)}
+        />
+      </label>
+
+      <label
+        for="damage"
+      >
+        Damage:
+        <input
+          required
+          value={damage}
+          type="number"
+          onChange={e => setDamage(e.target.value)}
+        />
+      </label>
+
+      <label
+        for="health"
+      >
+        Health:
+        <input
+          required
+          value={health}
+          type="number"
+          onChange={e => setHealth(e.target.value)}
+        />
+      </label>
+
+      <label
+        for="reviveHours"
+      >
+        Revive Time (Hours):
+        <input
+          required
+          value={reviveHours}
+          type="number"
+          onChange={e => setReviveHours(e.target.value)}
+        />
+      </label>
+
+      {/* TODO - Random Names */}
+
+      {entityShapes?.length > 0 && (
+        <label
+          for="shape"
+        >
+          Entity Shape:
+          <select
+            required
+            name='shape'
+            onChange={e => setShapeId(e.target.value)}
+            value={shapeId}
+          >
+            {entityShapes.map(shape => (
+              <option
+                value={shape.id}
+              >
+                {shape.displayName}
+              </option>
+            ))}
+          </select>
+        </label>
+      )}
+
+      {/* TODO - Save Button */}
+    </form>
+  )
+}

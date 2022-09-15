@@ -3,25 +3,33 @@
     {
       "id": "acorninnkeeper",
       "name": "Acorn Inn Keeper",
-      "shape": "trader"
+      "shape": "trader",
+      "quests": [
+        "acorninnwelcome",
+        "acorninnfirewood",
+        "acorninningredients",
+        "acorninnmoreingredients",
+        "acorninngettingsettled"
+      ],
+      "damage": 500,
+      "health": 1000,
+      "reviveHours": 1,
+      "randomizedName": [
+        "Rosto", 
+        "Solom"
+      ]
     }
   ],
   "questGiverShapes": [
     {
       "displayName": "Trader",
       "mod": "game",
-      "name": "trader",
+      "id": "trader",
       "type": "humanoid",
       "textureAlternatives": [
         {
           "type": "traderclothes",
-          "subTypes": [
-            "set1", 
-            "set2", 
-            "set3",
-            "set4",
-            "set5"
-          ]
+          "subTypes": ["set1", "set2", "set3", "set4", "set5"]
         }
       ]
     }

@@ -1,8 +1,26 @@
-body {
+@import './helpers/styles/fonts.scss';
+
+* {
   margin: 0;
   box-sizing: border-box;
-  background: url('./assets/background.jpg');
-  background-size: cover cover;
-  background-repeat: no-repeat;
   font-size: 10px;
+  @include primaryFont;
+  color: whitesmoke;
+}
+
+body {
+  background: url('./assets/background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+a {
+  outline: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+main {
+  position: fixed;
+  top: 6rem;
 }

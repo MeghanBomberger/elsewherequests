@@ -1,14 +1,14 @@
 require('dotenv').config()
 
 import express from 'express'
-import fse from 'fs-extra'
 
 const questGiverData = require("../data/givers.json")
 
 const questGiverRouter = express.Router()
 
 questGiverRouter.get("/", async (req, res, next) => {
-  res.send(questGiverData)
+  const data = questGiverData
+  res.send(data)
 })
 
 export default questGiverRouter

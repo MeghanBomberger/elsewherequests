@@ -1,0 +1,23 @@
+@import '../helpers/styles/buttons.scss';
+
+header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+
+  .go-back {
+    img {
+      height: 2rem;
+      @include icon;
+    }
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+}

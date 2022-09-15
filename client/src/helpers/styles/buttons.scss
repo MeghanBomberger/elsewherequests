@@ -4,3 +4,11 @@
   border: none;
   cursor: pointer;
 }
+
+@mixin icon {
+  filter: invert(60%);
+  
+  &:hover {
+    filter: invert(95%);
+  }
+}

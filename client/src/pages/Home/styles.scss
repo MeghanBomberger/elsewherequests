@@ -1,0 +1,26 @@
+@import '../../helpers/styles/fonts.scss';
+@import '../../helpers/styles/buttons.scss';
+
+.home {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+  .home-link {
+    .home-icons {
+      margin: 3rem 3rem 1rem 3rem;
+      height: 10rem;
+      @include icon;
+    }
+
+    p {
+      margin-bottom: 2rem;
+      @include primaryFont;
+      color: whitesmoke;
+      font-size: 2rem;
+      font-weight: 600;
+      text-align: center;
+    }
+  }
+}

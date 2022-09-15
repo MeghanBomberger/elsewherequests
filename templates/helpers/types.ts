@@ -21,12 +21,13 @@ export interface Quest {
 
 export interface QuestGiver {
   id: string;
-  name: string;
-  randomizedName: string[];
-  health: number;
-  reviveHours: number;
   damage: number;
+  health: number;
+  name: string;
   quests: Quest[];
+  randomizedName: string[];
+  reviveHours: number;
+  shape: string;
 }
 
 export enum QuestGiverShapeType {

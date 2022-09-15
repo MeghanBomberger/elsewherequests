@@ -37,7 +37,7 @@ app.get("/api/hello", (req, res) => {
 }) 
 
 // API routes
-app.use("/api/questgiver", questGiverRouter)
+app.use("/api/questgivers", questGiverRouter)
 
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, 'client/build')))
