@@ -1,5 +1,7 @@
 import { useCallback, useEffect, useState } from 'react'
+
 import './QuestGiverForm.scss'
+import { names, selectRandomNames } from '../../helpers/names'
 
 export const QuestGiverForm = ({
   selectedQuestGiver,
@@ -24,6 +26,12 @@ export const QuestGiverForm = ({
     setShapeId(selectedQuestGiver.shape)
   }, [selectedQuestGiver])
 
+  const rerollNames = () => setRandomizedNames(selectRandomNames())
+
+  useEffect(() => {
+    rerollNames()
+  }, [])
+
   useEffect(() => {
     if (!!selectedQuestGiver) {
       updateForm()
@@ -40,7 +48,7 @@ export const QuestGiverForm = ({
           required
           value={name}
           type="text"
-          onChange={e => setId(e.target.value)}
+          onChange={e => setName(e.target.value)}
         />
       </label>
 
@@ -53,7 +61,7 @@ export const QuestGiverForm = ({
           pattern={'/[^a-z0-9]/'}
           value={id}
           type="text"
-          onChange={e => setName(e.target.value)}
+          onChange={e => setId(e.target.value)}
         />
       </label>
 
@@ -93,8 +101,6 @@ export const QuestGiverForm = ({
         />
       </label>
 
-      {/* TODO - Random Names */}
-
       {entityShapes?.length > 0 && (
         <label
           for="shape"
@@ -117,7 +123,37 @@ export const QuestGiverForm = ({
         </label>
       )}
 
-      {/* TODO - Save Button */}
+      <h3>Character Names</h3>
+      <ul className='name-list'>
+        {randomizedNames.map(name => <li>{name}</li>)}
+      </ul>
+      <button 
+        className="reroll-names"
+        onClick={e => {
+          e.preventDefault()
+          rerollNames()
+        }}
+      >
+        Pick New Names
+      </button>
+  
+      <button 
+        className="save-button"
+        onClick={ e => {
+          e.preventDefault()
+          console.log({
+            id,
+            name,
+            damage,
+            health,
+            reviveHours,
+            randomizedNames,
+            shapeId
+          })
+        }}
+      >
+        {selectedQuestGiver?.length > 0 ? 'Edit' : 'Create'} Quest Giver
+      </button>
     </form>
   )
 }

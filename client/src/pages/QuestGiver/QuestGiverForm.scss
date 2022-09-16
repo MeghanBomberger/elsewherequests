@@ -15,11 +15,66 @@
 
     input, select {
       margin-left: 2rem;
-      font-size: 1.2rem;
+      font-size: 1.4rem;
+      color: black;
 
       option {
         font-size: 1.2rem;
+        color: black;
       }
     }
+  }
+
+  h3 {
+    margin-top: 1rem;
+    width: 100%;
+    font-size: 2rem;
+    text-align: center;
+    background-color: whitesmoke;
+    color: black;
+    border: solid whitesmoke 0.1rem;
+    border-bottom: none;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+  }
+
+  .name-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 1rem 0;
+    width: 100%;
+    border: solid whitesmoke 0.1rem;
+
+    li {
+      padding: 0 3rem;
+      font-size: 1.6rem;
+      list-style-type: none;
+    }
+  }
+
+  .reroll-names {
+    padding: 0.5rem 0;
+    width: 100%;
+    @include naked-button;
+    background-color: whitesmoke;
+    color: black;
+    font-size: 1.5rem;
+    font-weight: 800;
+    cursor: pointer;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+  }
+
+  .save-button {
+    margin: 2rem auto;
+    padding: 0.5rem 3rem;
+    @include naked-button;
+    background-color: whitesmoke;
+    color: black;
+    font-size: 1.5rem;
+    font-weight: 800;
+    border-radius: 1rem;
   }
 }

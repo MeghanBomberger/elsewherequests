@@ -28,6 +28,7 @@
         border-right: solid whitesmoke 0.1rem;
         text-align: center;
         vertical-align: top;
+        font-size: 1.5rem;
 
         &:last-of-type {
           border-right: none;
@@ -38,16 +39,16 @@
 
           li {
             text-align: left;
+            font-size: 1.5rem;
           }
         }
 
         .edit-button {
-          margin-top: -0.5rem;
           @include naked-button;
 
           img {
             @include icon;
-            height: 1.5rem;
+            height: 2rem;
           }
         }
       }
