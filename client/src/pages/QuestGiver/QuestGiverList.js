@@ -92,7 +92,7 @@ export const QuestGiverList = ({
             </td>
 
             <td>
-              {row?.reviveHours || ''}
+              {row?.reviveHours || ''} hour{row?.reviveHours > 1 && 's'}
             </td>
 
             <td>

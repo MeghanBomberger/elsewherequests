@@ -16,6 +16,9 @@ export const QuestGiverForm = ({
   const [randomizedNames, setRandomizedNames] = useState([])
   const [shapeId, setShapeId] = useState("trader")
 
+  // TODO - check for duplicate id
+  // TODO - handle save
+
   const updateForm = useCallback(() => {
     setName(selectedQuestGiver.name)
     setId(selectedQuestGiver.id)
