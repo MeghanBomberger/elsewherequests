@@ -16,7 +16,6 @@ export const QuestGiverForm = ({
   const [randomizedNames, setRandomizedNames] = useState([])
   const [shapeId, setShapeId] = useState("trader")
 
-  // TODO - check for duplicate id
   // TODO - handle save
 
   const updateForm = useCallback(() => {
@@ -28,6 +27,14 @@ export const QuestGiverForm = ({
     setRandomizedNames(selectedQuestGiver.randomizedName)
     setShapeId(selectedQuestGiver.shape)
   }, [selectedQuestGiver])
+
+  const validateId = useCallback(
+    () => questGiverIds?.includes(id),
+    [
+      questGiverIds,
+      id
+    ]
+  )
 
   const rerollNames = () => setRandomizedNames(selectRandomNames())
 
@@ -67,6 +74,9 @@ export const QuestGiverForm = ({
           onChange={e => setId(e.target.value)}
         />
       </label>
+      {!!validateId() && (
+        <i className="id-error">Quest Giver ID must be unique.</i>
+      )}
 
       <label
         for="damage"
@@ -144,15 +154,17 @@ export const QuestGiverForm = ({
         className="save-button"
         onClick={ e => {
           e.preventDefault()
-          console.log({
-            id,
-            name,
-            damage,
-            health,
-            reviveHours,
-            randomizedNames,
-            shapeId
-          })
+          !selectedQuestGiver && validateId() 
+            ? console.error("ID Duplicate Error")
+            : console.table({
+              id,
+              name,
+              damage,
+              health,
+              reviveHours,
+              randomizedNames,
+              shapeId
+            })
         }}
       >
         {selectedQuestGiver?.length > 0 ? 'Edit' : 'Create'} Quest Giver
