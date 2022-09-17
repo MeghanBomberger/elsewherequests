@@ -1,8 +1,13 @@
 require('dotenv').config()
 
 import express from 'express'
+import {
+  access,
+  constants,
+} from 'node:fs'
 
 const questGiverData = require("../data/givers.json")
+const questGiverDataFile = "../elsewherequests/data/givers.json"
 
 const questGiverRouter = express.Router()
 
@@ -12,8 +17,10 @@ questGiverRouter.get("/", async (req, res, next) => {
 })
 
 questGiverRouter.post("/", async (req, res, next) => {
-  console.log(req.body)
-  
+  // console.log(req.body)
+  access(questGiverDataFile, constants.F_OK, (err) => {
+    err ? console.error(err) : console.log(`${questGiverDataFile} file found.`)
+  })
   res.send("success")
 })
 
