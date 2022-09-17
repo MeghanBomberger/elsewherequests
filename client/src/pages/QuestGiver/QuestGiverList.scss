@@ -1,8 +1,8 @@
 @import '../../helpers/styles/buttons.scss';
 
 .quest-givers-list {
-  width: calc(100vw - 4rem);
   border: solid whitesmoke 0.3rem;
+  margin: 0 auto 4rem auto;
 
   thead {
     tr {

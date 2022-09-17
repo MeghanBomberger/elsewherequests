@@ -38,10 +38,9 @@ export const QuestGiverForm = ({
     ]
   )
 
-  console.log(validateId)
-
-  const createQuestGiver = useCallback(async () => {
+  const handleSave = useCallback(async () => {
     const reqBody = {
+      isEdit: selectedQuestGiver?.id,
       id,
       name,
       damage,
@@ -60,39 +59,7 @@ export const QuestGiverForm = ({
     reviveHours,
     randomizedNames,
     shapeId,
-  ])
-
-  const updateQuestGiver = useCallback(async () => {
-    const reqBody = {
-      id,
-      name,
-      damage,
-      health,
-      reviveHours,
-      randomizedNames,
-      shapeId,
-    }
-
-    // TODO - not working
-    const res = await axios.put(`http://localhost:5000/api/questgivers/${selectedQuestGiver.id}`, reqBody)
-    return res
-  }, [
-    id,
-    name,
-    damage,
-    health,
-    reviveHours,
-    randomizedNames,
-    shapeId,
     selectedQuestGiver?.id
-  ])
-
-  const handleSave = useCallback(() => {
-    !!selectedQuestGiver.id ? updateQuestGiver() : createQuestGiver()
-  }, [
-    createQuestGiver,
-    updateQuestGiver,
-    selectedQuestGiver.id
   ])
 
   const rerollNames = () => setRandomizedNames(selectRandomNames())
@@ -102,7 +69,7 @@ export const QuestGiverForm = ({
   }, [])
 
   useEffect(() => {
-    if (!!selectedQuestGiver) {
+    if (!!selectedQuestGiver?.id) {
       updateForm()
     }
   }, [selectedQuestGiver, updateForm])
@@ -127,7 +94,7 @@ export const QuestGiverForm = ({
         VS ID:
         {!!selectedQuestGiver?.id 
         ? (
-          <span>{selectedQuestGiver.id}</span>
+          <span>{selectedQuestGiver?.id}</span>
         )
         : (
           <input

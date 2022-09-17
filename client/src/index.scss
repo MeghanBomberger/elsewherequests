@@ -12,6 +12,7 @@ body {
   background: url('./assets/background.jpg');
   background-size: cover;
   background-repeat: no-repeat;
+  overflow: auto;
 }
 
 a {
@@ -23,4 +24,8 @@ a {
 main {
   position: fixed;
   top: 6rem;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  overflow: auto;
 }

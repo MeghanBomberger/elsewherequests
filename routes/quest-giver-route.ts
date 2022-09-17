@@ -13,12 +13,15 @@ questGiverRouter.get("/", async (req, res, next) => {
 
 questGiverRouter.post("/", async (req, res, next) => {
   console.log(req.body)
+  
   res.send("success")
 })
 
-questGiverRouter.put("/:id", async (req, res, next) => {
-  console.log(req.body)
-  res.send("success")
-})
+// questGiverRouter.put("/:id", async (req, res, next) => {
+//   console.log(req.params)
+//   console.log(req.body)
+//   res.send("success")
+// })
+// TODO - PUT not working with form currently, making do with POST in the meantime.
 
 export default questGiverRouter

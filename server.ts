@@ -1,5 +1,6 @@
 require('dotenv').config()
 
+import bodyParser from 'body-parser'
 import cors from 'cors'
 import express from 'express'
 import path from 'path'
@@ -25,6 +26,7 @@ const options: cors.CorsOptions = {
 
 app.use(express.json())
 app.use(cors(options))
+app.use(bodyParser.urlencoded({ extended: true }))
 app.use(serveStatic(__dirname + '/client/build'))
 
 app.get("/", (req, res) => {
