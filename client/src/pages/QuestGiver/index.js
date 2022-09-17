@@ -22,9 +22,7 @@ export const QuestGiver = () => {
     return res.data
   }
 
-  console.log(entityShapes)
-
-  useEffect(() => {
+  const refetchQuestGiverData = () => {
     fetchQuestGiverData()
       .then(res => {
         setQuestGivers(res.questGivers)
@@ -34,6 +32,10 @@ export const QuestGiver = () => {
         console.error(err)
         setErrorMessage("An error has occurred fetching the quest giver data.")
       })
+  }
+
+  useEffect(() => {
+    refetchQuestGiverData()
   }, [])
 
   return (
@@ -87,6 +89,7 @@ export const QuestGiver = () => {
             selectedQuestGiver={selectedQuestGiver}
             entityShapes={entityShapes}
             questGiverIds={questGivers?.map(giver => giver.id) || []}
+            refetchQuestGiverData={refetchQuestGiverData}
           />
         )}
         

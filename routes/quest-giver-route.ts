@@ -16,4 +16,9 @@ questGiverRouter.post("/", async (req, res, next) => {
   res.send("success")
 })
 
+questGiverRouter.put("/:id", async (req, res, next) => {
+  console.log(req.body)
+  res.send("success")
+})
+
 export default questGiverRouter

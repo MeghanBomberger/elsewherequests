@@ -1,12 +1,14 @@
 import { useCallback, useEffect, useState } from 'react'
+import axios from 'axios'
 
 import './QuestGiverForm.scss'
-import { names, selectRandomNames } from '../../helpers/names'
+import { selectRandomNames } from '../../helpers/names'
 
 export const QuestGiverForm = ({
-  selectedQuestGiver,
   entityShapes,
   questGiverIds,
+  refetchQuestGiverData,
+  selectedQuestGiver,
 }) => {
   const [name, setName] = useState("")
   const [id, setId] = useState("")
@@ -35,6 +37,63 @@ export const QuestGiverForm = ({
       id
     ]
   )
+
+  console.log(validateId)
+
+  const createQuestGiver = useCallback(async () => {
+    const reqBody = {
+      id,
+      name,
+      damage,
+      health,
+      reviveHours,
+      randomizedNames,
+      shapeId,
+    }
+    const res = await axios.post('http://localhost:5000/api/questgivers', reqBody)
+    return res
+  }, [
+    id,
+    name,
+    damage,
+    health,
+    reviveHours,
+    randomizedNames,
+    shapeId,
+  ])
+
+  const updateQuestGiver = useCallback(async () => {
+    const reqBody = {
+      id,
+      name,
+      damage,
+      health,
+      reviveHours,
+      randomizedNames,
+      shapeId,
+    }
+
+    // TODO - not working
+    const res = await axios.put(`http://localhost:5000/api/questgivers/${selectedQuestGiver.id}`, reqBody)
+    return res
+  }, [
+    id,
+    name,
+    damage,
+    health,
+    reviveHours,
+    randomizedNames,
+    shapeId,
+    selectedQuestGiver?.id
+  ])
+
+  const handleSave = useCallback(() => {
+    !!selectedQuestGiver.id ? updateQuestGiver() : createQuestGiver()
+  }, [
+    createQuestGiver,
+    updateQuestGiver,
+    selectedQuestGiver.id
+  ])
 
   const rerollNames = () => setRandomizedNames(selectRandomNames())
 
@@ -66,15 +125,22 @@ export const QuestGiverForm = ({
         for="id"
       >
         VS ID:
-        <input
-          required
-          pattern={'/[^a-z0-9]/'}
-          value={id}
-          type="text"
-          onChange={e => setId(e.target.value)}
-        />
+        {!!selectedQuestGiver?.id 
+        ? (
+          <span>{selectedQuestGiver.id}</span>
+        )
+        : (
+          <input
+            required
+            pattern={'/[^a-z0-9]/'}
+            value={id}
+            type="text"
+            onChange={e => setId(e.target.value)}
+          />
+          )
+        }
       </label>
-      {!!validateId() && (
+      {validateId() && !selectedQuestGiver?.id && (
         <i className="id-error">Quest Giver ID must be unique.</i>
       )}
 
@@ -154,20 +220,10 @@ export const QuestGiverForm = ({
         className="save-button"
         onClick={ e => {
           e.preventDefault()
-          !selectedQuestGiver && validateId() 
-            ? console.error("ID Duplicate Error")
-            : console.table({
-              id,
-              name,
-              damage,
-              health,
-              reviveHours,
-              randomizedNames,
-              shapeId
-            })
+          handleSave()
         }}
       >
-        {selectedQuestGiver?.length > 0 ? 'Edit' : 'Create'} Quest Giver
+        {!!selectedQuestGiver?.id ? 'Edit' : 'Create'} Quest Giver
       </button>
     </form>
   )
