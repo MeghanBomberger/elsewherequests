@@ -11,9 +11,13 @@ const questGiverDataFilePath = `${dataPath}/givers.json`
 const questGiverRouter = express.Router()
 
 questGiverRouter.get("/", async (req, res, next) => {
-  const data: QuestGiver = req.body
-  
-  res.send(data)
+  fs.readFile(questGiverDataFilePath, 'utf8', (err, data) => {
+    if (err) {
+      console.error("ERROR FETCHING QUESTGIVER DATA: ", err)
+      res.send("failure")
+    }
+    res.send(data)
+  })
 })
 
 questGiverRouter.post("/", async (req, res, next) => {
