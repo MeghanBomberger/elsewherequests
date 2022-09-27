@@ -13,23 +13,10 @@ import {
 
 const writeModRouter = express.Router()
 
-writeModRouter.get("/", async (req, res, next) => {
-  const status = {
-    modInfoFile: '',
-    questConfig: '',
-    questGiverEntities: '',
-    creatureItems: '',
-    enLang: ''
-  }
-
-  console.log("")
-  console.log("-------------------------------------------")
-
-  console.log("WRITING MODINFO.JSON FILE...")
+const writeModInfoFile = () => {
   fs.readFile(`${dataPath}/modinfo.json`, 'utf8', (err, data) => {
     if (err) {
       console.error("ERROR FETCHING MODS DATA: ", err)
-      res.send(status)
       return
     }
     const modInfoContents = modInfoDefaultTemplate
@@ -44,28 +31,49 @@ writeModRouter.get("/", async (req, res, next) => {
     fs.appendFile(`${buildPath}/modinfo.json`, "", (err2: any, data2: any) => {
       if (err2) {
         console.error("MODINFO CREATE FILE ERROR: ", err2)
-        res.send(status)
         return
       }
-      status.modInfoFile = "modinfo.json created"
 
       // @ts-ignore
       fs.writeFile(`${buildPath}/modinfo.json`, JSON.stringify(modInfoContents), (err3, data3) => {
         if (err3) {
           console.error("MODINFO WRITE ERROR: ", err3)
-          res.send(status)
           return
         }
-        status.modInfoFile = "modinfo.json editted"
-        res.send(status)
         return
       })
     })
   })
+}
+
+writeModRouter.get("/", async (req, res, next) => {
+  const status = {
+    modInfoFile: '',
+    questConfig: '',
+    questGiverEntities: '',
+    creatureItems: '',
+    enLang: ''
+  }
+
+  console.log("")
+  console.log("-------------------------------------------")
+
+  console.log("WRITING MODINFO.JSON FILE...")
+  await writeModInfoFile()
+  status.modInfoFile = "modinfo.json editted"
   console.log("WRITING MODINFO.JSON FILE COMPLETE!")
 
+  // TODO - write entity files
+  // TODO - write creature item file
+  // TODO - write quest config file
+  // TODO - write en lang file
+
+  console.log("MOD GENERATION COMPLETE. READY TO ZIP!")
+  
   console.log("-------------------------------------------")
   console.log("")
+  
+  res.send(status)
 })
 
 export default writeModRouter
