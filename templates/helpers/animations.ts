@@ -1,6 +1,6 @@
 import { Animation } from "./types"
 
-export const idleAnimation: Animation = {
+const idleAnimation: Animation = {
   "code": "idle",
   "animation": "idle",
   "blendMode": "addAverage",
@@ -10,7 +10,7 @@ export const idleAnimation: Animation = {
   }
 }
 
-export const sleepAnimation = {
+const sleepAnimation = {
   "code": "sleep",
   "animation": "sleep",
   "easeInSpeed": 4,
@@ -18,7 +18,7 @@ export const sleepAnimation = {
   "blendMode": "average"
 }
 
-export const sitAnimation = {
+const sitAnimation = {
   "code": "sit",
   "animation": "sit",
   "easeInSpeed": 4,
@@ -26,7 +26,7 @@ export const sitAnimation = {
   "blendMode": "average"
 }
 
-export const dieAnimation: Animation = {
+const dieAnimation: Animation = {
   "code": "die",
   "animation": "die",
   "animationSpeed": 1.75,
@@ -34,27 +34,38 @@ export const dieAnimation: Animation = {
   "blendMode": "addAverage"
 }
 
-export const hurtAnimation: Animation = {
+const hurtAnimation: Animation = {
   "code": "hurt",
   "animation": "hurt",
   "animationSpeed": 2,
   "blendMode": "addAverage"
 }
 
-export const rowdyWelcomeAnimation: Animation = {
+const rowdyWelcomeAnimation: Animation = {
   code: "rowdywelcome",
   animation: "rowdywelcome",
   blendMode: "addAverage"
 }
 
-export const lazyWelcomeAnimation: Animation = {
+const lazyWelcomeAnimation: Animation = {
   code: "lazywelcome",
   animation: "lazywelcome",
   blendMode: "addAverage"
 }
 
-export const lazyNodAnimation: Animation = {
+const lazyNodAnimation: Animation = {
   code: "lazynod",
   animation: "lazynod",
   blendMode: "addAverage"
+}
+
+export const animations = {
+  dieAnimation,
+  hurtAnimation,
+  idleAnimation,
+  lazyNodAnimation,
+  lazyWelcomeAnimation,
+  rowdyWelcomeAnimation,
+  sitAnimation,
+  sleepAnimation,
 }

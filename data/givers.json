@@ -39,11 +39,7 @@
           "subTypes": ["set1", "set2", "set3", "set4", "set5"]
         }
       ],
-      "additionalAnimations": [
-        "rowdywelcome",
-        "lazywelcome",
-        "lazynod"
-      ]
+      "additionalAnimations": ["rowdywelcome", "lazywelcome", "lazynod"]
     },
     {
       "displayName": "Wolf",
@@ -54,8 +50,8 @@
         {
           "type": "wolf",
           "subTypes": [
-            "wolf2", 
-            "wolf3"
+            "wolf2",
+            "wolf3",
             "wolf4",
             "wolf5",
             "wolf6",
@@ -64,11 +60,7 @@
           ]
         }
       ],
-      "additionalAnimations": [
-        "idle",
-        "sleep",
-        "sit"
-      ]
+      "additionalAnimations": ["idle", "sleep", "sit"]
     }
   ]
 }

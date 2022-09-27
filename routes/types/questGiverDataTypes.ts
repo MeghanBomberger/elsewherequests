@@ -1,3 +1,5 @@
+import { EntityShape } from "../../templates/helpers/types";
+
 export interface QuestGiver {
   id: string;
   name: string;
@@ -25,5 +27,5 @@ export interface QuestGiverShape {
 
 export interface QuestGiverData {
   questGivers: QuestGiver[];
-  questGiverShapes: QuestGiverShape[];
+  questGiverShapes: EntityShape[];
 }

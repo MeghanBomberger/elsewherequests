@@ -24,8 +24,8 @@ export interface QuestGiver {
   damage: number;
   health: number;
   name: string;
-  quests: Quest[];
-  randomizedName: string[];
+  quests: string[];
+  randomizedNames: string[];
   reviveHours: number;
   shape: string;
 }
@@ -43,10 +43,10 @@ export interface TextureAlternative {
 export interface EntityShape {
   displayName: string;
   mod: string;
-  name: string;
+  id: string;
   type: QuestGiverShapeType;
   textureAlternatives: TextureAlternative[];
-  animations: Animation[];
+  additionalAnimations: string[];
 }
 
 export interface QuestGiverShape {
