@@ -178,3 +178,16 @@ export interface QuestGiverData {
   name: string;
   shape: string;
 }
+
+export interface Mod {
+  name: string;
+  version: string;
+}
+
+export interface ModsData {
+  version: string;
+  mods: Mod[];
+}
+export interface ModDependencies {
+  [name: string]: string;
+}

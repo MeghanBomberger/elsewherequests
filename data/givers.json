@@ -14,10 +14,17 @@
       "damage": 500,
       "health": 1000,
       "reviveHours": 1,
-      "randomizedName": [
-        "Rosto", 
-        "Solom"
-      ]
+      "randomizedNames": ["Rosto", "Solom"]
+    },
+    {
+      "id": "archaeologist",
+      "name": "Archaeologist",
+      "shape": "trader",
+      "quests": [],
+      "damage": 500,
+      "health": 1000,
+      "reviveHours": 1,
+      "randomizedNames": ["Daffie", "Sena", "Courtnay", "Amara", "Theresa"]
     }
   ],
   "questGiverShapes": [
@@ -28,9 +35,39 @@
       "type": "humanoid",
       "textureAlternatives": [
         {
-          "type": "traderclothes",
+          "type": "humanoid/traderclothes",
           "subTypes": ["set1", "set2", "set3", "set4", "set5"]
         }
+      ],
+      "additionalAnimations": [
+        "rowdywelcome",
+        "lazywelcome",
+        "lazynod"
+      ]
+    },
+    {
+      "displayName": "Wolf",
+      "mod": "game",
+      "id": "wolf-female",
+      "type": "land",
+      "textureAlternatives": [
+        {
+          "type": "wolf",
+          "subTypes": [
+            "wolf2", 
+            "wolf3"
+            "wolf4",
+            "wolf5",
+            "wolf6",
+            "wolf7",
+            "wolf8"
+          ]
+        }
+      ],
+      "additionalAnimations": [
+        "idle",
+        "sleep",
+        "sit"
       ]
     }
   ]

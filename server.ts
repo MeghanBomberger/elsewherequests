@@ -7,6 +7,7 @@ import path from 'path'
 import serveStatic from 'serve-static'
 
 import questGiverRouter from './routes/quest-giver-route'
+import writeModRouter from './routes/write-mod-route'
 
 const app = express()
 
@@ -40,6 +41,7 @@ app.get("/api/hello", (req, res) => {
 
 // API routes
 app.use("/api/questgivers", questGiverRouter)
+app.use("/api/writemod", writeModRouter)
 
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, 'client/build')))
