@@ -3,11 +3,10 @@ require('dotenv').config()
 import express from 'express'
 import fs from 'fs'
 
-import { genQuestGiverDataObj } from './helpers/utils'
+import { dataPath, genQuestGiverDataObj } from './helpers/utils'
 import { QuestGiver, QuestGiverData } from './types/questGiverDataTypes'
 
-const questGiverDataFilePath = "/Users/geeke/Dev/Elsewhere/elsewherequests/data/givers.json"
-const questsDataFilePath = "/data/quests.json"
+const questGiverDataFilePath = `${dataPath}/givers.json`
 
 const questGiverRouter = express.Router()
 

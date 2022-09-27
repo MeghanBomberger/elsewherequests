@@ -1,9 +1,9 @@
-import fs from 'fs'
+require('dotenv').config()
 import { Mod, ModDependencies, ModsData } from '../../templates/helpers/types';
-import { modInfoDefaultTemplate } from "../../templates/mod-info-template";
 
-export const buildPath = "/Users/geeke/Dev/Elsewhere/elsewherequests/generatedMod"
-export const dataPath = "/Users/geeke/Dev/Elsewhere/elsewherequests/data"
+export const basePath = process.env.BASE_PATH
+export const buildPath = `${basePath}/generatedMod`
+export const dataPath = `${basePath}/data`
 
 interface GenQuestGiverDataObjProps {
     id?: string;
