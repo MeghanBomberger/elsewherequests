@@ -29,3 +29,10 @@ main {
   left: 0;
   overflow: auto;
 }
+
+.error-message {
+  padding: 1rem 2rem;
+  width: 100%;
+  background-color: palevioletred;
+  color: black;
+}

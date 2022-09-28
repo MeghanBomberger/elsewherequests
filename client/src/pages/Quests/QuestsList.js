@@ -1,4 +1,5 @@
 import './QuestsList.scss'
+import editIcon from '../../assets/editing.png'
 
 const columns = [
   {
@@ -36,11 +37,17 @@ const columns = [
   {
     header: "Cooldown Hours",
     key: "cooldown"
+  },
+  {
+    header: '',
+    key: 'edit'
   }
 ]
 
 export const QuestsList = ({
-  quests
+  quests,
+  setFormIsOpen,
+  setSelectedQuest,
 }) => {
 
   return (
@@ -156,6 +163,22 @@ export const QuestsList = ({
 
             <td>
               {row?.cooldown || ''}
+            </td>
+
+            <td>
+              <button
+                className="edit-button"
+                onClick={() => {
+                  setSelectedQuest(row)
+                  setFormIsOpen(true)
+                }}
+              >
+                <img
+                  alt="edit quest"
+                  title="edit quest"
+                  src={editIcon}
+                />
+              </button>
             </td>
           </tr>
         ))}

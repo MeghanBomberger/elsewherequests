@@ -7,7 +7,6 @@ import { selectRandomNames } from '../../helpers/names'
 export const QuestGiverForm = ({
   entityShapes,
   questGiverIds,
-  refetchQuestGiverData,
   selectedQuestGiver,
 }) => {
   const [name, setName] = useState("")
@@ -17,8 +16,6 @@ export const QuestGiverForm = ({
   const [reviveHours, setReviveHours] = useState(1)
   const [randomizedNames, setRandomizedNames] = useState([])
   const [shapeId, setShapeId] = useState("trader")
-
-  // TODO - handle save
 
   const updateForm = useCallback(() => {
     setName(selectedQuestGiver.name)
@@ -160,6 +157,7 @@ export const QuestGiverForm = ({
           >
             {entityShapes.map(shape => (
               <option
+                key={shape.id}
                 value={shape.id}
               >
                 {shape.displayName}
