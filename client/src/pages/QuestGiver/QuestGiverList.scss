@@ -1,59 +1,6 @@
 @import '../../helpers/styles/buttons.scss';
+@import '../../helpers/styles/tables.scss';
 
 .quest-givers-list {
-  border: solid whitesmoke 0.3rem;
-  margin: 0 auto 4rem auto;
-
-  thead {
-    tr {
-      border-bottom: solid whitesmoke 0.2rem;
-      background-color: whitesmoke;
-
-      th {
-        padding: 1rem;
-        border-right: solid whitesmoke 0.1rem;
-        color: black;
-        font-size: 1.5rem;
-
-        &:last-of-type {
-          border-right: none;
-        }
-      }
-    }
-  }
-
-  tbody {
-    tr {
-      td {
-        padding: 1.5rem 1rem 0.5rem 1rem;
-        border-top: solid whitesmoke 0.2rem;
-        border-right: solid whitesmoke 0.1rem;
-        text-align: center;
-        vertical-align: top;
-        font-size: 1.5rem;
-
-        &:last-of-type {
-          border-right: none;
-        }
-
-        ul {
-          margin-bottom: 0.5rem;
-
-          li {
-            text-align: left;
-            font-size: 1.5rem;
-          }
-        }
-
-        .edit-button {
-          @include naked-button;
-
-          img {
-            @include icon;
-            height: 2rem;
-          }
-        }
-      }
-    }
-  }
+  @include tableStyles;
 }

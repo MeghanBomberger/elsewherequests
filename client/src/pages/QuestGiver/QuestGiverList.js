@@ -1,7 +1,46 @@
-import React, { useMemo } from 'react'
+import React from 'react'
 
 import './QuestGiverList.scss'
 import editIcon from '../../assets/editing.png'
+
+const columns = [
+  {
+    header: 'Display Name',
+    key: 'name'
+  },
+  {
+    header: 'VS ID',
+    key: 'id',
+  },
+  {
+    header: 'Quests',
+    key: 'quests',
+  },
+  {
+    header: 'Damage',
+    key: 'damage',
+  },
+  {
+    header: 'Health',
+    key: 'health',
+  },
+  {
+    header: 'Revive Hours',
+    key: 'reviveHours',
+  },
+  {
+    header: 'Character Names',
+    key: 'randomizedName',
+  },
+  {
+    header: 'Entity Shape',
+    key: 'shape',
+  },
+  {
+    header: '',
+    key: 'edit'
+  }
+]
 
 export const QuestGiverList = ({ 
   data, 
@@ -9,45 +48,6 @@ export const QuestGiverList = ({
   setFormIsOpen,
   setSelectedQuestGiver, 
 }) => {
-  const columns = useMemo(() => ([
-    {
-      header: 'Display Name',
-      key: 'name'
-    },
-    {
-      header: 'VS ID',
-      key: 'id',
-    },
-    {
-      header: 'Quests',
-      key: 'quests',
-    },
-    {
-      header: 'Damage',
-      key: 'damage',
-    },
-    {
-      header: 'Health',
-      key: 'health',
-    },
-    {
-      header: 'Revive Hours',
-      key: 'reviveHours',
-    },
-    {
-      header: 'Character Names',
-      key: 'randomizedName',
-    },
-    {
-      header: 'Entity Shape',
-      key: 'shape',
-    },
-    {
-      header: '',
-      key: 'edit'
-    }
-  ]), [])
-
   return data?.length > 0 ? (
     <table className="quest-givers-list">
       <thead>

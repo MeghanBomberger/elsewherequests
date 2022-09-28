@@ -1,0 +1,58 @@
+@import '../../helpers/styles/tables.scss';
+
+.quests-list {
+  width: calc(100% - 4rem);
+  @include tableStyles;
+}
+
+.description {
+  max-width: 50rem;
+  font-style: italic;
+}
+
+.objectives {
+  article {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: solid 1px whitesmoke;
+
+    &:last-of-type {
+      margin-bottom: none;
+      border-bottom: none;
+    }
+
+    .objective-type {
+      font-size: 1.4rem;
+      font-weight: 900;
+
+      b {
+        margin: -0.5rem 0.5rem 0.5rem 0.5rem;
+        padding: 0.25rem 0.75rem;
+        background-color: whitesmoke;
+        color: black;
+        border-radius: 50rem;
+        font-weight: 900;
+      }
+    }
+
+    ul > li {
+      margin-left: -2rem;
+      font-size: 1.2rem !important;
+    }
+
+    .objective-desc-title {
+      margin: 2rem 0 3rem 0;
+      u {
+        font-size: 1.3rem;
+      }
+    }
+
+    .objective-desc {
+      margin-top: 1rem;
+      i {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+

@@ -7,6 +7,7 @@ import path from 'path'
 import serveStatic from 'serve-static'
 
 import questGiverRouter from './routes/quest-giver-route'
+import questsRouter from './routes/quests-route'
 import writeModRouter from './routes/write-mod-route'
 
 const app = express()
@@ -41,6 +42,7 @@ app.get("/api/hello", (req, res) => {
 
 // API routes
 app.use("/api/questgivers", questGiverRouter)
+app.use("/api/quests", questsRouter)
 
 // API route to generate mod files
 app.use("/api/writemod", writeModRouter)
