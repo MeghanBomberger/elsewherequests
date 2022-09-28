@@ -1,1 +1,49 @@
-[]
+[
+  {
+    "id": "acorninnwelcome",
+    "title": "Welcome to Elsewhere",
+    "description": "Welcome!<br><br>Did you just come through the rift?<br><br> Feeling okay?... Good.<br><br>Well, why don't I help you get settled. Did you manage to bring anything through with you?<br><br><i>Type forward slash starterkit with your inventory bar empty to see what you were able to bring with you through the rift.</i>",
+    "gatherObjectives": [
+      {
+        "ids": ["storagevesselcolored-burnt-blurple"],
+        "quantity": 1,
+        "description": "Give inn keeper the blue vessel"
+      }
+    ],
+    "killObjectives": [],
+    "rewardItems": [
+      {
+        "id": "game:bed-hay-head-north",
+        "quantity": 1
+      },
+      {
+        "id": "game:linensack",
+        "quantity": 4
+      },
+      {
+        "id": "game:knife-copper",
+        "quantity": 1
+      },
+      {
+        "id": "game:axe-copper",
+        "quantity": 1
+      },
+      {
+        "id": "bread-spelt-perfect",
+        "quantity": 32
+      },
+      {
+        "id": "glazedbowl-burnt-clear-blue-plain",
+        "quantity": 1
+      },
+      {
+        "id": "glazedoillamp-clear-blue-up",
+        "quantity": 1
+      }
+    ],
+    "perPlayer": true,
+    "cooldown": 999999,
+    "preReqQuestIds": [],
+    "questGiverId": "acorninnkeeper"
+  }
+]

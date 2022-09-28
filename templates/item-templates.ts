@@ -5,7 +5,7 @@ import {
 export const gatherItemCodeTemplate = ({
   id = "UNKNOWN",
   attributes = []
-}: Item): string =>`${id}${attributes?.map(attribute => `-${attribute}`)}`
+}: Item): string =>`${id}${attributes?.map(attribute => `-${attribute}`).join("")}`
 
 export const rewardItemCodeTemplate = ({
   id = "UNKNOWN",

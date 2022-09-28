@@ -1,7 +1,7 @@
 // Some of the cases are mismatched. This is due to inconsistancies between the multiple APIs involved between the game itself and the various mods. Sorry, it hurts my heart too.
 
 export interface Objective {
-  itemIds: string[];
+  ids: string[];
   quantity: number;
   description: string;
 }
