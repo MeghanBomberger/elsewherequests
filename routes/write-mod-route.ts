@@ -2,9 +2,6 @@ require('dotenv').config()
 
 import express from 'express'
 import fs from 'fs'
-import { EntityShape, ModsData } from '../templates/helpers/types'
-import { modInfoDefaultTemplate } from '../templates/mod-info-template'
-import { questGiverEntityFileContents, traderShape } from '../templates/questgiver-template'
 
 import { 
   buildPath,
@@ -12,6 +9,10 @@ import {
   formatMods,
 } from './helpers/utils'
 import { QuestGiverData } from './types/questGiverDataTypes'
+import { generateCreatureFileContents } from '../templates/creature-file-templates'
+import { EntityShape, ModsData } from '../templates/helpers/types'
+import { modInfoDefaultTemplate } from '../templates/mod-info-template'
+import { questGiverEntityFileContents, traderShape } from '../templates/questgiver-template'
 
 const writeModRouter = express.Router()
 
@@ -88,6 +89,37 @@ const writeEntityFiles = () => {
   })
 }
 
+const writeCreatureItemFile = async () => {
+  console.info("...fetching quest giver data...")
+  fs.readFile(`${dataPath}/givers.json`, "utf8", async (err, data) => {
+    if (err) {
+      console.error("ERROR READING QUEST GIVER DATA FILE: ", err)
+      return
+    }
+    const creatureFilePath = `${buildPath}/itemtypes/creatures.json`
+    const parsedData = JSON.parse(data)
+    const { questGivers } = parsedData
+    const questGiverIds = questGivers.map(giver => giver.id)
+    const contents = await generateCreatureFileContents(questGiverIds)
+
+    // @ts-ignore
+    fs.appendFile(creatureFilePath, '', (err2, data2) => {
+      if (err2) {
+        console.error("ERROR CREATING CREATURE.JSON FILE: ", err2)
+        return
+      }
+
+      // @ts-ignore
+      fs.writeFile(creatureFilePath, contents, (err3, data3) => {
+        if (err3) {
+          console.error("ERROR WRITING CREATURE.JSON FILE: ", err3)
+          return
+        }
+      })
+    })
+  })
+}
+
 writeModRouter.get("/", async (req, res, next) => {
   const status = {
     modInfoFile: '',
@@ -110,7 +142,10 @@ writeModRouter.get("/", async (req, res, next) => {
   status.questGiverEntities = "entity files editted"
   console.info("WRITING QUEST GIVER ENTITY FILES COMPLETE!")
 
-  // TODO - write creature item file
+  console.info("WRITING CREATURES.JSON FILE...")
+  await writeCreatureItemFile()
+  status.creatureItems = "creatures.json file editted"
+  console.info("WRITING CREATURES.JSON FILE COMPLETE!")
 
   // TODO - write quest config file
   
