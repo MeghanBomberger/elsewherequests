@@ -40,7 +40,7 @@ export const QuestGiver = () => {
 
   return (
     <>
-      <Header title="Quest Givers"/>
+      <Header title="Quest Givers" titleOnly={false}/>
 
       <main className="quest-givers">
         {!!errorMessage && <p className="error-message">{errorMessage}</p>}

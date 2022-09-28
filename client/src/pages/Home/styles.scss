@@ -23,4 +23,43 @@
       text-align: center;
     }
   }
+
+  .button-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    min-width: 90vw;
+
+    button {
+      padding: 0.5rem 2rem;
+      color: black;
+      font-size: 1.6rem;
+      font-weight: 800;
+      border: black solid 2px;
+      outline: whitesmoke solid 3px;
+      border-radius: 5rem;
+      cursor: pointer;
+    }
+  }
+
+  .gen-status {
+    display: block;
+    margin-bottom: 2rem;
+    padding: 1rem 2rem;
+    border: whitesmoke solid 1px;
+    border-radius: 1rem;
+
+    p {
+      line-height: 3rem;
+      font-size: 1.2rem;
+      font-weight: 600;
+
+      i {
+        margin-left: 1rem;
+        font-size: inherit;
+        font-weight: 300;
+      }
+    }
+  }
 }

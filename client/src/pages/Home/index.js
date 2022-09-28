@@ -1,63 +1,61 @@
+import axios from 'axios'
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 import './styles.scss'
-import QuestGiverIcon from '../../assets/peasant.png'
-import QuestIcon from '../../assets/quest.png'
-import MobsIcon from '../../assets/cthulhu.png'
-import ItemsIcon from '../../assets/diamonds.png'
-import ModsIcon from '../../assets/tools.png'
-import EntityShapes from '../../assets/shapes.png'
-
-const navIcons = [
-  {
-    icon: QuestGiverIcon,
-    path: '/questgivers',
-    title: 'Quest Givers',
-  },
-  {
-    icon: EntityShapes,
-    path: '/entityshapes',
-    title: 'Entity Shapes',
-  },
-  {
-    icon: QuestIcon,
-    path: '/quests',
-    title: 'Quests',
-  },
-  {
-    icon: MobsIcon,
-    path: '/mobs',
-    title: 'Mobs',
-  },
-  {
-    icon: ItemsIcon,
-    path: '/items',
-    title: 'Items',
-  },
-  {
-    icon: ModsIcon,
-    path: '/mods',
-    title: 'Mods',
-  }
-]
+import { navIcons } from '../../helpers/navIcons'
+import { Header } from '../../components/Header'
 
 export const Home = () => {
+  const [status, setStatus] = useState(null)
+  
+  const generateModFiles = async () => {
+    const res = await axios.get("http://localhost:5000/api/writemod")
+    console.log(res)
+    setStatus(res.data)
+  }
+
   return (
-    <main className="main home">
-      {navIcons?.map(navIcon => (
-        <Link 
-          className="home-link"
-          to={navIcon.path}
-        >
-          <img
-            alt={navIcon.title}
-            title={navIcon.title}
-            src={navIcon.icon}
-            className="home-icons"
-          />
-          <p>{navIcon.title}</p>
-        </Link>
-      ))}
-    </main>
+    <>
+      <Header 
+        title="Elsewhere Quest Maker"
+        titleOnly={true}
+      />
+
+      <main className="main home">
+        {navIcons?.map(navIcon => (
+          <Link 
+            className="home-link"
+            to={navIcon.path}
+          >
+            <img
+              alt={navIcon.title}
+              title={navIcon.title}
+              src={navIcon.icon}
+              className="home-icons"
+            />
+            <p>{navIcon.title}</p>
+          </Link>
+        ))}
+
+        <div className="button-bar">
+          <button
+            onClick={generateModFiles}
+          >
+            Generate Mod Files
+          </button>
+        </div>
+
+        {!!status && (
+          <div className="gen-status">
+            <p>Mod Info File Status: <i>{status.modInfoFile || "UNKNOWN"}</i></p>
+            <p>Quest Config File Status: <i>{status.questConfig || "UNKNOWN"}</i></p>
+            <p>Quest Giver Entity Files Status: <i>{status.questGiverEntities || "UNKNOWN"}</i></p>
+            <p>Creatures Item File Status: <i>{status.creatureItems || "UNKNOWN"}</i></p>
+            <p>En Lang File Status: <i>{status.enLang || "UNKNOWN"}</i></p>
+          </div>
+        )}
+      </main>
+    </>
   )
 }

@@ -9,7 +9,7 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 1rem 2rem;
-
+  
   .go-back {
     img {
       height: 2rem;
@@ -19,5 +19,30 @@ header {
 
   h1 {
     font-size: 2rem;
+  }
+
+  .title-only {
+    width: 100%;
+    text-align: center;
+    font-size: 3rem;
+    text-transform: uppercase;
+  }
+
+  .nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 3rem;
+
+    .header-link {
+      margin: 0 0.75rem;
+      width: 2rem;
+      height: 2rem;
+
+      .header-icon {
+        height: 2rem;
+        filter: invert(100%);
+      }
+    }
   }
 }
