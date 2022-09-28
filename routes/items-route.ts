@@ -4,12 +4,12 @@ import express from 'express'
 import fs from 'fs'
 import { dataPath } from './helpers/utils'
 
-const questsDataFilePath = `${dataPath}/quests.json`
+const itemsDataFilePath = `${dataPath}/items.json`
 
-const questsRouter = express.Router()
+const itemsRouter = express.Router()
 
-questsRouter.get("/", async (req, res, next) => {
-  fs.readFile(questsDataFilePath, 'utf8', (err, data) => {
+itemsRouter.get("/", async (req, res, next) => {
+  fs.readFile(itemsDataFilePath, 'utf8', (err, data) => {
     if (err) {
       console.error("ERROR FETCHING QUESTS DATA: ", err)
       res.send("failure")
@@ -18,4 +18,4 @@ questsRouter.get("/", async (req, res, next) => {
   })
 })
 
-export default questsRouter
+export default itemsRouter

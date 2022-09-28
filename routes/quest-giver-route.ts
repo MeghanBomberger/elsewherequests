@@ -16,7 +16,7 @@ questGiverRouter.get("/", async (req, res, next) => {
       console.error("ERROR FETCHING QUESTGIVER DATA: ", err)
       res.send("failure")
     }
-    res.send(data)
+    res.send(JSON.parse(data))
   })
 })
 

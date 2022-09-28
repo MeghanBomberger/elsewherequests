@@ -30,11 +30,13 @@ export const Quests = () => {
   }
 
   const fetchItemsData = async () => {
+    // TODO route
     const res = await axios.get("http://localhost:5000/api/items")
     return res?.data || []
   }
 
   const fetchMobsData = async () => {
+    // TODO route
     const res = await axios.get("http://localhost:5000/api/mobs")
     return res?.data || []
   }
@@ -140,7 +142,6 @@ export const Quests = () => {
           setFormIsOpen={setFormIsOpen}
           setSelectedQuest={setSelectedQuest}
         />
-        {/* TODO add edit button to quest list */}
       </main>
     </>
   )

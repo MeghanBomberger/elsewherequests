@@ -6,6 +6,8 @@ import express from 'express'
 import path from 'path'
 import serveStatic from 'serve-static'
 
+import itemsRouter from './routes/items-route'
+import mobsRouter from './routes/mobs-route'
 import questGiverRouter from './routes/quest-giver-route'
 import questsRouter from './routes/quests-route'
 import writeModRouter from './routes/write-mod-route'
@@ -43,6 +45,8 @@ app.get("/api/hello", (req, res) => {
 // API routes
 app.use("/api/questgivers", questGiverRouter)
 app.use("/api/quests", questsRouter)
+app.use("/api/items", itemsRouter)
+app.use("/api/mobs", mobsRouter)
 
 // API route to generate mod files
 app.use("/api/writemod", writeModRouter)
