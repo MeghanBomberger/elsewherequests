@@ -72,6 +72,16 @@
         }
       }
     }
-  }
 
+  }
+  
+  .solo-quest {
+    display: flex;
+    align-items: center;
+    
+    input {
+      height: 2rem;
+      width: 2rem;
+    }
+  }
 }

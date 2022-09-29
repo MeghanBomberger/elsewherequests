@@ -26,7 +26,7 @@ export const QuestForm = ({
   const [filteredRewardItem, setFilteredRewardItem] = useState([])
   const [selectedRewardItem, setSelectedRewardItem] = useState('')
   const [rewardItems, setRewardItems] = useState([])
-  const [perPlayer, setPerPlayer] = useState(false)
+  const [perPlayer, setPerPlayer] = useState(true)
   const [cooldown, setCooldown] = useState(999999)
 
   const disableSave = useCallback(() => {
@@ -307,9 +307,13 @@ export const QuestForm = ({
         {/* TODO list with delete buttons */}
       </section>
 
-      <label for="perPlayer">
+      <label for="perPlayer" className="solo-quest">
         Solo Quest:
-        {/* checkbox input */}
+        <input
+          type="checkbox"
+          checked={perPlayer}
+          onChange={() => setPerPlayer(!perPlayer)}
+        />
       </label>
 
       <label for="cooldown">
