@@ -8,6 +8,9 @@ export const QuestGiverForm = ({
   entityShapes,
   questGiverIds,
   selectedQuestGiver,
+  setErrorMessage,
+  setFormIsOpen,
+  setQuestGivers,
 }) => {
   const [name, setName] = useState("")
   const [id, setId] = useState("")
@@ -23,7 +26,7 @@ export const QuestGiverForm = ({
     setDamage(selectedQuestGiver.damage)
     setHealth(selectedQuestGiver.health)
     setReviveHours(selectedQuestGiver.reviveHours)
-    setRandomizedNames(selectedQuestGiver.randomizedName)
+    setRandomizedNames(selectedQuestGiver.randomizedNames)
     setShapeId(selectedQuestGiver.shape)
   }, [selectedQuestGiver])
 
@@ -34,6 +37,26 @@ export const QuestGiverForm = ({
       id
     ]
   )
+
+  const disableSave = useCallback(() => {
+    return (
+      !!id &&
+      !!name &&
+      !!damage &&
+      !!health &&
+      !!reviveHours &&
+      !!randomizedNames?.length &&
+      !!shapeId
+    )
+  }, [
+    id,
+    name,
+    damage,
+    health,
+    reviveHours,
+    randomizedNames,
+    shapeId
+  ])
 
   const handleSave = useCallback(async () => {
     const reqBody = {
@@ -47,6 +70,10 @@ export const QuestGiverForm = ({
       shapeId,
     }
     const res = await axios.post('http://localhost:5000/api/questgivers', reqBody)
+
+    setQuestGivers(res)
+    setFormIsOpen(false)
+
     return res
   }, [
     id,
@@ -155,7 +182,7 @@ export const QuestGiverForm = ({
             onChange={e => setShapeId(e.target.value)}
             value={shapeId}
           >
-            {entityShapes.map(shape => (
+            {entityShapes?.map(shape => (
               <option
                 key={shape.id}
                 value={shape.id}
@@ -169,7 +196,7 @@ export const QuestGiverForm = ({
 
       <h3>Character Names</h3>
       <ul className='name-list'>
-        {randomizedNames.map(name => <li>{name}</li>)}
+        {randomizedNames?.map(name => <li key={name}>{name}</li>)}
       </ul>
       <button 
         className="reroll-names"
@@ -182,10 +209,11 @@ export const QuestGiverForm = ({
       </button>
   
       <button 
+        disabled={!disableSave()}
         className="save-button"
         onClick={ e => {
           e.preventDefault()
-          handleSave()
+          !disableSave() ? setErrorMessage("Form is incomplete") : handleSave()
         }}
       >
         {!!selectedQuestGiver?.id ? 'Edit' : 'Create'} Quest Giver

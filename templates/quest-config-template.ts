@@ -39,22 +39,22 @@ export const generateQuestConfigFileContents = async (quests: QuestData[]) => {
       perPlayer: perPlayer,
     }
 
-    const gatherObjectivesList = gatherObjectives.map(obj => ({
+    const gatherObjectivesList = gatherObjectives?.map(obj => ({
       validCodes: [...obj.ids],
       demand: obj.quantity
-    }))
+    })) || []
     questObj.gatherObjectives = gatherObjectivesList
 
-    const killObjectivesList = killObjectives.map(obj => ({
+    const killObjectivesList = killObjectives?.map(obj => ({
       validCodes: [...obj.ids],
       demand: obj.quantity
-    }))
+    })) || []
     questObj.killObjectives = killObjectivesList
 
-    const itemRewardsList = rewardItems.map(item => ({
+    const itemRewardsList = rewardItems?.map(item => ({
       itemCode: item.id,
       amount: item.quantity
-    }))
+    })) || []
     questObj.itemRewards = itemRewardsList
 
     contents.push(questObj)

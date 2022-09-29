@@ -4,6 +4,7 @@ import express from 'express'
 import fs from 'fs'
 
 import { 
+  basePath,
   buildPath,
   dataPath,
   formatMods,
@@ -18,8 +19,8 @@ import { generateQuestConfigFileContents } from '../templates/quest-config-templ
 
 const writeModRouter = express.Router()
 
-const writeModInfoFile = () => {
-  fs.readFile(`${dataPath}/modinfo.json`, 'utf8', (err, data) => {
+const writeModInfoFile = async () => {
+  await fs.readFile(`${dataPath}/modinfo.json`, 'utf8', (err, data) => {
     if (err) {
       console.error("ERROR FETCHING MODS DATA: ", err)
       return
@@ -51,8 +52,8 @@ const writeModInfoFile = () => {
   })
 }
 
-const writeEntityFiles = () => {
-  fs.readFile(`${dataPath}/givers.json`, "utf8", (err, data) => {
+const writeEntityFiles = async () => {
+  await fs.readFile(`${dataPath}/givers.json`, "utf8", (err, data) => {
     if (err) {
       console.error("ERROR READING QUEST GIVER DATA FILE: ", err)
       return
@@ -90,7 +91,7 @@ const writeEntityFiles = () => {
 }
 
 const writeCreatureItemFile = async () => {
-  fs.readFile(`${dataPath}/givers.json`, "utf8", async (err, data) => {
+  await fs.readFile(`${dataPath}/givers.json`, "utf8", async (err, data) => {
     if (err) {
       console.error("ERROR READING QUEST GIVER DATA FILE: ", err)
       return
@@ -98,7 +99,7 @@ const writeCreatureItemFile = async () => {
     const creatureFilePath = `${buildPath}/itemtypes/creatures.json`
     const parsedData: QuestGiverData = JSON.parse(data)
     const { questGivers } = parsedData
-    const questGiverIds = questGivers.map(giver => giver.id)
+    const questGiverIds = questGivers?.map(giver => giver.id) || []
     const contents = await generateCreatureFileContents(questGiverIds)
 
     // @ts-ignore
@@ -120,7 +121,7 @@ const writeCreatureItemFile = async () => {
 }
 
 const writeQuestsConfigFile = async () => {
-  fs.readFile(`${dataPath}/quests.json`, "utf8", async (err, data) => {
+  await fs.readFile(`${dataPath}/quests.json`, "utf8", async (err, data) => {
     if (err) {
       console.error("ERROR READING QUESTS DATA FILE: ", err)
       return
@@ -153,14 +154,14 @@ interface EnLangConfig {
 }
 
 const genObjStr = (gatherObj: Objective[], killObj: Objective[]) => {
-  const gatherStrs = gatherObj.map(obj => `${obj.description}: 0/${obj.quantity}`)
-  const killStrs = killObj.map(obj => `${obj.description}: 0/${obj.quantity}`)
+  const gatherStrs = gatherObj?.map(obj => `${obj.description}: 0/${obj.quantity}`) || []
+  const killStrs = killObj?.map(obj => `${obj.description}: 0/${obj.quantity}`) || []
   const objStr = [...gatherStrs, ...killStrs].join("<br>")
   return objStr
 }
 
-const writeEnLangFile = () => {
-  fs.readFile(`${dataPath}/givers.json`, 'utf8', (giverDataErr, giverData) => {
+const writeEnLangFile = async () => {
+  await fs.readFile(`${dataPath}/givers.json`, 'utf8', (giverDataErr, giverData) => {
     if (giverDataErr) {
       console.error("ERROR READING GIVER.JSON DATA FILE: ", giverDataErr)
       return
@@ -222,7 +223,7 @@ const writeEnLangFile = () => {
   })
 }
 
-writeModRouter.get("/", async (req, res, next) => {
+writeModRouter.get("/", (req, res, next) => {
   const status = {
     modInfoFile: '',
     questConfig: '',
@@ -233,38 +234,78 @@ writeModRouter.get("/", async (req, res, next) => {
 
   console.info("")
   console.info("-------------------------------------------")
-
+  
   console.info("WRITING MODINFO.JSON FILE...")
-  await writeModInfoFile()
-  status.modInfoFile = "modinfo.json editted"
-  console.info("WRITING MODINFO.JSON FILE COMPLETE!")
+  writeModInfoFile()
+    .then(() => {
+      status.modInfoFile = "modinfo.json editted"
+      console.info("WRITING MODINFO.JSON FILE COMPLETE!")
 
-  console.info("WRITING QUEST GIVER ENTITY FILES...")
-  await writeEntityFiles()
-  status.questGiverEntities = "entity files editted"
-  console.info("WRITING QUEST GIVER ENTITY FILES COMPLETE!")
+      console.info("WRITING QUEST GIVER ENTITY FILES...")
+      writeEntityFiles()
+        .then(() => {
+          status.questGiverEntities = "entity files editted"
+          console.info("WRITING QUEST GIVER ENTITY FILES COMPLETE!")
 
-  console.info("WRITING CREATURES.JSON FILE...")
-  await writeCreatureItemFile()
-  status.creatureItems = "creatures.json file editted"
-  console.info("WRITING CREATURES.JSON FILE COMPLETE!")
+          console.info("WRITING CREATURES.JSON FILE...")
+          writeCreatureItemFile()
+            .then(() => {
+              status.creatureItems = "creatures.json file editted"
+              console.info("WRITING CREATURES.JSON FILE COMPLETE!")
 
-  console.info("WRITING QUESTS.JSON FILE...")
-  await writeQuestsConfigFile()
-  status.questConfig = "quests.json file editted"
-  console.info("WRITING QUESTS.JSON FILE COMPLETE!")
-  
-  console.info("WRITING EN LANG FILE...")
-  await writeEnLangFile()
-  status.enLang = "en.json file editted"
-  console.info("WRITING EN LANG FILE COMPLETE!")
+              console.info("WRITING QUESTS.JSON FILE...")
+              writeQuestsConfigFile()
+                .then(() => {
+                  status.questConfig = "quests.json file editted"
+                  console.info("WRITING QUESTS.JSON FILE COMPLETE!")
+                  
+                  console.info("WRITING EN LANG FILE...")
+                  writeEnLangFile()
+                    .then(() => {
+                      status.enLang = "en.json file editted"
+                      console.info("WRITING EN LANG FILE COMPLETE!")
+                      
+                      console.info("MOD GENERATION COMPLETE. READY TO ZIP!")
+                      
+                      console.info("-------------------------------------------")
+                      console.info("")
 
-  console.info("MOD GENERATION COMPLETE. READY TO ZIP!")
-  
-  console.info("-------------------------------------------")
-  console.info("")
-  
-  res.send(status)
+                      res.send(status)
+                    })
+                    .catch(err => {
+                      if (err) {
+                        console.error("ERROR WRITING MOD FILES: ", err)
+                        res.send("failure")
+                      }
+                    })
+                })
+                .catch(err => {
+                  if (err) {
+                    console.error("ERROR WRITING MOD FILES: ", err)
+                    res.send("failure")
+                  }
+                })
+            })
+            .catch(err => {
+              if (err) {
+                console.error("ERROR WRITING MOD FILES: ", err)
+                res.send("failure")
+              }
+            })
+        })
+        .catch(err => {
+          if (err) {
+            console.error("ERROR WRITING MOD FILES: ", err)
+            res.send("failure")
+          }
+        })
+    })
+    .catch(err => {
+      if (err) {
+        console.error("ERROR WRITING MOD FILES: ", err)
+        res.send("failure")
+      }
+    })
 })
 
 export default writeModRouter

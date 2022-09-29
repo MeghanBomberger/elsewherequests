@@ -105,7 +105,7 @@ export const QuestForm = ({
             onChange={e => setSelectedQuestGiver(e.target.value)}
             value={selectedQuestGiver}
           >
-            {questGivers.map(giver => (
+            {questGivers?.map(giver => (
               <option
                 key={giver.id}
                 value={giver.id}
@@ -125,7 +125,7 @@ export const QuestForm = ({
             onChange={e => setSelectedPreReqQuest(e.target.value)}
             value={selectedPreReqQuest}
           >
-            {quests.map(quest => (
+            {quests?.map(quest => (
               <option
                 key={quest.id}
                 value={quest.id}

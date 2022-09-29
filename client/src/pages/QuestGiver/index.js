@@ -89,6 +89,9 @@ export const QuestGiver = () => {
             entityShapes={entityShapes}
             questGiverIds={questGivers?.map(giver => giver.id) || []}
             refetchQuestGiverData={refetchQuestGiverData}
+            setErrorMessage={setErrorMessage}
+            setFormIsOpen={setFormIsOpen}
+            setQuestGivers={setQuestGivers}
           />
         )}
         

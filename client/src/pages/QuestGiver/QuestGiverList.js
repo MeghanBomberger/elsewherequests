@@ -96,9 +96,9 @@ export const QuestGiverList = ({
             </td>
 
             <td>
-              {row?.randomizedName?.length > 0 && (
+              {row?.randomizedNames?.length > 0 && (
                 <ul>
-                  {row.randomizedName.map(name => (
+                  {row.randomizedNames?.map(name => (
                     <li key={`npcnames-${name}`}>
                       {name}
                     </li>

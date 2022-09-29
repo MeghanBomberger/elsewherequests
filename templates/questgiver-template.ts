@@ -340,7 +340,7 @@ export const questGiverEntityFileContents = async ({
   })
 
   // @ts-ignore
-  const additionalAnimations = shape.additionalAnimations.map(animationId => animations[animationId])
+  const additionalAnimations = shape.additionalAnimations?.map(animationId => animations[animationId]) || []
   // @ts-ignore
   const nameTagBehaviorIndex = data.server.behaviors.indexOf((behavior) => behavior.code === "nametag")
   // @ts-ignore
