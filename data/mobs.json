@@ -2,6 +2,7 @@
   {
     "id": "",
     "name": "drifter",
-    "attribute": ["surface"]
+    "attribute": ["surface"],
+    "mod": "game"
   }
 ]

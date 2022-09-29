@@ -80,8 +80,8 @@ export const QuestForm = ({
   const addGatherItem = async (e) => {
     e.preventDefault()
     const itemId = e.target.value
-    await setSelectedGatherItem(itemId)
     const selectedItem = items?.find(item => item.id === itemId)
+    await setSelectedGatherItem(itemId)
     await setGatherObjectives([...gatherObjectives, selectedItem])
     const filteredItems = filteredGatherItems?.filter(item => item.id !== itemId)
     await setFilteredGatherItems(filteredItems)
@@ -96,12 +96,23 @@ export const QuestForm = ({
     await setFilteredGatherItems(filteredItems)
   }
 
-  const addKillMob = () => {
-    //TODO
+  const addKillMob = async (e) => {
+    e.preventDefault()
+    const mobId = e.target.value
+    const selectedMob = mobs?.find(mob => mob.id === mobId)
+    await setSelectedKillMob(mobId)
+    await setKillObjectives([...killObjectives, selectedMob])
+    const filteredMobs = filteredKillMobs?.filter(mob => mob.id !== mobId)
+    await setFilteredKillMobs(filteredMobs)
+    await setSelectedKillMob('')
   }
 
-  const removeKillMob = () => {
-    //TODO
+  const removeKillMob = async (e, selectedMob) => {
+    e.preventDefault()
+    const mobId = selectedMob.id
+    await setKillObjectives(killObjectives?.filter(mob => mob.id !== mobId))
+    const filteredMobs = [...filteredKillMobs, selectedMob]
+    await setFilteredKillMobs(filteredMobs)
   }
 
   const handleSave = () => {
@@ -122,28 +133,6 @@ export const QuestForm = ({
   useEffect(() => {
     setFilteredKillMobs(mobs)
   }, [mobs])
-
-  // useEffect(() => {
-  //   console.log({
-  //     items,
-  //     mobs,
-  //     filteredGatherItems,
-  //     filteredKillMobs,
-  //     filteredRewardItem,
-  //     selectedGatherItem,
-  //     gatherObjectives,
-  //     selectedQuestGiver
-  //   })
-  // }, [
-  //   items,
-  //   mobs,
-  //   filteredGatherItems,
-  //   filteredKillMobs,
-  //   filteredRewardItem,
-  //   selectedGatherItem,
-  //   gatherObjectives, 
-  //   selectedQuestGiver
-  // ])
 
   return (
     <form className="quest-form">
@@ -244,10 +233,7 @@ export const QuestForm = ({
             {!!filteredGatherItems?.length && (
               <select
                 name="gatherItems"
-                onChange={e => {
-                  console.log(e.target.value)
-                  addGatherItem(e)
-                }}
+                onChange={e => addGatherItem(e)}
                 value={selectedGatherItem}
               >
                 <option
@@ -297,9 +283,60 @@ export const QuestForm = ({
         }
       </section>
 
-      <section className="kill-mobs">
-        {/* TODO dropdown */}
-        {/* TODO list with delete buttons */}
+      <section className="objectives-section kill-mobs">
+          <label for="killMobs">
+            Kill Objectives: 
+            {!!filteredKillMobs?.length && (
+              <select
+                name="killMobs"
+                onChange={e => addKillMob(e)}
+                value={selectedKillMob}
+              >
+                <option
+                  key={"no-killmob"}
+                  value={""}
+                >
+                  NONE
+                </option>
+                {filteredKillMobs?.map(mob => (
+                  <option
+                    key={mob.id}
+                    value={mob.id}
+                  >
+                    {mob.name}{!!mob?.attribute?.length && "-"}{mob?.attribute?.join("-")}{mob.mod !== "game" && ` (${mob.mod})`}
+                  </option>
+                ))}
+              </select>
+            )}
+          </label>
+        
+        {!!killObjectives?.length
+          ? (
+            <table className="objective-table">
+              <tbody>
+                {killObjectives?.map(mob => (
+                  <tr key={`kill-mob-${mob.id}`}>
+                    <td>{`${mob.name}${!!mob?.attribute?.length && "-"}${mob?.attribute?.join("-")}`}</td>
+                    <td>
+                      <button
+                        onClick={(e) => removeKillMob(e, mob)}
+                      >
+                        <img
+                          alt="remove kill objective"
+                          title="remove kill objective"
+                          src={closeIcon}
+                        />
+                      </button>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          )
+          : (
+            <p className="no-objective">No kill objectives selected</p>
+          )
+        }
       </section>
 
       <section className="reward-items">
