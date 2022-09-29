@@ -115,6 +115,25 @@ export const QuestForm = ({
     await setFilteredKillMobs(filteredMobs)
   }
 
+  const addRewardItem = async (e) => {
+    e.preventDefault()
+    const itemId = e.target.value
+    const selectedItem = items?.find(item => item.id === itemId)
+    await setSelectedRewardItem(itemId)
+    await setRewardItems([...rewardItems, selectedItem])
+    const filteredItems = filteredRewardItem?.filter(item => item.id !== itemId)
+    await setFilteredRewardItem(filteredItems)
+    await setSelectedRewardItem('')
+  }
+
+  const removeRewardItem = async (e, selectedItem) => {
+    e.preventDefault()
+    const itemId = selectedItem.id
+    await setRewardItems(rewardItems?.filter(item => item.id !== itemId))
+    const filteredItems = [...filteredRewardItem, selectedItem]
+    await setFilteredRewardItem(filteredItems)
+  }
+
   const handleSave = () => {
     // TODO
   }
@@ -339,9 +358,60 @@ export const QuestForm = ({
         }
       </section>
 
-      <section className="reward-items">
-        {/* TODO dropdown */}
-        {/* TODO list with delete buttons */}
+      <section className="objectives-section reward-items">
+          <label for="rewardItems">
+            Reward Items: 
+            {!!filteredRewardItem?.length && (
+              <select
+                name="rewardItems"
+                onChange={e => addRewardItem(e)}
+                value={selectedRewardItem}
+              >
+                <option
+                  key={"no-rewarditem"}
+                  value={""}
+                >
+                  NONE
+                </option>
+                {filteredRewardItem?.map(item => (
+                  <option
+                    key={item.id}
+                    value={item.id}
+                  >
+                    {item.name}{item.mod !== "game" && ` (${item.mod})`}
+                  </option>
+                ))}
+              </select>
+            )}
+          </label>
+        
+        {!!rewardItems?.length
+          ? (
+            <table className="objective-table">
+              <tbody>
+                {rewardItems?.map(item => (
+                  <tr key={`reward-item-${item.id}`}>
+                    <td>{item.name}{item.mod !== "game" && ` (${item.mod})`}</td>
+                    <td>
+                      <button
+                        onClick={(e) => removeRewardItem(e, item)}
+                      >
+                        <img
+                          alt="remove reward item"
+                          title="remove reward item"
+                          src={closeIcon}
+                        />
+                      </button>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          )
+          : (
+            <p className="no-objective">No reward items selected</p>
+          )
+        }
       </section>
 
       <label for="perPlayer" className="solo-quest">
@@ -371,7 +441,7 @@ export const QuestForm = ({
           !disableSave() ? setErrorMessage("Form is incomplete") : handleSave()
         }}
       >
-        {!!selectedQuest?.id ? 'Edit' : 'Create'} Quest Giver
+        {!!selectedQuest?.id ? 'Edit' : 'Create'} Quest
       </button>
     </form>
   )
