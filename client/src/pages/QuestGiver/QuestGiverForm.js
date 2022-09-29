@@ -83,7 +83,9 @@ export const QuestGiverForm = ({
     reviveHours,
     randomizedNames,
     shapeId,
-    selectedQuestGiver?.id
+    selectedQuestGiver?.id,
+    setFormIsOpen,
+    setQuestGivers
   ])
 
   const rerollNames = () => setRandomizedNames(selectRandomNames())

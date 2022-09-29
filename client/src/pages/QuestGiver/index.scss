@@ -1,4 +1,5 @@
 @import '../../helpers/styles/buttons.scss';
+@import '../../helpers/styles/form.scss';
 
 .quest-givers {
   display: flex;
@@ -10,35 +11,6 @@
   overflow: auto;
 
   .giver-form-action {
-    margin-bottom: 2rem;
-
-    .open-form {
-      padding: 0.5rem 3rem;
-      font-size: 1.5rem;
-      font-weight: 600;
-      color: black;
-    }
-
-    div {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding-bottom: 0.5rem;
-      width: calc(100vw - 4rem);
-      max-width: 40rem;
-      border-bottom: solid whitesmoke 0.1rem;
-      
-      h2 {
-        font-size: 2rem;
-      }
-
-      .close-form-button {
-        @include naked-button;
-        img {
-          @include icon;
-          height: 1.5rem;
-        }
-      }
-    }
+    @include formControls;
   }
 }

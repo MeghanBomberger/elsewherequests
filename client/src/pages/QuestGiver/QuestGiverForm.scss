@@ -1,54 +1,7 @@
-@import '../../helpers/styles/buttons.scss';
+@import '../../helpers/styles/form.scss';
 
 .quest-giver-form {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin-bottom: 3rem;
-  padding: 0.5rem 1rem;
-  max-width: 40rem;
-  width: calc(100vw - 4rem);
-
-  label {
-    margin-bottom: 1rem;
-    font-size: 1.4rem;
-
-    input, select {
-      margin-left: 2rem;
-      font-size: 1.4rem;
-      color: black;
-
-      option {
-        font-size: 1.2rem;
-        color: black;
-      }
-    }
-
-    span {
-      margin-left: 2rem;
-      font-size: 1.4rem;
-    }
-  }
-
-  .id-error {
-    margin-bottom: 2rem;
-    color: lightcoral;
-    font-weight: 600;
-    font-size: 1.2rem;
-  }
-
-  h3 {
-    margin-top: 1rem;
-    width: 100%;
-    font-size: 2rem;
-    text-align: center;
-    background-color: whitesmoke;
-    color: black;
-    border: solid whitesmoke 0.1rem;
-    border-bottom: none;
-    border-top-left-radius: 1rem;
-    border-top-right-radius: 1rem;
-  }
+  @include formStyles;
 
   .name-list {
     display: flex;
@@ -77,16 +30,5 @@
     cursor: pointer;
     border-bottom-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
-  }
-
-  .save-button {
-    margin: 2rem auto;
-    padding: 0.5rem 3rem;
-    @include naked-button;
-    background-color: whitesmoke;
-    color: black;
-    font-size: 1.5rem;
-    font-weight: 800;
-    border-radius: 1rem;
   }
 }
