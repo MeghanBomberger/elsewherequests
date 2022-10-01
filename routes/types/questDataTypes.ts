@@ -18,6 +18,26 @@ export interface QuestData {
   gatherObjectives: Objective[];
   killObjectives: Objective[];
   rewardItems: Reward[];
-  preReqQuestIds: string[];
+  preReqQuestId: string;
   questGiverId: string;
+}
+
+interface QuestConfigObjective {
+  validCodes: string[];
+  demand: number;
+}
+
+interface QuestConfigItemReward {
+  itemCode: string;
+  amount: number;
+}
+
+export interface QuestConfigFileObj {
+  id: string;
+  predecessor?: string;
+  cooldown: number;
+  perPlayer: boolean;
+  gatherObjectives?: QuestConfigObjective[];
+  killObjectives?: QuestConfigObjective[];
+  itemRewards?: QuestConfigItemReward[];
 }

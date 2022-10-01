@@ -33,15 +33,13 @@ const writeModInfoFile = async () => {
       ...formatMods(modsData.mods)
     }
     
-    // @ts-ignore
-    fs.appendFile(`${buildPath}/modinfo.json`, "", (err2: any, data2: any) => {
+    fs.appendFile(`${buildPath}/modinfo.json`, "", (err2) => {
       if (err2) {
         console.error("MODINFO CREATE FILE ERROR: ", err2)
         return
       }
 
-      // @ts-ignore
-      fs.writeFile(`${buildPath}/modinfo.json`, JSON.stringify(modInfoContents), (err3, data3) => {
+      fs.writeFile(`${buildPath}/modinfo.json`, JSON.stringify(modInfoContents), (err3) => {
         if (err3) {
           console.error("MODINFO WRITE ERROR: ", err3)
           return
@@ -66,8 +64,7 @@ const writeEntityFiles = async () => {
       const questGiverBuildFilePath = `${buildPath}/entities/${giver.id}.json`
       const giverShape: EntityShape = questGiverShapes.find(shape => shape.id === giver.shape) || traderShape
 
-      // @ts-ignore
-      await fs.appendFile(questGiverBuildFilePath, '', async (err2, data2) => {
+      await fs.appendFile(questGiverBuildFilePath, '', async (err2) => {
         if (err2) {
           console.error("ERROR CREATING QUEST GIVER DATA FILE: ", err2)
           return
@@ -75,8 +72,7 @@ const writeEntityFiles = async () => {
 
         const giverContents = await questGiverEntityFileContents({giver: giver, shape: giverShape})
 
-        // @ts-ignore
-        await fs.writeFile(questGiverBuildFilePath, giverContents, (err3, data3) => {
+        await fs.writeFile(questGiverBuildFilePath, giverContents, (err3) => {
           if (err3) {
             console.error("ERROR WRITING QUEST GIVER DATA FILE: ", err3)
             return
@@ -102,15 +98,13 @@ const writeCreatureItemFile = async () => {
     const questGiverIds = questGivers?.map(giver => giver.id) || []
     const contents = await generateCreatureFileContents(questGiverIds)
 
-    // @ts-ignore
-    fs.appendFile(creatureFilePath, '', (err2, data2) => {
+    fs.appendFile(creatureFilePath, '', (err2) => {
       if (err2) {
         console.error("ERROR CREATING CREATURE.JSON FILE: ", err2)
         return
       }
 
-      // @ts-ignore
-      fs.writeFile(creatureFilePath, contents, (err3, data3) => {
+      fs.writeFile(creatureFilePath, contents, (err3) => {
         if (err3) {
           console.error("ERROR WRITING CREATURE.JSON FILE: ", err3)
           return
@@ -130,17 +124,15 @@ const writeQuestsConfigFile = async () => {
     const parsedData: QuestData[] = JSON.parse(data)
     const contents = await generateQuestConfigFileContents(parsedData)
     const questFilePath = `${buildPath}/config/quests.json`
-    
-    // @ts-ignore
-    fs.appendFile(questFilePath, '', (err2, data2) => {
+
+    fs.appendFile(questFilePath, '', (err2) => {
       if (err2) {
         console.error("ERROR CREATING QUESTS.JSON FILE: ", err2)
         return
       }
     })
 
-    // @ts-ignore
-    fs.writeFile(questFilePath, contents, (err3, data3) => {
+    fs.writeFile(questFilePath, contents, (err3) => {
       if (err3) {
         console.error("ERROR WRITING QUESTS.JSON FILE: ", err3)
         return
@@ -203,15 +195,13 @@ const writeEnLangFile = async () => {
 
         const enLangFilePath = `${buildPath}/lang/en.json`
 
-        // @ts-ignore
-        fs.appendFile(enLangFilePath, '', (appendEnLangFileErr, appendEnLangFileData) => {
+        fs.appendFile(enLangFilePath, '', (appendEnLangFileErr) => {
           if (appendEnLangFileErr) {
             console.error("ERROR CREATING EN.JSON FILE: ", appendEnLangFileErr)
             return
           }
 
-          // @ts-ignore
-          fs.writeFile(enLangFilePath, JSON.stringify(contents), (writeFileErr, writeFileData) => {
+          fs.writeFile(enLangFilePath, JSON.stringify(contents), (writeFileErr) => {
             if (writeFileErr) {
               console.error("ERROR CREATING EN.JSON FILE: ", writeFileErr)
               return

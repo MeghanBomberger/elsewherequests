@@ -11,6 +11,7 @@ export const QuestForm = ({
   quests,
   selectedQuest,
   setErrorMessage,
+  setQuests,
 }) => {
   const [id, setId] = useState('')
   const [title, setTitle] = useState('')
@@ -134,8 +135,21 @@ export const QuestForm = ({
     await setFilteredRewardItem(filteredItems)
   }
 
-  const handleSave = () => {
-    // TODO
+  const handleSave = async () => {
+    const newQuest = {
+      id,
+      title,
+      description,
+      perPlayer,
+      cooldown,
+      gatherObjectives,
+      killObjectives,
+      rewardItems,
+      questGiverId: selectedQuestGiver,
+      preReqQuestId: selectedPreReqQuest,
+    }
+    const res = await axios.post("http://localhost:5000/api/quests", newQuest)
+    setQuests(res)
   }
 
   useEffect(() => {
@@ -202,10 +216,7 @@ export const QuestForm = ({
           <select
             required
             name="selectedQuestGiver"
-            onChange={e => { 
-              console.log(e.target.value) 
-              setSelectedQuestGiver(e.target.value)
-            }}
+            onChange={e => setSelectedQuestGiver(e.target.value)}
             value={selectedQuestGiver}
           >
             {questGivers?.map(giver => (
