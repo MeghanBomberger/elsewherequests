@@ -1,7 +1,7 @@
 export interface ItemData {
   id: string;
-  name: string;
+  name?: string;
   mod: string;
-  primaryAttributes: string[];
-  secondaryAttributes: string[];
+  primaryAttributes?: string[];
+  secondaryAttributes?: string[];
 }

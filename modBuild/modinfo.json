@@ -7,13 +7,12 @@
   "description": "Quests for the Elsewhere server.",
   "version": "0.0.15",
   "dependencies": {
-    "bricklayers": "1.0.0-pre.6",
-    "game": "1.17.0-pre.1",
+    "bricklayers": "1.1.1",
+    "game": "1.17.3",
     "lichen": "1.6.1",
-    "petai": "1.5.3",
+    "petai": "1.5.4",
     "primitivesurvival": "3.0.5",
-    "vsquest": "0.0.2",
-    "vsvillage": "0.2.4",
+    "vsquest": "0.1.0",
     "wolftaming": "1.5.2"
   }
 }

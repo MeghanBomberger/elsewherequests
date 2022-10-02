@@ -4,7 +4,6 @@ import express from 'express'
 import fs from 'fs'
 
 import { 
-  basePath,
   buildPath,
   dataPath,
   formatMods,
@@ -16,22 +15,45 @@ import { modInfoDefaultTemplate } from '../templates/mod-info-template'
 import { questGiverEntityFileContents, traderShape } from '../templates/questgiver-template'
 import { QuestData } from './types/questDataTypes'
 import { generateQuestConfigFileContents } from '../templates/quest-config-template'
+import modsRouter from './mods-route'
 
 const writeModRouter = express.Router()
 
+interface Mod {
+  [mod: string]: string;
+}
+
+interface ModInfoData {
+  modVersion: string;
+  modsInUse: string[];
+  mods: Mod;
+}
+
 const writeModInfoFile = async () => {
-  await fs.readFile(`${dataPath}/modinfo.json`, 'utf8', (err, data) => {
+  await fs.readFile(`${dataPath}/mods.json`, 'utf8', (err, data) => {
     if (err) {
       console.error("ERROR FETCHING MODS DATA: ", err)
       return
     }
+
+    const parsedData: ModInfoData = JSON.parse(data)
+    const modsInUse: Mod = {}
+    Object.keys(parsedData?.mods)
+      ?.filter(key => parsedData?.modsInUse?.includes(key))
+      ?.forEach(key => modsInUse[key] = parsedData?.mods[key])
+    const versionNumber = parsedData?.modVersion
+      ?.split(".")
+      ?.map((str, i) => i === 1 ? parseInt(str) + 1 : parseInt(str))
+      ?.join(".")
+
     const modInfoContents = modInfoDefaultTemplate
-    const modsData: ModsData = JSON.parse(data)
-    modInfoContents.version = modsData.version
+    modInfoContents.version = versionNumber
     modInfoContents.dependencies = {
-      ...modInfoContents.dependencies,
-      ...formatMods(modsData.mods)
+      "game": "1.17.3",
+      "vsquest": "0.1.0",
+      ...modsInUse
     }
+    
     
     fs.appendFile(`${buildPath}/modinfo.json`, "", (err2) => {
       if (err2) {
@@ -41,12 +63,14 @@ const writeModInfoFile = async () => {
 
       fs.writeFile(`${buildPath}/modinfo.json`, JSON.stringify(modInfoContents), (err3) => {
         if (err3) {
-          console.error("MODINFO WRITE ERROR: ", err3)
+          console.error("MODINFO WRITING FILE ERROR: ", err3)
           return
         }
         return
       })
+      return
     })
+    return
   })
 }
 

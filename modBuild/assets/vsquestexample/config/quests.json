@@ -260,7 +260,6 @@
   {
     "id": "vsquestexample:quest-valleycampmakingcamp3",
     "cooldown": 999999,
-    "predecessor": "vsquestexample:quest-valleycampmakingcamp2",
     "perPlayer": true,
     "gatherObjectives": [
       {
@@ -270,7 +269,7 @@
     ],
     "killObjectives": [
       {
-        "validCodes": ["creature-wolf"],
+        "validCodes": ["creature-wolf", "drifter-*"],
         "demand": 4
       }
     ],

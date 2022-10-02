@@ -8,6 +8,7 @@ import serveStatic from 'serve-static'
 
 import itemsRouter from './routes/items-route'
 import mobsRouter from './routes/mobs-route'
+import modsRouter from './routes/mods-route'
 import questGiverRouter from './routes/quest-giver-route'
 import questsRouter from './routes/quests-route'
 import writeModRouter from './routes/write-mod-route'
@@ -47,6 +48,7 @@ app.use("/api/questgivers", questGiverRouter)
 app.use("/api/quests", questsRouter)
 app.use("/api/items", itemsRouter)
 app.use("/api/mobs", mobsRouter)
+app.use("/api/mods", modsRouter)
 
 // API route to generate mod files
 app.use("/api/writemod", writeModRouter)

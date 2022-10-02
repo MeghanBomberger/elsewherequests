@@ -6,6 +6,7 @@ import { dataPath } from './helpers/utils'
 import { ItemData } from './types/itemDataTypes'
 
 const itemsDataFilePath = `${dataPath}/items.json`
+const modsDataFilePath = `${dataPath}/mods.json`
 
 const itemsRouter = express.Router()
 
@@ -23,36 +24,59 @@ itemsRouter.post("/", async (req, res, next) => {
   const newItem = req.body
   const itemId = req.body.id
 
-  fs.readFile(itemsDataFilePath, 'utf8', (err, data) => {
-    if (err) {
-      console.error("ERROR FETCHING ITEMS DATA: ", err)
-      res.send("failure")
+  fs.readFile(modsDataFilePath, 'utf8', (modsErr, modsData) => {
+    if (modsErr) {
+      console.error("ERROR READING MODS DATA: ", modsErr)
     }
 
-    const contents = JSON.parse(data)?.filter(item => item.id !== itemId)
-    contents.push(newItem)
-    
-    fs.writeFile(itemsDataFilePath, JSON.stringify(contents), (writeErr) => {
-      if (writeErr) {
-        console.error("ERROR WRITING ITEMS DATA: ", writeErr)
+    const parsedModsData = JSON.parse(modsData)
+    const modsInUse = parsedModsData.modsInUse
+
+    fs.readFile(itemsDataFilePath, 'utf8', (err, data) => {
+      if (err) {
+        console.error("ERROR FETCHING ITEMS DATA: ", err)
         res.send("failure")
       }
+  
+      const parsedData: ItemData[] = JSON.parse(data)
+      const contents = parsedData?.filter(item => item.id !== itemId)
+      contents.push(newItem)
 
-      fs.readFile(itemsDataFilePath, "utf8", (readErr, readData) => {
-        if (readErr) {
-          console.error("ERROR READING ITEMS DATA: ", readErr)
+      !!modsInUse?.includes(newItem.mod) && modsInUse.push(newItem.mod)
+      
+      fs.writeFile(itemsDataFilePath, JSON.stringify(contents), (writeErr) => {
+        if (writeErr) {
+          console.error("ERROR WRITING ITEMS DATA: ", writeErr)
           res.send("failure")
         }
 
-        const fileData: ItemData = JSON.parse(readData)
+        parsedModsData.modsInUse = modsInUse
 
-        res.send({
-          message: "success",
-          items: fileData
+        fs.writeFile(modsDataFilePath, JSON.stringify(parsedModsData), (err4) => {
+          if (err4) {
+            console.error("ERROR WRITING TO MODS DATA FILE: ", err4)
+            res.send("failure")
+          }
+          
+          fs.readFile(itemsDataFilePath, "utf8", (readErr, readData) => {
+            if (readErr) {
+              console.error("ERROR READING ITEMS DATA: ", readErr)
+              res.send("failure")
+            }
+    
+            const fileData: ItemData = JSON.parse(readData)
+    
+            res.send({
+              message: "success",
+              items: fileData
+            })
+          })
         })
+  
       })
     })
   })
+
 })
 
 export default itemsRouter

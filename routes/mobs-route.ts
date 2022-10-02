@@ -29,7 +29,8 @@ mobsRouter.post("/", async (req, res, next) => {
       res.send("failure")
     }
     
-    const contents = JSON.parse(data)?.filter(mob => mob.id !== mobId)
+    const parsedData: MobData[] = JSON.parse(data)
+    const contents = parsedData?.filter(mob => mob.id !== mobId)
     contents.push(newMob)
 
     fs.writeFile(mobsDataFilePath, JSON.stringify(contents), (writeErr) => {
