@@ -35,7 +35,14 @@ export const Items = () => {
         setErrorMessage("An error has occurred fetching the items data.")
       })
     fetchModsData()
-      .then(res => setMods(res))
+      .then(res => {
+        const modsData = Object.keys(res.mods)?.map(key => ({
+          id: key,
+          version: res.mods[key],
+          isUsed: !!res.modsInUse?.includes(key)
+        }))
+        setMods(modsData)
+      })
       .catch(err => {
         console.error(err)
         setErrorMessage("An error has occurred fetching the mods data.")
@@ -56,14 +63,14 @@ export const Items = () => {
         )}
 
         <section
-          className={`quest-form-action ${formIsOpen ? 'open' : 'closed'}`}
+          className={`item-form-action ${formIsOpen ? 'open' : 'closed'}`}
         >
           {!formIsOpen && (
             <button
               className="open-form"
               onClick={() => setFormIsOpen(true)}
             >
-              Add Quest
+              Add Item
             </button>
           )}
 
@@ -72,7 +79,7 @@ export const Items = () => {
               <h2>
                 { !!selectedItem 
                     ? `Edit ${selectedItem.name}` 
-                    : 'Create New Quest'
+                    : 'Create New Item'
                 }
               </h2>
 
@@ -97,14 +104,17 @@ export const Items = () => {
           <ItemsForm
             items={items}
             mods={mods}
-            selectedItems={selectedItem}
+            selectedItem={selectedItem}
             setItems={setItems}
+            refetchData={refetchData}
+            setFormIsOpen={setFormIsOpen}
           />
         )}
 
         <ItemsList 
           items={items}
           setSelectedItem={setSelectedItem}
+          setFormIsOpen={setFormIsOpen}
         />
       </main>
     </>

@@ -446,7 +446,7 @@ export const QuestForm = ({
 
       <button 
         disabled={!disableSave()}
-        className="save-button"
+        className={disableSave() ? "save-button" : "save-button-disabled"}
         onClick={ e => {
           e.preventDefault()
           !disableSave() ? setErrorMessage("Form is incomplete") : handleSave()

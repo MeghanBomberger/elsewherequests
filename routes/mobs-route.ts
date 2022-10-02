@@ -15,6 +15,7 @@ mobsRouter.get("/", async (req, res, next) => {
       console.error("ERROR FETCHING QUESTS DATA: ", err)
       res.send("failure")
     }
+    console.log(data)
     res.send(JSON.parse(data))
   })
 })

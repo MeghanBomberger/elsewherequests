@@ -1,0 +1,15 @@
+@import '../../helpers/styles/form.scss';
+
+.items {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  max-width: 100vw;
+  padding: 0 2rem;
+  overflow: auto;
+
+  .item-form-action {
+    @include formControls;
+  }
+}

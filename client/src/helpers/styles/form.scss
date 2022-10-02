@@ -64,14 +64,13 @@
   }
 
   .save-button {
-    margin: 2rem auto;
-    padding: 0.5rem 3rem;
-    @include naked-button;
-    background-color: whitesmoke;
-    color: black;
-    font-size: 1.5rem;
-    font-weight: 800;
-    border-radius: 1rem;
+    @include save-button;
+  }
+
+  .save-button-disabled {
+    @include save-button;
+    background-color: gray;
+    cursor: not-allowed;
   }
 }
 

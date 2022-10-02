@@ -1,9 +1,1 @@
-[
-  {
-    "id": "linensack",
-    "name": "Linen Sack",
-    "mod": "game",
-    "primaryAttributes": [],
-    "secondaryAttributes": []
-  }
-]
+[{"id":"linensack","name":"Linen Sack","mod":"game","primaryAttributes":[],"secondaryAttributes":[]},{"id":"bed-hay","name":"Hay Bed","mod":"game","primaryAttributes":["head","north"],"secondaryAttributes":[]}]

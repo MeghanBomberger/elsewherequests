@@ -47,6 +47,23 @@ interface Output {
 const modsRouter = express.Router()
 
 const unpackPath = `../../../../../${process.env.VS_UNPACK_PATH}`
+const modsDataFilePath = `${dataPath}/mods.json`
+
+modsRouter.get("/", async (req, res, next) => {
+  await readFile(modsDataFilePath, "utf8")
+    .then(data => {
+      const parsedData = JSON.parse(data)
+      res.send({
+        ...parsedData
+      })
+    })
+    .catch(err => {
+      if (err) {
+        console.error("ERROR READING MOD FILE: ", err)
+        res.send({ message: "failure" })
+      }
+    })
+})
 
 modsRouter.get("/readunpack", async (req, res, next) => {
   const output: Output = {
@@ -72,7 +89,7 @@ modsRouter.get("/readunpack", async (req, res, next) => {
               const modVersion = parsedModInfoContents.version
               output.mods[mod] = modVersion
 
-              await writeFile(`${dataPath}/mods.json`, JSON.stringify(output.mods))
+              await writeFile(modsDataFilePath, JSON.stringify(output.mods))
                 .catch(err => !!err && console.error("ERROR WRITING TO MODS DATA FILE"))
               return
             })

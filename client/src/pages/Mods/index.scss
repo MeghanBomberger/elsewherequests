@@ -1,0 +1,9 @@
+@import '../../helpers/styles/tables.scss';
+
+.mods {
+  .mods-list {
+    width: 60%;
+    max-width: 100rem;
+    @include tableStyles;
+  }
+}
