@@ -250,9 +250,7 @@ export const ItemsForm = ({
         disabled={!disableSave()}
         className={disableSave() ? "save-button" : "save-button-disabled"}
         onClick={ e => {
-          console.log("save?")
           e.preventDefault()
-          console.log(disableSave)
           !disableSave() ? setErrorMessage("Form is incomplete") : handleSave()
         }}
       >

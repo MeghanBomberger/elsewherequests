@@ -1,8 +1,1 @@
-[
-  {
-    "id": "",
-    "name": "drifter",
-    "attribute": ["surface"],
-    "mod": "game"
-  }
-]
+[{"id":"","name":"drifter","attribute":["surface"],"mod":"game"},{"id":"drifter-normal","name":"Surface Drifter","mod":"game","attributes":[]}]

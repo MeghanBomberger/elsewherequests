@@ -7,8 +7,8 @@ import {
 import './index.scss'
 import closeIcon from '../../assets/cancel.png'
 import { Header } from '../../components/Header'
-import MobsForm from './MobsForm'
-import MobsList from './MobsList'
+import { MobsForm } from './MobsForm'
+import { MobsList } from './MobsList'
 
 export const Mobs = () => {
   const [errorMessage, setErrorMessage] = useState(null)
@@ -35,7 +35,14 @@ export const Mobs = () => {
         setErrorMessage("An error has occurred fetching the mobs data.")
       })
     fetchModsData()
-      .then(res => setMods(res))
+      .then(res => {
+        const modsData = Object.keys(res.mods)?.map(key => ({
+          id: key,
+          version: res.mods[key],
+          isUsed: !!res.modsInUse?.includes(key)
+        }))
+        setMods(modsData)
+      })
       .catch(err => {
         console.error(err)
         setErrorMessage("An error has occurred fetching the mods data.")
@@ -99,12 +106,15 @@ export const Mobs = () => {
             mods={mods}
             selectedMob={selectedMob}
             setMobs={setMobs}
+            refetchData={refetchData}
+            setFormIsOpen={setFormIsOpen}
           />
         )}
 
         <MobsList 
           mobs={mobs}
           setSelectedMob={setSelectedMob}
+          setFormIsOpen={setFormIsOpen}
         />
       </main>
     </>

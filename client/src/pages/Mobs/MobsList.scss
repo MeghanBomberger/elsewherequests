@@ -1,0 +1,18 @@
+@import '../../helpers/styles/buttons.scss';
+@import '../../helpers/styles/tables.scss';
+
+.mobs-list {
+  width: 90%;
+  @include tableStyles;
+}
+
+.edit-mob {
+  @include naked-button;
+  margin-left: 0.25rem;
+  margin-right: -0.25rem;
+
+  img {
+    height: 2rem;
+    filter: invert(100%);
+  }
+}

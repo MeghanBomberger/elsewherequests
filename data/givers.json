@@ -1,1 +1,60 @@
-{"questGivers":[{"id":"acorninnkeeper","name":"Acorn Inn Keeper","shape":"trader","quests":["acorninnwelcome"],"damage":500,"health":1000,"reviveHours":1,"randomizedNames":["Daryn","Estrellita","Lita","Casandra","Iolande"]},{"id":"archaeologist","name":"Archaeologist","shape":"trader","quests":[],"damage":500,"health":1000,"reviveHours":1,"randomizedNames":["Daffie","Sena","Courtnay","Amara","Theresa"]}],"questGiverShapes":[{"displayName":"Trader","mod":"game","id":"trader","type":"humanoid","textureAlternatives":[{"type":"humanoid/traderclothes","subTypes":["set1","set2","set3","set4","set5"]}],"additionalAnimations":["rowdywelcome","lazywelcome","lazynod"]},{"displayName":"Wolf","mod":"game","id":"wolf-female","type":"land","textureAlternatives":[{"type":"wolf","subTypes":["wolf2","wolf3","wolf4","wolf5","wolf6","wolf7","wolf8"]}],"additionalAnimations":["idle","sleep","sit"]}]}
+{
+  "questGivers": [
+    {
+      "id": "acorninnkeeper",
+      "name": "Acorn Inn Keeper",
+      "shape": "trader",
+      "quests": ["acorninnwelcome"],
+      "damage": 500,
+      "health": 1000,
+      "reviveHours": 1,
+      "randomizedNames": ["Daryn", "Estrellita", "Lita", "Casandra", "Iolande"]
+    },
+    {
+      "id": "archaeologist",
+      "name": "Archaeologist",
+      "shape": "trader",
+      "quests": [],
+      "damage": 500,
+      "health": 1000,
+      "reviveHours": 1,
+      "randomizedNames": ["Daffie", "Sena", "Courtnay", "Amara", "Theresa"]
+    }
+  ],
+  "questGiverShapes": [
+    {
+      "displayName": "Trader",
+      "mod": "game",
+      "id": "trader",
+      "type": "humanoid",
+      "textureAlternatives": [
+        {
+          "type": "humanoid/traderclothes",
+          "subTypes": ["set1", "set2", "set3", "set4", "set5"]
+        }
+      ],
+      "additionalAnimations": ["rowdywelcome", "lazywelcome", "lazynod"]
+    },
+    {
+      "displayName": "Wolf",
+      "mod": "game",
+      "id": "wolf-female",
+      "type": "land",
+      "textureAlternatives": [
+        {
+          "type": "wolf",
+          "subTypes": [
+            "wolf2",
+            "wolf3",
+            "wolf4",
+            "wolf5",
+            "wolf6",
+            "wolf7",
+            "wolf8"
+          ]
+        }
+      ],
+      "additionalAnimations": ["idle", "sleep", "sit"]
+    }
+  ]
+}
