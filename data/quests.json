@@ -6,44 +6,295 @@
     "gatherObjectives": [
       {
         "ids": ["storagevesselcolored-burnt-blurple"],
-        "quantity": 1,
+        "demand": 1,
         "description": "Give inn keeper the blue vessel"
       }
     ],
     "killObjectives": [],
     "rewardItems": [
-      {
-        "id": "game:bed-hay-head-north",
-        "quantity": 1
-      },
-      {
-        "id": "game:linensack",
-        "quantity": 4
-      },
-      {
-        "id": "game:knife-copper",
-        "quantity": 1
-      },
-      {
-        "id": "game:axe-copper",
-        "quantity": 1
-      },
-      {
-        "id": "bread-spelt-perfect",
-        "quantity": 32
-      },
-      {
-        "id": "glazedbowl-burnt-clear-blue-plain",
-        "quantity": 1
-      },
-      {
-        "id": "glazedoillamp-clear-blue-up",
-        "quantity": 1
-      }
+      { "itemCode": "game:bed-hay-head-north", "amount": 1 },
+      { "itemCode": "game:linensack", "amount": 4 },
+      { "itemCode": "game:knife-copper", "amount": 1 },
+      { "itemCode": "game:axe-copper", "amount": 1 },
+      { "itemCode": "bread-spelt-perfect", "amount": 32 },
+      { "itemCode": "glazedbowl-burnt-clear-blue-plain", "amount": 1 },
+      { "itemCode": "glazedoillamp-clear-blue-up", "amount": 1 }
     ],
     "perPlayer": true,
     "cooldown": 999999,
-    "preReqQuestIds": [],
     "questGiverId": "acorninnkeeper"
+  },
+  {
+    "id": "acorninnfirewood",
+    "cooldown": "20",
+    "perPlayer": true,
+    "title": "Keeping the Acorn Cozy",
+    "description": "We're high enough up that the fire needs to be lit around the clock. I've been far too busy to go down and gather firewood with all the new travelers about. Would you mind fetching some? I'll pay you for your time, of course.",
+    "questGiverId": "acorninnkeeper",
+    "preReqQuestId": "acorninnwelcome",
+    "gatherObjectives": [
+      { "ids": ["firewood"], "demand": 32, "description": "Gather firewood" }
+    ],
+    "rewardItems": [{ "itemCode": "gear-rusty", "amount": 1 }]
+  },
+  {
+    "id": "acorninnmoreingredients",
+    "title": "Mushroom Stew",
+    "description": "I need some ingredients for the evening meal. Was thinking of making some mushroom stew. Can you fetch the ingredients for me?",
+    "predecessor": "vsquestexample:quest-acorninnwelcome",
+    "perPlayer": true,
+    "cooldown": 20,
+    "questGiverId": "acorninnkeeper",
+    "gatherObjectives": [
+      {
+        "ids": [
+          "mushroom-indigomilkcap-normal",
+          "mushroom-greencrackedrussula-normal",
+          "mushroom-lobster-normal",
+          "mushroom-paddystraw-normal",
+          "mushroom-fieldmushroom-normal",
+          "mushroom-almondmushroom-normal",
+          "mushroom-chickenofthewoods-normal-north",
+          "mushroom-dryadsaddle-normal-north",
+          "mushroom-pinkoyster-normal-north",
+          "mushroom-tinderhoof-normal-north",
+          "mushroom-beardedtooth-normal-north",
+          "mushroom-whiteoyster-normal-north",
+          "mushroom-reishi-normal-north",
+          "mushroom-livermushroom-normal-north",
+          "mushroom-shiitake-normal-north",
+          "mushroom-blacktrumpet-normal",
+          "mushroom-chanterelle-normal",
+          "mushroom-commonmorel-normal",
+          "mushroom-indigomilkcap-normal",
+          "mushroom-kingbolete-normal",
+          "mushroom-orangeoakbolete-normal",
+          "mushroom-puffball-normal",
+          "mushroom-redwinecap-normal",
+          "mushroom-saffronmilkcap-normal",
+          "mushroom-violetwebcap-normal",
+          "mushroom-witchhat-normal"
+        ],
+        "demand": 16,
+        "description": "Gather edible mushrooms"
+      }
+    ],
+    "itemRewards": [
+      {
+        "itemCode": "game:gear-rusty",
+        "amount": 2
+      },
+      {
+        "itemCode": "game:bread-flax-perfect",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": "acorninningredients",
+    "title": "Cranberry Potroast",
+    "description": "I need some ingredients for the evening meal. Was thinking of making some roast with cranberry sauce. Can you fetch the ingredients for me?",
+    "predecessor": "vsquestexample:quest-acorninnwelcome",
+    "perPlayer": true,
+    "cooldown": 20,
+    "questGiverId": "acorninnkeeper",
+    "gatherObjectives": [
+      {
+        "ids": ["redmeat-raw"],
+        "demand": 16,
+        "description": "Gather red meat"
+      },
+      {
+        "ids": ["fruit-cranberry"],
+        "demand": 16,
+        "description": "Gather cranberries"
+      }
+    ],
+    "itemRewards": [
+      {
+        "itemCode": "game:gear-rusty",
+        "amount": 2
+      },
+      {
+        "itemCode": "game:bread-flax-perfect",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": "acorninngettingsettled",
+    "title": "Getting Settled",
+    "description": "You're welcome to stay in one of the available rooms upstairs, but if you're looking for something more permanent I'd go talk to the guard captain in the camp down in the valley. He's got plenty of work to go around, and will help you set up a decent place to stay in the camp.<br><br>While you're down there, can you ask if my ale shipment has come in yet? The traders were suppose to be here with it days ago.",
+    "predecessor": "vsquestexample:quest-acorninnwelcome",
+    "perPlayer": true,
+    "cooldown": 20,
+    "questGiverId": "acorninnkeeper",
+    "gatherObjectives": [
+      {
+        "ids": ["linen-diamond-down"],
+        "demand": 16,
+        "description": "Get order of diamond stitch linen from camp"
+      }
+    ],
+    "itemRewards": [
+      {
+        "itemCode": "game:gear-rusty",
+        "amount": 12
+      },
+      {
+        "itemCode": "game:bread-flax-perfect",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": "tavernpuppersmallsnack",
+    "title": "A Small Snack",
+    "desc": "<i>The dog looks at you and then pointedly at their empty bowl. The innkeeper seems pretty busy. Maybe you should just go grab the dog a snack.</i>",
+    "perPlayer": true,
+    "cooldown": 20,
+    "questGiverId": "tavernpupper",
+    "gatherObjectives": [
+      {
+        "ids": ["bone"],
+        "demand": 8,
+        "description": "Gather bones"
+      }
+    ],
+    "itemRewards": [
+      {
+        "itemCode": "wolftaming:dogtoy",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": "tavernpuppermissingpuppy",
+    "title": "Missing Puppy",
+    "desc": "<i>The dog looks very sad. You ask the tavern keeper what is wrong with her. They tell you they sold the dog's litter to one of the traders that passed through and thinks she misses them.</i>",
+    "perPlayer": true,
+    "cooldown": 20,
+    "questGiverId": "tavernpupper",
+    "gatherObjectives": [
+      {
+        "ids": ["creature-tame-wolf-pup"],
+        "demand": 1,
+        "description": "Return puppy"
+      }
+    ],
+    "itemRewards": [
+      {
+        "itemCode": "game:gear-rusty",
+        "amount": 12
+      }
+    ]
+  },
+  {
+    "id": "valleycampfirstaide",
+    "title": "First Aide",
+    "desc": "You'd think some of these folks had never held anything sharp before. We're running low on poultices. Bring back some horsetail and reeds would you?",
+    "perPlayer": true,
+    "cooldown": 20,
+    "questGiverId": "valleycampguardcaptain",
+    "gatherObjectives": [
+      {
+        "ids": ["cattailtops"],
+        "demand": 2,
+        "description": "Gather reeds"
+      },
+      {
+        "ids": ["flower-horsetail-free"],
+        "demand": 4,
+        "description": "Gather horsetails"
+      }
+    ],
+    "itemRewards": [
+      {
+        "itemCode": "game:poultice-reed-horsetail",
+        "amount": 4
+      }
+    ]
+  },
+  {
+    "id": "valleycampmakingcamp1",
+    "title": "Making Camp - Part 1",
+    "desc": "The inn keeper at the Acorn sent you, huh?<br><br>Well, we've still got space down here, and I could use another pair of hands.<br><br>Why don't you clear a plot of the extra grass while I go look for the Acorn's shipment?",
+    "perPlayer": true,
+    "cooldown": 999999,
+    "questGiverId": "valleycampguardcaptain",
+    "gatherObjectives": [
+      {
+        "ids": ["drygrass"],
+        "demand": 10,
+        "description": "Gather dried grass"
+      }
+    ],
+    "itemRewards": [
+      {
+        "itemCode": "game:linen-diamond-down",
+        "amount": 10
+      }
+    ]
+  },
+  {
+    "id": "valleycampmakingcamp2",
+    "title": "Making Camp - Part 2",
+    "desc": "Plot looks good. You're going to need a fence to mark out your section of the camp. If you go get some wood you can use my tools to make some fence.",
+    "perPlayer": true,
+    "cooldown": 999999,
+    "questGiverId": "valleycampguardcaptain",
+    "gatherObjectives": [
+      {
+        "ids": ["log-placed-pine-ud"],
+        "demand": 8,
+        "description": "Gather pine logs"
+      }
+    ],
+    "itemRewards": [
+      {
+        "itemCode": "game:woodenfencegate-pine-n-closed",
+        "amount": 2
+      },
+      {
+        "itemCode": "game:woodenfence-pine-ew-free",
+        "amount": 22
+      },
+      {
+        "itemCode": "primitivesurvival:woodenlantern-pine-up",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": "valleycampmakingcamp3",
+    "title": "Making Camp - Part 3",
+    "desc": "We're going to need to get some more leather to make you a real tent. The wolves are getting out of hand up on the cliff anyway. Thin out the pack and bring me the hides.",
+    "perPlayer": true,
+    "cooldown": 999999,
+    "questGiverId": "valleycampguardcaptain",
+    "gatherObjectives": [
+      {
+        "ids": ["hide-raw-medium"],
+        "demand": 8,
+        "description": "Gather medium hide"
+      }
+    ],
+    "killObjectives": [
+      {
+        "ids": ["creature-wolf", "drifter-*"],
+        "demand": 4,
+        "description": "Kill wolves"
+      }
+    ],
+    "itemRewards": [
+      {
+        "itemCode": "game:woodenfence-pine-ew-free",
+        "amount": 4
+      },
+      {
+        "itemCode": "lichen:hideroof-light-up-north-free",
+        "amount": 24
+      }
+    ]
   }
 ]

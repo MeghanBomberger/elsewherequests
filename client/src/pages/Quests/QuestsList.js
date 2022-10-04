@@ -82,7 +82,7 @@ export const QuestsList = ({
             </td>
 
             <td>
-              {row?.preReqQuestIds?.[0] || ''}
+              {row?.preReqQuestIds || ''}
             </td>
 
             <td className="objectives">
@@ -94,7 +94,7 @@ export const QuestsList = ({
                   <p className="objective-type">
                     Gather a total of 
                     <b className="item-quantity">
-                      {objective?.quantity || 0}
+                      {objective?.demand || 0}
                     </b> 
                     of the following items: 
                   </p>
@@ -109,7 +109,7 @@ export const QuestsList = ({
                     <>
                       <b className="objective-desc-title"><u>Gather Objective Description (VTML):</u></b>
                       <p className="objective-desc">
-                        <i>{objective.description}: 0/{objective.quantity}</i>
+                        <i>{objective.description}: 0/{objective.demand}</i>
                       </p>
                     </>
                   )}
@@ -139,7 +139,7 @@ export const QuestsList = ({
                     <>
                       <b><u>Objective Description (VTML):</u></b>
                       <p>
-                        <i>{objective.description}: 0/{objective.quantity}</i>
+                        <i>{objective.description}: 0/{objective.demand}</i>
                       </p>
                     </>
                   )}
@@ -150,8 +150,8 @@ export const QuestsList = ({
             <td>
               <ul>
                 {row?.rewardItems?.map(item => (
-                  <li key={`rewardItem-${item.id}`}>
-                    {item.quantity} x {item.id}
+                  <li key={`rewardItem-${item.itemCode}`}>
+                    {item.amount} x {item.itemCode}
                   </li>
                 ))}
               </ul>

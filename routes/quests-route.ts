@@ -30,6 +30,7 @@ questsRouter.post("/", async (req, res, next) => {
       res.send("failure")
     }
 
+    console.log(newQuest)
     const parsedQuestsData: QuestConfigFileObj[] = JSON.parse(readData)
     const contents = parsedQuestsData?.filter(quest => quest.id !== questId)
     contents.push(newQuest)

@@ -52,7 +52,7 @@ export const generateQuestConfigFileContents = async (quests: QuestData[]) => {
     questObj.killObjectives = killObjectivesList
 
     const itemRewardsList = rewardItems?.map(item => ({
-      itemCode: item.id,
+      itemCode: item.ids?.[0],
       amount: item.quantity
     })) || []
     questObj.itemRewards = itemRewardsList

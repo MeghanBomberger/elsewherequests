@@ -5,7 +5,7 @@ interface Objective {
 }
 
 interface Reward {
-  id: string;
+  ids: string[];
   quantity: number;
 }
 
@@ -34,10 +34,13 @@ interface QuestConfigItemReward {
 
 export interface QuestConfigFileObj {
   id: string;
+  title: string;
+  description: string;
   predecessor?: string;
   cooldown: number;
   perPlayer: boolean;
   gatherObjectives?: QuestConfigObjective[];
   killObjectives?: QuestConfigObjective[];
   itemRewards?: QuestConfigItemReward[];
+  questGiverId?: string;
 }

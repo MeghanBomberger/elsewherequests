@@ -34,7 +34,7 @@ questGiverRouter.post("/", async (req, res, next) => {
       }
 
       const parsedQuestsData: QuestData[] = JSON.parse(questsData)
-      const questIds = parsedQuestsData?.filter(quest => quest.questGiverId)?.map(quest => quest.id) || []
+      const questIds = parsedQuestsData?.filter(quest => quest.questGiverId === questGiverId)?.map(quest => quest.id)
       newQuestGiver.quests = questIds
 
       fs.readFile(questGiverDataFilePath, "utf8", (giverErr, giverData) => {

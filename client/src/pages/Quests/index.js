@@ -130,6 +130,7 @@ export const Quests = () => {
             questGivers={questGivers}
             quests={quests}
             selectedQuest={selectedQuest}
+            setFormIsOpen={setFormIsOpen}
           />
         )}
 

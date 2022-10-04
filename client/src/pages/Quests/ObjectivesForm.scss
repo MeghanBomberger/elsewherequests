@@ -1,0 +1,104 @@
+@import '../../helpers/styles/buttons.scss';
+
+.add-objective-group {
+  @include save-button;
+  margin-bottom: 2rem;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  border-radius: 5rem;
+}
+
+.objective-header {
+  margin: 2rem 0 0 0;
+  width: 100%;
+  font-size: 1.4rem;
+  border-radius: none;
+  border-bottom: solid whitesmoke 1px;
+}
+
+.no-objective-text {
+  margin: 1rem 0;
+  width: 100%;
+  font-size: 1.2rem;
+  text-align: center;
+  font-style: italic;
+}
+
+hr {
+  margin-bottom: 3rem;
+  width: 100%;
+  border-bottom: solid whitesmoke 1px;
+}
+
+.objective-group {
+  width: 100%;
+  border: solid whitesmoke 1px;
+
+  label {
+    margin-left: 1rem;
+
+    p {
+      text-align: center;
+      font-size: 1rem;
+      font-style: italic;
+    }
+  }
+
+  select {
+    display: block;
+    width: 100%;
+    font-size: 1.4rem;
+    color: black;
+    height: 3rem;
+
+    option {
+      font-size: 1.2rem;
+      color: black;
+    }
+  }
+
+  input {
+    font-size: 1.4rem;
+    color: black;
+  }
+
+  textarea {
+    width: 65%;
+  }
+
+  input,
+  textarea {
+    margin-left: 2rem;
+  }
+
+  .selected-options {
+    padding: 0.5rem;
+    margin-bottom: 1.5rem;
+    width: 100%;
+    border-bottom: solid whitesmoke 1px;
+
+    .remove-option {
+      margin: 0.5rem;
+      padding: 0 1rem;
+      background-color: whitesmoke;
+      color: black;
+      font-size: 1.2rem;
+      vertical-align: middle;
+      border-radius: 5rem;
+  
+      img {
+        margin-left: 0.5rem;
+        margin-bottom: -0.05rem;
+        height: 1rem;
+      }
+    }
+
+  }
+
+  .remove-objective-group {
+    width: 100%;
+    background-color: whitesmoke;
+    color: black;
+    font-size: 1.4rem;
+  }
+}

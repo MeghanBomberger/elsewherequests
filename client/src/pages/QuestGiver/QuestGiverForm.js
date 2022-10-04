@@ -11,6 +11,7 @@ export const QuestGiverForm = ({
   setErrorMessage,
   setFormIsOpen,
   setQuestGivers,
+  refetchQuestGiverData
 }) => {
   const [name, setName] = useState("")
   const [id, setId] = useState("")
@@ -69,12 +70,15 @@ export const QuestGiverForm = ({
       randomizedNames,
       shapeId,
     }
-    const res = await axios.post('http://localhost:5000/api/questgivers', reqBody)
-
-    setQuestGivers(res)
-    setFormIsOpen(false)
-
-    return res
+    await axios.post('http://localhost:5000/api/questgivers', reqBody)
+      .then(res => {
+        refetchQuestGiverData()
+        setFormIsOpen(false)
+      })
+      .catch(err => {
+        !!err && console.error("ERROR SAVING QUESTGIVER: ", err)
+        !!err && setErrorMessage("ERROR SAVING QUESTGIVER")
+      })
   }, [
     id,
     name,
@@ -85,7 +89,8 @@ export const QuestGiverForm = ({
     shapeId,
     selectedQuestGiver?.id,
     setFormIsOpen,
-    setQuestGivers
+    setErrorMessage,
+    refetchQuestGiverData
   ])
 
   const rerollNames = () => setRandomizedNames(selectRandomNames())

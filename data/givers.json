@@ -19,6 +19,384 @@
       "health": 1000,
       "reviveHours": 1,
       "randomizedNames": ["Daffie", "Sena", "Courtnay", "Amara", "Theresa"]
+    },
+    {
+      "id": "artificer",
+      "name": "Artificer",
+      "shape": "trader",
+      "quests": [],
+      "damage": 500,
+      "health": 1000,
+      "reviveHours": 1,
+      "randomizedNames": ["Giovanna", "Neala", "Theo", "Opal", "Melodee"]
+    },
+    {
+      "id": "baker",
+      "name": "Baker",
+      "shape": "trader",
+      "quests": [],
+      "damage": 500,
+      "health": 1000,
+      "reviveHours": 1,
+      "randomizedNames": ["Chelsy", "Timmie", "Danell", "Tamera", "Charita"]
+    },
+    {
+      "id": "beekeeper",
+      "name": "Bee Keeper",
+      "shape": "trader",
+      "quests": [],
+      "damage": 500,
+      "health": 1000,
+      "reviveHours": 1,
+      "randomizedNames": ["Dareen", "Paulina", "Teresina", "Nara", "Delly"]
+    },
+    {
+      "id": "blacksmith",
+      "name": "Blacksmith",
+      "shape": "trader",
+      "quests": [],
+      "damage": 500,
+      "health": 1000,
+      "reviveHours": 1,
+      "randomizedNames": ["Wendie", "Vanda", "Martita", "Lonnie", "Querida"]
+    },
+    {
+      "id": "carpenter",
+      "name": "Carpenter",
+      "shape": "trader",
+      "quests": [],
+      "damage": 500,
+      "health": 1000,
+      "reviveHours": 1,
+      "randomizedNames": ["Brietta", "Tawnya", "Nanni", "Enrica", "Kirstyn"]
+    },
+    {
+      "id": "chef",
+      "name": "Chef",
+      "shape": "trader",
+      "quests": [],
+      "damage": 500,
+      "health": 1000,
+      "reviveHours": 1,
+      "randomizedNames": ["Brandise", "Linell", "Morgana", "Lilas", "Marja"]
+    },
+    {
+      "id": "farmer",
+      "name": "Farmer",
+      "shape": "trader",
+      "quests": [],
+      "damage": 500,
+      "health": 1000,
+      "reviveHours": 1,
+      "randomizedNames": ["Lezlie", "Winny", "Elbertine", "Jonie", "Rebecka"]
+    },
+    {
+      "id": "fisher",
+      "name": "Fisher",
+      "shape": "trader",
+      "quests": [],
+      "damage": 500,
+      "health": 1000,
+      "reviveHours": 1,
+      "randomizedNames": ["Nadeen", "Vivien", "Katerina", "Nikkie", "Muriel"]
+    },
+    {
+      "id": "hunter",
+      "name": "Hunter",
+      "shape": "trader",
+      "quests": [],
+      "damage": 500,
+      "health": 1000,
+      "reviveHours": 1,
+      "randomizedNames": ["Abigail", "Tyne", "Eudora", "Kirbie", "Taryn"]
+    },
+    {
+      "id": "lumberjack",
+      "name": "Lumberjack",
+      "shape": "trader",
+      "quests": [],
+      "damage": 500,
+      "health": 1000,
+      "reviveHours": 1,
+      "randomizedNames": [
+        "Maybelle",
+        "Quentin",
+        "Gusella",
+        "Rafaelita",
+        "Bride"
+      ]
+    },
+    {
+      "id": "miner",
+      "name": "Miner",
+      "shape": "trader",
+      "quests": [],
+      "damage": 500,
+      "health": 1000,
+      "reviveHours": 1,
+      "randomizedNames": ["Dotty", "Shalna", "Shoshana", "Afton", "Tasha"]
+    },
+    {
+      "id": "minersdog",
+      "name": "Miner's Dog",
+      "shape": "wolf-female",
+      "quests": [],
+      "damage": 500,
+      "health": 1000,
+      "reviveHours": 1,
+      "randomizedNames": ["Nina", "Zarah", "Juliane", "Lyn", "Aleda"]
+    },
+    {
+      "id": "outlooklibrarian",
+      "name": "Outlook Librarian",
+      "shape": "trader",
+      "quests": [],
+      "damage": 500,
+      "health": 1000,
+      "reviveHours": 1,
+      "randomizedNames": ["Rowena", "Kelcie", "Orsola", "Cybill", "Channa"]
+    },
+    {
+      "id": "potter",
+      "name": "Potter",
+      "shape": "trader",
+      "quests": [],
+      "damage": 500,
+      "health": 1000,
+      "reviveHours": 1,
+      "randomizedNames": ["Rosaline", "Rachele", "Kippie", "Rennie", "Olia"]
+    },
+    {
+      "id": "rancher",
+      "name": "Rancher",
+      "shape": "trader",
+      "quests": [],
+      "damage": 500,
+      "health": 1000,
+      "reviveHours": 1,
+      "randomizedNames": ["Gracia", "Hannie", "Austine", "Cyb", "Patrizia"]
+    },
+    {
+      "id": "soldiermining",
+      "name": "Akatin Soldier",
+      "shape": "trader",
+      "quests": [],
+      "damage": 500,
+      "health": 1000,
+      "reviveHours": 1,
+      "randomizedNames": ["Alida", "Bamby", "Lyndell", "Essa", "Gwendolen"]
+    },
+    {
+      "id": "soldiercooking",
+      "name": "Andosa Soldier",
+      "shape": "trader",
+      "quests": [],
+      "damage": 500,
+      "health": 1000,
+      "reviveHours": 1,
+      "randomizedNames": ["Bonnie", "Twyla", "Darcee", "Monique", "Devinne"]
+    },
+    {
+      "id": "soldierpottery",
+      "name": "Bribus Soldier",
+      "shape": "trader",
+      "quests": [],
+      "damage": 500,
+      "health": 1000,
+      "reviveHours": 1,
+      "randomizedNames": ["Ilse", "Dory", "Fina", "Minnie", "Pierette"]
+    },
+    {
+      "id": "soldierfarming",
+      "name": "Hialing Soldier",
+      "shape": "trader",
+      "quests": [],
+      "damage": 500,
+      "health": 1000,
+      "reviveHours": 1,
+      "randomizedNames": ["Nana", "Lonna", "Coletta", "Annie", "Clary"]
+    },
+    {
+      "id": "soldiermetalworking",
+      "name": "Jul Soldier",
+      "shape": "trader",
+      "quests": [],
+      "damage": 500,
+      "health": 1000,
+      "reviveHours": 1,
+      "randomizedNames": ["Rivkah", "Camala", "Maryjo", "Candace", "Ninnette"]
+    },
+    {
+      "id": "soldierforestry",
+      "name": "Prashire Soldier",
+      "shape": "trader",
+      "quests": [],
+      "damage": 500,
+      "health": 1000,
+      "reviveHours": 1,
+      "randomizedNames": ["Annelise", "Kamillah", "Sena", "Genny", "Anjanette"]
+    },
+    {
+      "id": "soldierdigging",
+      "name": "Ucresa Soldier",
+      "shape": "trader",
+      "quests": [],
+      "damage": 500,
+      "health": 1000,
+      "reviveHours": 1,
+      "randomizedNames": ["Julie", "Nerta", "Georgianne", "Lelia", "Willamina"]
+    },
+    {
+      "id": "soldierhusbandry",
+      "name": "Wens Soldier",
+      "shape": "trader",
+      "quests": [],
+      "damage": 500,
+      "health": 1000,
+      "reviveHours": 1,
+      "randomizedNames": ["Magdalena", "Ruth", "Sashenka", "Melony", "Mildred"]
+    },
+    {
+      "id": "acorninntavernpupper",
+      "name": "Tavern Pupper",
+      "shape": "wolf-female",
+      "quests": [],
+      "damage": 500,
+      "health": 1000,
+      "reviveHours": 1,
+      "randomizedNames": ["Antonie", "Faina", "Marylin", "Martha", "Nissy"]
+    },
+    {
+      "id": "travelingmerchantmetalworking",
+      "name": "Jul Traveling Merchant",
+      "shape": "trader",
+      "quests": [],
+      "damage": 500,
+      "health": 1000,
+      "reviveHours": 1,
+      "randomizedNames": [
+        "Jessamine",
+        "Othelia",
+        "Marietta",
+        "Vilhelmina",
+        "Addi"
+      ]
+    },
+    {
+      "id": "travelingmerchantmining",
+      "name": "Akatin Traveling Merchant",
+      "shape": "trader",
+      "quests": [],
+      "damage": 500,
+      "health": 1000,
+      "reviveHours": 1,
+      "randomizedNames": ["Sam", "Cathyleen", "Grethel", "De", "Jamima"]
+    },
+    {
+      "id": "travelingmerchantcooking",
+      "name": "Andosa Traveling Merchant",
+      "shape": "trader",
+      "quests": [],
+      "damage": 500,
+      "health": 1000,
+      "reviveHours": 1,
+      "randomizedNames": ["Catherina", "Tommie", "Linnie", "Cinda", "Liane"]
+    },
+    {
+      "id": "travelingmerchantspawn",
+      "name": "Traveling Merchant",
+      "shape": "trader",
+      "quests": [],
+      "damage": 500,
+      "health": 1000,
+      "reviveHours": 1,
+      "randomizedNames": ["Vida", "Candice", "Josephine", "Hephzibah", "Micki"]
+    },
+    {
+      "id": "travelingmerchantpottery",
+      "name": "Bribus Traveling Merchant",
+      "shape": "trader",
+      "quests": [],
+      "damage": 500,
+      "health": 1000,
+      "reviveHours": 1,
+      "randomizedNames": ["Bella", "Laura", "Miran", "Erinna", "Rhea"]
+    },
+    {
+      "id": "travelingmerchantfarming",
+      "name": "Hialing Traveling Merchant",
+      "shape": "trader",
+      "quests": [],
+      "damage": 500,
+      "health": 1000,
+      "reviveHours": 1,
+      "randomizedNames": [
+        "Dottie",
+        "Margaretha",
+        "Bendite",
+        "Lucretia",
+        "Carlye"
+      ]
+    },
+    {
+      "id": "travelingmerchantforestry",
+      "name": "Prashire Traveling Merchant",
+      "shape": "trader",
+      "quests": [],
+      "damage": 500,
+      "health": 1000,
+      "reviveHours": 1,
+      "randomizedNames": ["Annemarie", "Giana", "Aigneis", "Taffy", "Noellyn"]
+    },
+    {
+      "id": "travelingmerchantdigging",
+      "name": "Ucresa Traveling Merchant",
+      "shape": "trader",
+      "quests": [],
+      "damage": 500,
+      "health": 1000,
+      "reviveHours": 1,
+      "randomizedNames": ["Lydie", "Letta", "Raynell", "Kristel", "Annis"]
+    },
+    {
+      "id": "travelingmerchanthusbandry",
+      "name": "Wens Traveling Merchant",
+      "shape": "trader",
+      "quests": [],
+      "damage": 500,
+      "health": 1000,
+      "reviveHours": 1,
+      "randomizedNames": ["Glynda", "Linnell", "Heddie", "Odelia", "Caren"]
+    },
+    {
+      "id": "treasurehunter",
+      "name": "Treasure Hunter",
+      "shape": "trader",
+      "quests": [],
+      "damage": 500,
+      "health": 1000,
+      "reviveHours": 1,
+      "randomizedNames": ["Lorene", "Kass", "Dorothea", "Page", "Ranee"]
+    },
+    {
+      "id": "valleycampguardcaptain",
+      "name": "Valley Camp Guard Captain",
+      "shape": "trader",
+      "quests": [],
+      "damage": 500,
+      "health": 1000,
+      "reviveHours": 1,
+      "randomizedNames": ["Arda", "Renata", "Allsun", "Cynthie", "Tillie"]
+    },
+    {
+      "id": "weaver",
+      "name": "Weaver",
+      "shape": "trader",
+      "quests": [],
+      "damage": 500,
+      "health": 1000,
+      "reviveHours": 1,
+      "randomizedNames": ["Aurlie", "Pauletta", "Halimeda", "Xylia", "Darci"]
     }
   ],
   "questGiverShapes": [

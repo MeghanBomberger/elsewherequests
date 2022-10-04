@@ -25,7 +25,7 @@ export const QuestGiver = () => {
   const refetchQuestGiverData = () => {
     fetchQuestGiverData()
       .then(res => {
-        setQuestGivers(res.questGivers)
+        setQuestGivers(res.questGivers.sort(giver => giver.id))
         setEntityShapes(res.questGiverShapes)
       })
       .catch(err => {
@@ -87,7 +87,7 @@ export const QuestGiver = () => {
           <QuestGiverForm
             selectedQuestGiver={selectedQuestGiver}
             entityShapes={entityShapes}
-            questGiverIds={questGivers?.map(giver => giver.id) || []}
+            questGiverIds={!!questGivers?.length ? questGivers?.map(giver => giver.id) || [] : []}
             refetchQuestGiverData={refetchQuestGiverData}
             setErrorMessage={setErrorMessage}
             setFormIsOpen={setFormIsOpen}

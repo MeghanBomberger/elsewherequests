@@ -2,7 +2,7 @@ import axios from 'axios'
 import { useCallback, useEffect, useState } from 'react'
 
 import './QuestForm.scss'
-import closeIcon from '../../assets/cancel.png'
+import { ObjectivesForm } from './ObjectivesForm'
 
 export const QuestForm = ({
   items,
@@ -12,20 +12,15 @@ export const QuestForm = ({
   selectedQuest,
   setErrorMessage,
   setQuests,
+  setFormIsOpen,
 }) => {
   const [id, setId] = useState('')
   const [title, setTitle] = useState('')
   const [description, setDescription] = useState('')
   const [selectedQuestGiver, setSelectedQuestGiver] = useState('')
   const [selectedPreReqQuest, setSelectedPreReqQuest] = useState('')
-  const [filteredGatherItems, setFilteredGatherItems] = useState([])
-  const [selectedGatherItem, setSelectedGatherItem] = useState('')
   const [gatherObjectives, setGatherObjectives] = useState([])
-  const [filteredKillMobs, setFilteredKillMobs] = useState([])
-  const [selectedKillMob, setSelectedKillMob] = useState('')
   const [killObjectives, setKillObjectives] = useState([])
-  const [filteredRewardItem, setFilteredRewardItem] = useState([])
-  const [selectedRewardItem, setSelectedRewardItem] = useState('')
   const [rewardItems, setRewardItems] = useState([])
   const [perPlayer, setPerPlayer] = useState(true)
   const [cooldown, setCooldown] = useState(999999)
@@ -36,34 +31,26 @@ export const QuestForm = ({
       !!title &&
       !!description &&
       !!selectedQuestGiver &&
-      !!selectedPreReqQuest &&
       !!perPlayer &&
       !!cooldown &&
-      !!rewardItems?.length &&
-      (
-        !!gatherObjectives?.length || 
-        !!killObjectives?.length
-      )
+      !!rewardItems?.length
     )
   }, [
     id,
     title,
     description,
     selectedQuestGiver,
-    selectedPreReqQuest,
     perPlayer,
     cooldown,
-    rewardItems,
-    gatherObjectives,
-    killObjectives
+    rewardItems
   ])
 
   const updateForm = useCallback(() => {
     setId(selectedQuest.id)
     setTitle(selectedQuest.title)
     setDescription(selectedQuest.description)
-    setSelectedQuestGiver(selectedQuest.questGiver)
-    setSelectedPreReqQuest(selectedQuest.preReqQuest)
+    setSelectedQuestGiver(selectedQuest.questGiverId)
+    setSelectedPreReqQuest(selectedQuest.preReqQuestId)
     setGatherObjectives(selectedQuest.gatherObjectives)
     setKillObjectives(selectedQuest.killObjectives)
     setRewardItems(selectedQuest.rewardItems)
@@ -78,63 +65,6 @@ export const QuestForm = ({
     ]
   )
 
-  const addGatherItem = async (e) => {
-    e.preventDefault()
-    const itemId = e.target.value
-    const selectedItem = items?.find(item => item.id === itemId)
-    await setSelectedGatherItem(itemId)
-    await setGatherObjectives([...gatherObjectives, selectedItem])
-    const filteredItems = filteredGatherItems?.filter(item => item.id !== itemId)
-    await setFilteredGatherItems(filteredItems)
-    await setSelectedGatherItem('')
-  }
-
-  const removeGatherItem = async (e, selectedItem) => {
-    e.preventDefault()
-    const itemId = selectedItem.id
-    await setGatherObjectives(gatherObjectives?.filter(item => item.id !== itemId))
-    const filteredItems = [...filteredGatherItems, selectedItem]
-    await setFilteredGatherItems(filteredItems)
-  }
-
-  const addKillMob = async (e) => {
-    e.preventDefault()
-    const mobId = e.target.value
-    const selectedMob = mobs?.find(mob => mob.id === mobId)
-    await setSelectedKillMob(mobId)
-    await setKillObjectives([...killObjectives, selectedMob])
-    const filteredMobs = filteredKillMobs?.filter(mob => mob.id !== mobId)
-    await setFilteredKillMobs(filteredMobs)
-    await setSelectedKillMob('')
-  }
-
-  const removeKillMob = async (e, selectedMob) => {
-    e.preventDefault()
-    const mobId = selectedMob.id
-    await setKillObjectives(killObjectives?.filter(mob => mob.id !== mobId))
-    const filteredMobs = [...filteredKillMobs, selectedMob]
-    await setFilteredKillMobs(filteredMobs)
-  }
-
-  const addRewardItem = async (e) => {
-    e.preventDefault()
-    const itemId = e.target.value
-    const selectedItem = items?.find(item => item.id === itemId)
-    await setSelectedRewardItem(itemId)
-    await setRewardItems([...rewardItems, selectedItem])
-    const filteredItems = filteredRewardItem?.filter(item => item.id !== itemId)
-    await setFilteredRewardItem(filteredItems)
-    await setSelectedRewardItem('')
-  }
-
-  const removeRewardItem = async (e, selectedItem) => {
-    e.preventDefault()
-    const itemId = selectedItem.id
-    await setRewardItems(rewardItems?.filter(item => item.id !== itemId))
-    const filteredItems = [...filteredRewardItem, selectedItem]
-    await setFilteredRewardItem(filteredItems)
-  }
-
   const handleSave = async () => {
     const newQuest = {
       id,
@@ -148,8 +78,12 @@ export const QuestForm = ({
       questGiverId: selectedQuestGiver,
       preReqQuestId: selectedPreReqQuest,
     }
-    const res = await axios.post("http://localhost:5000/api/quests", newQuest)
-    setQuests(res)
+    await axios.post("http://localhost:5000/api/quests", newQuest)
+      .then(res => {
+        setQuests(res)
+        // setFormIsOpen(false)
+      })
+      .catch(err => !!err && setErrorMessage("Error saving quest"))
   }
 
   useEffect(() => {
@@ -158,14 +92,12 @@ export const QuestForm = ({
     }
   }, [selectedQuest, updateForm])
 
-  useEffect(() => {
-    setFilteredGatherItems(items)
-    setFilteredRewardItem(items)
-  }, [items])
-
-  useEffect(() => {
-    setFilteredKillMobs(mobs)
-  }, [mobs])
+  console.log("QUEST FORM", {
+    selectedQuest,
+    gatherObjectives,
+    killObjectives,
+    rewardItems
+  })
 
   return (
     <form className="quest-form">
@@ -175,7 +107,7 @@ export const QuestForm = ({
         )
         : (
           <>
-            <label for="id">
+            <label htmlFor="id">
               VS ID:
               <input
                 required
@@ -191,7 +123,7 @@ export const QuestForm = ({
         )
       }
 
-      <label for="title">
+      <label htmlFor="title">
         Title:
         <input
           required
@@ -201,7 +133,7 @@ export const QuestForm = ({
         />
       </label>
 
-      <label for="description" className="quest-description">
+      <label htmlFor="description" className="quest-description">
         Description (VTML):
         <textarea
           required
@@ -211,7 +143,7 @@ export const QuestForm = ({
       </label>
 
       {questGivers?.length && (
-        <label for="selectedQuestGiver">
+        <label htmlFor="selectedQuestGiver">
           Quest Giver:
           <select
             required
@@ -219,6 +151,11 @@ export const QuestForm = ({
             onChange={e => setSelectedQuestGiver(e.target.value)}
             value={selectedQuestGiver}
           >
+            <option
+                value={""}
+              >
+                SELECT QUEST GIVER
+              </option>
             {questGivers?.map(giver => (
               <option
                 key={giver.id}
@@ -232,7 +169,7 @@ export const QuestForm = ({
       )}
 
       {quests?.length && (
-        <label for="selectedPreReqQuest">
+        <label htmlFor="selectedPreReqQuest">
           Pre Requisit Quest (optional):
           <select
             name="selectedPreReqQuest"
@@ -257,175 +194,34 @@ export const QuestForm = ({
         </label>
       )}
 
-      <section className="objectives-section gather-items">
-          <label for="gatherItems">
-            Gather Objectives: 
-            {!!filteredGatherItems?.length && (
-              <select
-                name="gatherItems"
-                onChange={e => addGatherItem(e)}
-                value={selectedGatherItem}
-              >
-                <option
-                  key={"no-gatherobjective"}
-                  value={""}
-                >
-                  NONE
-                </option>
-                {filteredGatherItems?.map(item => (
-                  <option
-                    key={item.id}
-                    value={item.id}
-                  >
-                    {item.name}{item.mod !== "game" && ` (${item.mod})`}
-                  </option>
-                ))}
-              </select>
-            )}
-          </label>
-        
-        {!!gatherObjectives?.length
-          ? (
-            <table className="objective-table">
-              <tbody>
-                {gatherObjectives?.map(item => (
-                  <tr key={`gather-item-${item.id}`}>
-                    <td>{item.name}</td>
-                    <td>
-                      <button
-                        onClick={(e) => removeGatherItem(e, item)}
-                      >
-                        <img
-                          alt="remove gather objective"
-                          title="remove gather objective"
-                          src={closeIcon}
-                        />
-                      </button>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          )
-          : (
-            <p className="no-objective">No gather objectives selected</p>
-          )
-        }
-      </section>
+      <ObjectivesForm
+        objectives={gatherObjectives}
+        setObjectives={setGatherObjectives}
+        objectiveType="Gather Objective"
+        options={items}
+        singleGroup={false}
+        isEdit={!!selectedQuest ? true : false}
+      />
 
-      <section className="objectives-section kill-mobs">
-          <label for="killMobs">
-            Kill Objectives: 
-            {!!filteredKillMobs?.length && (
-              <select
-                name="killMobs"
-                onChange={e => addKillMob(e)}
-                value={selectedKillMob}
-              >
-                <option
-                  key={"no-killmob"}
-                  value={""}
-                >
-                  NONE
-                </option>
-                {filteredKillMobs?.map(mob => (
-                  <option
-                    key={mob.id}
-                    value={mob.id}
-                  >
-                    {mob.name}{!!mob?.attribute?.length && "-"}{mob?.attribute?.join("-")}{mob.mod !== "game" && ` (${mob.mod})`}
-                  </option>
-                ))}
-              </select>
-            )}
-          </label>
-        
-        {!!killObjectives?.length
-          ? (
-            <table className="objective-table">
-              <tbody>
-                {killObjectives?.map(mob => (
-                  <tr key={`kill-mob-${mob.id}`}>
-                    <td>{`${mob.name}${!!mob?.attribute?.length && "-"}${mob?.attribute?.join("-")}`}</td>
-                    <td>
-                      <button
-                        onClick={(e) => removeKillMob(e, mob)}
-                      >
-                        <img
-                          alt="remove kill objective"
-                          title="remove kill objective"
-                          src={closeIcon}
-                        />
-                      </button>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          )
-          : (
-            <p className="no-objective">No kill objectives selected</p>
-          )
-        }
-      </section>
+      <ObjectivesForm
+        objectives={killObjectives}
+        setObjectives={setKillObjectives}
+        objectiveType="Kill Objective"
+        options={mobs}
+        singleGroup={false}
+        isEdit={!!selectedQuest ? true : false}
+      />
 
-      <section className="objectives-section reward-items">
-          <label for="rewardItems">
-            Reward Items: 
-            {!!filteredRewardItem?.length && (
-              <select
-                name="rewardItems"
-                onChange={e => addRewardItem(e)}
-                value={selectedRewardItem}
-              >
-                <option
-                  key={"no-rewarditem"}
-                  value={""}
-                >
-                  NONE
-                </option>
-                {filteredRewardItem?.map(item => (
-                  <option
-                    key={item.id}
-                    value={item.id}
-                  >
-                    {item.name}{item.mod !== "game" && ` (${item.mod})`}
-                  </option>
-                ))}
-              </select>
-            )}
-          </label>
-        
-        {!!rewardItems?.length
-          ? (
-            <table className="objective-table">
-              <tbody>
-                {rewardItems?.map(item => (
-                  <tr key={`reward-item-${item.id}`}>
-                    <td>{item.name}{item.mod !== "game" && ` (${item.mod})`}</td>
-                    <td>
-                      <button
-                        onClick={(e) => removeRewardItem(e, item)}
-                      >
-                        <img
-                          alt="remove reward item"
-                          title="remove reward item"
-                          src={closeIcon}
-                        />
-                      </button>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          )
-          : (
-            <p className="no-objective">No reward items selected</p>
-          )
-        }
-      </section>
+      <ObjectivesForm
+        objectives={rewardItems}
+        setObjectives={setRewardItems}
+        objectiveType="Item Reward"
+        options={items}
+        singleGroup={true}
+        isEdit={!!selectedQuest ? true : false}
+      />
 
-      <label for="perPlayer" className="solo-quest">
+      <label htmlFor="perPlayer" className="solo-quest">
         Solo Quest:
         <input
           type="checkbox"
@@ -434,7 +230,7 @@ export const QuestForm = ({
         />
       </label>
 
-      <label for="cooldown">
+      <label htmlFor="cooldown">
         Cooldown in Hours:
         <input
           required

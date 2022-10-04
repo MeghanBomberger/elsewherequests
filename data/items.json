@@ -1,1 +1,93 @@
-[{"id":"linensack","name":"Linen Sack","mod":"game","primaryAttributes":[],"secondaryAttributes":[]},{"id":"bed-hay","name":"Hay Bed","mod":"game","primaryAttributes":["head","north"],"secondaryAttributes":[]}]
+[
+  {
+    "id": "linensack",
+    "name": "Linen Sack",
+    "mod": "game",
+    "primaryAttributes": [],
+    "secondaryAttributes": []
+  },
+  {
+    "id": "bed-hay",
+    "name": "Hay Bed",
+    "mod": "game",
+    "primaryAttributes": ["head", "north"],
+    "secondaryAttributes": []
+  },
+  {
+    "id": "knife-copper",
+    "name": "Copper Knife",
+    "mod": "game",
+    "primaryAttributes": [],
+    "secondaryAttributes": []
+  },
+  {
+    "id": "axe-copper",
+    "name": "Copper Axe",
+    "mod": "game",
+    "primaryAttributes": [],
+    "secondaryAttributes": []
+  },
+  {
+    "id": "spelt",
+    "name": "Spelt Grain",
+    "mod": "game",
+    "primaryAttributes": [],
+    "secondaryAttributes": []
+  },
+  {
+    "id": "glazedbowl-burnt-clear-blue-plain",
+    "name": "Blue Glazed Bowl",
+    "mod": "bricklayers",
+    "primaryAttributes": [],
+    "secondaryAttributes": []
+  },
+  {
+    "id": "glazedoillamp-clear-blue-up",
+    "name": "Blue Glazed Lamp",
+    "mod": "bricklayers",
+    "primaryAttributes": [],
+    "secondaryAttributes": []
+  },
+  {
+    "id": "firewood",
+    "name": "Firewood",
+    "mod": "game",
+    "primaryAttributes": [],
+    "secondaryAttributes": []
+  },
+  {
+    "id": "gear-rusty",
+    "name": "Rusty Gear",
+    "mod": "game",
+    "primaryAttributes": [],
+    "secondaryAttributes": []
+  },
+  {
+    "id": "redmeat-raw",
+    "name": "Raw Redmeat",
+    "mod": "game",
+    "primaryAttributes": [],
+    "secondaryAttributes": []
+  },
+  {
+    "id": "fruit-cranberry",
+    "name": "Cranberry",
+    "mod": "game",
+    "primaryAttributes": [],
+    "secondaryAttributes": []
+  },
+  {
+    "id": "bread-flax",
+    "name": "Flax Bread",
+    "mod": "game",
+    "primaryAttributes": [],
+    "secondaryAttributes": []
+  },
+  {
+    "id": "storagevesselcolored-burnt-blurple",
+    "name": "Blue Storage Vessel",
+    "mod": "bricklayers",
+    "primaryAttributes": [],
+    "secondaryAttributes": []
+  }
+]

@@ -48,22 +48,29 @@ export const formatMods = (mods: Mod[]) => {
 
 export const genQuestDataObj = ({
   id,
+  title,
+  description,
   perPlayer,
   cooldown,
   gatherObjectives,
   killObjectives,
   rewardItems,
   preReqQuestId,
+  questGiverId,
 }: QuestData) => {
   const quest: QuestConfigFileObj = {
     id,
     cooldown,
     perPlayer,
+    title,
+    description,
+    questGiverId,
   }
 
   if (!!gatherObjectives?.length) {
+    //@ts-ignore - TODO fix types here
     quest.gatherObjectives = gatherObjectives?.map(item => ({
-      validCodes: item.ids,
+      ids: item.ids,
       demand: item.quantity
     })) || []
   }
@@ -76,8 +83,9 @@ export const genQuestDataObj = ({
   }
 
   if (!!rewardItems?.length) {
-    quest.itemRewards = rewardItems?.map(item => ({
-      itemCode: item.id,
+    //@ts-ignore - TODO fix types here
+    quest.rewardItems = rewardItems?.map(item => ({
+      itemCode: item.ids?.[0],
       amount: item.quantity
     }))
   }

@@ -149,6 +149,8 @@ const writeQuestsConfigFile = async () => {
     const contents = await generateQuestConfigFileContents(parsedData)
     const questFilePath = `${buildPath}/config/quests.json`
 
+    console.log("quest contents", contents)
+
     fs.appendFile(questFilePath, '', (err2) => {
       if (err2) {
         console.error("ERROR CREATING QUESTS.JSON FILE: ", err2)
