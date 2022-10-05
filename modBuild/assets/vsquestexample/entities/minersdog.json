@@ -52,18 +52,18 @@
         "animation": "die",
         "animationSpeed": 1.75,
         "weight": 10,
-        "blendMode": "addAverage"
+        "blendMode": "AddAverage"
       },
       {
         "code": "hurt",
         "animation": "hurt",
         "animationSpeed": 2,
-        "blendMode": "addAverage"
+        "blendMode": "AddAverage"
       },
       {
         "code": "idle",
         "animation": "idle",
-        "blendMode": "addAverage",
+        "blendMode": "AddAverage",
         "easeOutSpeed": 4,
         "triggeredBy": {
           "defaultAnim": true

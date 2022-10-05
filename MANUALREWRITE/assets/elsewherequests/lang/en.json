@@ -1,0 +1,59 @@
+{
+  "item-creature-acorninnkeeper": "Acorn Innkeeper",
+  "elsewherequests:acorninnwelcome-title": "Welcome to Elsewhere",
+  "elsewherequests:acorninnwelcome-desc": "Welcome!<br><br>Did you just come through the rift?<br><br> Feeling okay?... Good.<br><br>Well, why don't I help you get settled. Did you manage to bring anything through with you?<br><br><i>Type forward slash starterkit with your inventory bar empty to see what you were able to bring with you through the rift.</i>",
+  "elsewherequests:acorninnwelcome-obj": "Give inn keeper the blue vessel: {0}/1",
+  "elsewherequests:acorninnfirewood-title": "Keeping the Acorn Cozy",
+  "elsewherequests:acorninnfirewood-desc": "We're high enough up that the fire needs to be lit around the clock. I've been far too busy to go down and gather firewood with all the new travelers about. Would you mind fetching some? I'll pay you for your time, of course.",
+  "elsewherequests:acorninnfirewood-obj": "Gather firewood: {0}/32",
+  "elsewherequests:acorninningredients-title": "Cranberry Potroast",
+  "elsewherequests:acorninningredients-desc": "I need some ingredients for the evening meal. Was thinking of making some roast with cranberry sauce. Can you fetch the ingredients for me?",
+  "elsewherequests:acorninningredients-obj": "Gather red meat: {0}/16<br>Gather cranberries: {0}/16",
+  "elsewherequests:acorninnmoreingredients-title": "Mushroom Stew",
+  "elsewherequests:acorninnmoreingredients-desc": "I need some ingredients for the evening meal. Was thinking of making some mushroom stew. Can you fetch the ingredients for me?",
+  "elsewherequests:acorninnmoreingredients-obj": "Gather edible mushrooms: {0}/16",
+  "elsewherequests:acorninngettingsettled-title": "Getting Settled",
+  "elsewherequests:acorninngettingsettled-desc": "You're welcome to stay in one of the available rooms upstairs, but if you're looking for something more permanent I'd go talk to the guard captain in the camp down in the valley. He's got plenty of work to go around, and will help you set up a decent place to stay in the camp.<br><br>While you're there, would you mind asking if my linen shipment has come in?",
+  "elsewherequests:acorninngettingsettled-obj": "Find the taverns linen shipment: {0}/16",
+
+  "item-creature-valleycampguardcaptain": "Valley Camp Guard Captain",
+  "elsewherequests:valleycampintroduction-title": "Making Camp - Part 1",
+  "elsewherequests:valleycampintroduction-desc": "The inn keeper at the Acorn sent you, huh?<br><br>Well, we've still got space down here, and I could use another pair of hands.<br><br>Why don't you clear a space of grass to start with while I see if I can find the Acorn's shipment.<br><br><i>PRE-REQ: Getting Settled from the Acorn Innkeeper</i>",
+  "elsewherequests:valleycampintroduction-obj": "Gather dry grass: {0}/32",
+  "elsewherequests:valleycampmakingcamp1-title": "Making Camp - Part 1",
+  "elsewherequests:valleycampmakingcamp1-desc": "Plot looks good. You're going to need a fence to mark out your section of the camp. If you go get some wood you can use my tools to make some fence. Plenty of pine around here, but watch out for the bears and wolves.",
+  "elsewherequests:valleycampmakingcamp1-obj": "Gather pine logs: {0}/8",
+  "elsewherequests:valleycampmakingcamp2-title": "Making Camp - Part 2",
+  "elsewherequests:valleycampmakingcamp2-desc": "We're going to need to get some more leather to make you a real tent. The wolves are getting out of hand up on the cliff anyway. Thin out the pack and bring me the hides.",
+  "elsewherequests:valleycampmakingcamp2-obj": "Gather medium hide: {0}/8<br><br>Kill wolves: {0}/4",
+  "elsewherequests:valleycampmakingcamp3-title": "Making Camp - Part 3",
+  "elsewherequests:valleycampmakingcamp3-desc": "I appreciate all the help. I have more work if you're interested, but if you're itching to get out an explore I can make you a tent bag. It'll help you pack your shelter up more quickly and make it all a bit easier to carry. I'd just need the materials to put it together.<br><br>I'll need some rope, a big of a hide as you can find, and some fat to prepare the hide with. Only thing is, the only creature large enough to get the hide from in this area are the bears...<br><br><i>If you are unsure how to make rope press 'H' to open your handbook and search for the recipe using the search bar.</i>",
+  "elsewherequests:valleycampmakingcamp3-obj": "<i>The captain is helping you make a tent bag.</i><br><br>Gather hide: {0}/1<br>Gather rope: {0}/1<br>Gather fat: {0}/1<br><br>Kill bear: {0}/1",
+  "elsewherequests:valleycampfirstaide-title": "First Aide Supplies",
+  "elsewherequests:valleycampfirstaide-desc": "You'd think some of these folks had never held anything sharp before. We're running low on poultices. Bring back some horsetail and reeds would you?",
+  "elsewherequests:valleycampfirstaide-obj": "Gather reeds: {0}/2<br>Gather horsetail: {0}/4",
+
+  "item-creature-tavernpupper": "Tavern Pupper",
+  "elsewherequests:tavernpuppersmallsnack-title": "A Small Snack",
+  "elsewherequests:tavernpuppersmallsnack-desc": "<i>The dog looks at you and then pointedly at their empty bowl. The innkeeper seems pretty busy. Maybe you should just go grab the dog a snack.</i>",
+  "elsewherequests:tavernpuppersmallsnack-obj": "Gather bones: {0}/8",
+  "elsewherequests:tavernpuppermissingpuppy-title": "Missing Puppy",
+  "elsewherequests:tavernpuppermissingpuppy-desc": "<i>The dog looks very sad. You ask the tavern keeper what is wrong with her. They tell you they sold the dog's litter to one of the traders that passed through and thinks she misses them.</i>",
+  "elsewherequests:tavernpuppermissingpuppy-obj": "Return puppy: {0}/1",
+
+  "item-creature-archaeologist": "Archaeologist",
+
+  "item-creature-baker": "Baker",
+
+  "item-creature-lumberjack": "Lumberjack",
+
+  "item-creature-blacksmith": "Blacksmith",
+
+  "item-creature-Miner": "Miner",
+
+  "item-creature-potter": "Potter",
+
+  "item-creature-fisher": "Fisher",
+
+  "item-creature-farmer": "Farmer"
+}

@@ -1,1 +1,15 @@
-{"type":"content","modid":"vsquestexample","name":"Elsewhere Quests","side":"universal","authors":["Amigurumi","G3rste"],"description":"Quests for the Elsewhere server.","version":"0.2.0","dependencies":{"game":"1.17.3","vsquest":"0.1.0"}}
+{
+  "type": "content",
+  "modid": "vsquestexample",
+  "name": "Elsewhere Quests",
+  "side": "universal",
+  "authors": ["Amigurumi"],
+  "description": "Quests for the Elsewhere server.",
+  "version": "0.1.0",
+  "dependencies": {
+    "game": "1.17.4",
+    "vsquest": "0.1.0",
+    "wolftaming": "1.5.4",
+    "petai": "1.5.3"
+  }
+}

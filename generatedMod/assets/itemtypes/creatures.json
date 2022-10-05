@@ -1,0 +1,734 @@
+{
+  "code": "creature",
+  "class": "ItemCreature",
+  "maxstacksize": 64,
+  "variantgroups": [
+    {
+      "code": "type",
+      "states": [
+        "acorninnkeeper",
+        "archaeologist",
+        "artificer",
+        "baker",
+        "beekeeper",
+        "blacksmith",
+        "carpenter",
+        "chef",
+        "farmer",
+        "fisher",
+        "hunter",
+        "lumberjack",
+        "miner",
+        "minersdog",
+        "outlooklibrarian",
+        "potter",
+        "rancher",
+        "soldiermining",
+        "soldiercooking",
+        "soldierpottery",
+        "soldierfarming",
+        "soldiermetalworking",
+        "soldierforestry",
+        "soldierdigging",
+        "soldierhusbandry",
+        "acorninntavernpupper",
+        "travelingmerchantmetalworking",
+        "travelingmerchantmining",
+        "travelingmerchantcooking",
+        "travelingmerchantspawn",
+        "travelingmerchantpottery",
+        "travelingmerchantfarming",
+        "travelingmerchantforestry",
+        "travelingmerchantdigging",
+        "travelingmerchanthusbandry",
+        "treasurehunter",
+        "valleycampguardcaptain",
+        "weaver"
+      ]
+    }
+  ],
+  "shapeByType": {
+    "*-acorninnkeeper": { "base": "game:entity/humanoid/trader" },
+    "*-archaeologist": { "base": "game:entity/humanoid/trader" },
+    "*-artificer": { "base": "game:entity/humanoid/trader" },
+    "*-baker": { "base": "game:entity/humanoid/trader" },
+    "*-beekeeper": { "base": "game:entity/humanoid/trader" },
+    "*-blacksmith": { "base": "game:entity/humanoid/trader" },
+    "*-carpenter": { "base": "game:entity/humanoid/trader" },
+    "*-chef": { "base": "game:entity/humanoid/trader" },
+    "*-farmer": { "base": "game:entity/humanoid/trader" },
+    "*-fisher": { "base": "game:entity/humanoid/trader" },
+    "*-hunter": { "base": "game:entity/humanoid/trader" },
+    "*-lumberjack": { "base": "game:entity/humanoid/trader" },
+    "*-miner": { "base": "game:entity/humanoid/trader" },
+    "*-minersdog": { "base": "game:entity/humanoid/trader" },
+    "*-outlooklibrarian": { "base": "game:entity/humanoid/trader" },
+    "*-potter": { "base": "game:entity/humanoid/trader" },
+    "*-rancher": { "base": "game:entity/humanoid/trader" },
+    "*-soldiermining": { "base": "game:entity/humanoid/trader" },
+    "*-soldiercooking": { "base": "game:entity/humanoid/trader" },
+    "*-soldierpottery": { "base": "game:entity/humanoid/trader" },
+    "*-soldierfarming": { "base": "game:entity/humanoid/trader" },
+    "*-soldiermetalworking": { "base": "game:entity/humanoid/trader" },
+    "*-soldierforestry": { "base": "game:entity/humanoid/trader" },
+    "*-soldierdigging": { "base": "game:entity/humanoid/trader" },
+    "*-soldierhusbandry": { "base": "game:entity/humanoid/trader" },
+    "*-acorninntavernpupper": { "base": "game:entity/humanoid/trader" },
+    "*-travelingmerchantmetalworking": {
+      "base": "game:entity/humanoid/trader"
+    },
+    "*-travelingmerchantmining": { "base": "game:entity/humanoid/trader" },
+    "*-travelingmerchantcooking": { "base": "game:entity/humanoid/trader" },
+    "*-travelingmerchantspawn": { "base": "game:entity/humanoid/trader" },
+    "*-travelingmerchantpottery": { "base": "game:entity/humanoid/trader" },
+    "*-travelingmerchantfarming": { "base": "game:entity/humanoid/trader" },
+    "*-travelingmerchantforestry": { "base": "game:entity/humanoid/trader" },
+    "*-travelingmerchantdigging": { "base": "game:entity/humanoid/trader" },
+    "*-travelingmerchanthusbandry": { "base": "game:entity/humanoid/trader" },
+    "*-treasurehunter": { "base": "game:entity/humanoid/trader" },
+    "*-valleycampguardcaptain": { "base": "game:entity/humanoid/trader" },
+    "*-weaver": { "base": "game:entity/humanoid/trader" }
+  },
+  "texturesByType": {
+    "*-acorninnkeeper": { "skin": { "base": "game:entity/humanoid/trader" } },
+    "*-archaeologist": { "skin": { "base": "game:entity/humanoid/trader" } },
+    "*-artificer": { "skin": { "base": "game:entity/humanoid/trader" } },
+    "*-baker": { "skin": { "base": "game:entity/humanoid/trader" } },
+    "*-beekeeper": { "skin": { "base": "game:entity/humanoid/trader" } },
+    "*-blacksmith": { "skin": { "base": "game:entity/humanoid/trader" } },
+    "*-carpenter": { "skin": { "base": "game:entity/humanoid/trader" } },
+    "*-chef": { "skin": { "base": "game:entity/humanoid/trader" } },
+    "*-farmer": { "skin": { "base": "game:entity/humanoid/trader" } },
+    "*-fisher": { "skin": { "base": "game:entity/humanoid/trader" } },
+    "*-hunter": { "skin": { "base": "game:entity/humanoid/trader" } },
+    "*-lumberjack": { "skin": { "base": "game:entity/humanoid/trader" } },
+    "*-miner": { "skin": { "base": "game:entity/humanoid/trader" } },
+    "*-minersdog": { "skin": { "base": "game:entity/humanoid/trader" } },
+    "*-outlooklibrarian": { "skin": { "base": "game:entity/humanoid/trader" } },
+    "*-potter": { "skin": { "base": "game:entity/humanoid/trader" } },
+    "*-rancher": { "skin": { "base": "game:entity/humanoid/trader" } },
+    "*-soldiermining": { "skin": { "base": "game:entity/humanoid/trader" } },
+    "*-soldiercooking": { "skin": { "base": "game:entity/humanoid/trader" } },
+    "*-soldierpottery": { "skin": { "base": "game:entity/humanoid/trader" } },
+    "*-soldierfarming": { "skin": { "base": "game:entity/humanoid/trader" } },
+    "*-soldiermetalworking": {
+      "skin": { "base": "game:entity/humanoid/trader" }
+    },
+    "*-soldierforestry": { "skin": { "base": "game:entity/humanoid/trader" } },
+    "*-soldierdigging": { "skin": { "base": "game:entity/humanoid/trader" } },
+    "*-soldierhusbandry": { "skin": { "base": "game:entity/humanoid/trader" } },
+    "*-acorninntavernpupper": {
+      "skin": { "base": "game:entity/humanoid/trader" }
+    },
+    "*-travelingmerchantmetalworking": {
+      "skin": { "base": "game:entity/humanoid/trader" }
+    },
+    "*-travelingmerchantmining": {
+      "skin": { "base": "game:entity/humanoid/trader" }
+    },
+    "*-travelingmerchantcooking": {
+      "skin": { "base": "game:entity/humanoid/trader" }
+    },
+    "*-travelingmerchantspawn": {
+      "skin": { "base": "game:entity/humanoid/trader" }
+    },
+    "*-travelingmerchantpottery": {
+      "skin": { "base": "game:entity/humanoid/trader" }
+    },
+    "*-travelingmerchantfarming": {
+      "skin": { "base": "game:entity/humanoid/trader" }
+    },
+    "*-travelingmerchantforestry": {
+      "skin": { "base": "game:entity/humanoid/trader" }
+    },
+    "*-travelingmerchantdigging": {
+      "skin": { "base": "game:entity/humanoid/trader" }
+    },
+    "*-travelingmerchanthusbandry": {
+      "skin": { "base": "game:entity/humanoid/trader" }
+    },
+    "*-treasurehunter": { "skin": { "base": "game:entity/humanoid/trader" } },
+    "*-valleycampguardcaptain": {
+      "skin": { "base": "game:entity/humanoid/trader" }
+    },
+    "*-weaver": { "skin": { "base": "game:entity/humanoid/trader" } }
+  },
+  "creativeinventory": { "general": ["*"], "items": ["*"], "creatures": ["*"] },
+  "materialDensity": 600,
+  "guiTransformByType": {
+    "*-acorninnkeeper": {
+      "rotate": true,
+      "rotation": { "x": 0, "y": -90, "z": -178 },
+      "origin": { "x": 0.6, "y": 0.78, "z": 0.5 }
+    },
+    "*-archaeologist": {
+      "rotate": true,
+      "rotation": { "x": 0, "y": -90, "z": -178 },
+      "origin": { "x": 0.6, "y": 0.78, "z": 0.5 }
+    },
+    "*-artificer": {
+      "rotate": true,
+      "rotation": { "x": 0, "y": -90, "z": -178 },
+      "origin": { "x": 0.6, "y": 0.78, "z": 0.5 }
+    },
+    "*-baker": {
+      "rotate": true,
+      "rotation": { "x": 0, "y": -90, "z": -178 },
+      "origin": { "x": 0.6, "y": 0.78, "z": 0.5 }
+    },
+    "*-beekeeper": {
+      "rotate": true,
+      "rotation": { "x": 0, "y": -90, "z": -178 },
+      "origin": { "x": 0.6, "y": 0.78, "z": 0.5 }
+    },
+    "*-blacksmith": {
+      "rotate": true,
+      "rotation": { "x": 0, "y": -90, "z": -178 },
+      "origin": { "x": 0.6, "y": 0.78, "z": 0.5 }
+    },
+    "*-carpenter": {
+      "rotate": true,
+      "rotation": { "x": 0, "y": -90, "z": -178 },
+      "origin": { "x": 0.6, "y": 0.78, "z": 0.5 }
+    },
+    "*-chef": {
+      "rotate": true,
+      "rotation": { "x": 0, "y": -90, "z": -178 },
+      "origin": { "x": 0.6, "y": 0.78, "z": 0.5 }
+    },
+    "*-farmer": {
+      "rotate": true,
+      "rotation": { "x": 0, "y": -90, "z": -178 },
+      "origin": { "x": 0.6, "y": 0.78, "z": 0.5 }
+    },
+    "*-fisher": {
+      "rotate": true,
+      "rotation": { "x": 0, "y": -90, "z": -178 },
+      "origin": { "x": 0.6, "y": 0.78, "z": 0.5 }
+    },
+    "*-hunter": {
+      "rotate": true,
+      "rotation": { "x": 0, "y": -90, "z": -178 },
+      "origin": { "x": 0.6, "y": 0.78, "z": 0.5 }
+    },
+    "*-lumberjack": {
+      "rotate": true,
+      "rotation": { "x": 0, "y": -90, "z": -178 },
+      "origin": { "x": 0.6, "y": 0.78, "z": 0.5 }
+    },
+    "*-miner": {
+      "rotate": true,
+      "rotation": { "x": 0, "y": -90, "z": -178 },
+      "origin": { "x": 0.6, "y": 0.78, "z": 0.5 }
+    },
+    "*-minersdog": {
+      "rotate": true,
+      "rotation": { "x": 0, "y": -90, "z": -178 },
+      "origin": { "x": 0.6, "y": 0.78, "z": 0.5 }
+    },
+    "*-outlooklibrarian": {
+      "rotate": true,
+      "rotation": { "x": 0, "y": -90, "z": -178 },
+      "origin": { "x": 0.6, "y": 0.78, "z": 0.5 }
+    },
+    "*-potter": {
+      "rotate": true,
+      "rotation": { "x": 0, "y": -90, "z": -178 },
+      "origin": { "x": 0.6, "y": 0.78, "z": 0.5 }
+    },
+    "*-rancher": {
+      "rotate": true,
+      "rotation": { "x": 0, "y": -90, "z": -178 },
+      "origin": { "x": 0.6, "y": 0.78, "z": 0.5 }
+    },
+    "*-soldiermining": {
+      "rotate": true,
+      "rotation": { "x": 0, "y": -90, "z": -178 },
+      "origin": { "x": 0.6, "y": 0.78, "z": 0.5 }
+    },
+    "*-soldiercooking": {
+      "rotate": true,
+      "rotation": { "x": 0, "y": -90, "z": -178 },
+      "origin": { "x": 0.6, "y": 0.78, "z": 0.5 }
+    },
+    "*-soldierpottery": {
+      "rotate": true,
+      "rotation": { "x": 0, "y": -90, "z": -178 },
+      "origin": { "x": 0.6, "y": 0.78, "z": 0.5 }
+    },
+    "*-soldierfarming": {
+      "rotate": true,
+      "rotation": { "x": 0, "y": -90, "z": -178 },
+      "origin": { "x": 0.6, "y": 0.78, "z": 0.5 }
+    },
+    "*-soldiermetalworking": {
+      "rotate": true,
+      "rotation": { "x": 0, "y": -90, "z": -178 },
+      "origin": { "x": 0.6, "y": 0.78, "z": 0.5 }
+    },
+    "*-soldierforestry": {
+      "rotate": true,
+      "rotation": { "x": 0, "y": -90, "z": -178 },
+      "origin": { "x": 0.6, "y": 0.78, "z": 0.5 }
+    },
+    "*-soldierdigging": {
+      "rotate": true,
+      "rotation": { "x": 0, "y": -90, "z": -178 },
+      "origin": { "x": 0.6, "y": 0.78, "z": 0.5 }
+    },
+    "*-soldierhusbandry": {
+      "rotate": true,
+      "rotation": { "x": 0, "y": -90, "z": -178 },
+      "origin": { "x": 0.6, "y": 0.78, "z": 0.5 }
+    },
+    "*-acorninntavernpupper": {
+      "rotate": true,
+      "rotation": { "x": 0, "y": -90, "z": -178 },
+      "origin": { "x": 0.6, "y": 0.78, "z": 0.5 }
+    },
+    "*-travelingmerchantmetalworking": {
+      "rotate": true,
+      "rotation": { "x": 0, "y": -90, "z": -178 },
+      "origin": { "x": 0.6, "y": 0.78, "z": 0.5 }
+    },
+    "*-travelingmerchantmining": {
+      "rotate": true,
+      "rotation": { "x": 0, "y": -90, "z": -178 },
+      "origin": { "x": 0.6, "y": 0.78, "z": 0.5 }
+    },
+    "*-travelingmerchantcooking": {
+      "rotate": true,
+      "rotation": { "x": 0, "y": -90, "z": -178 },
+      "origin": { "x": 0.6, "y": 0.78, "z": 0.5 }
+    },
+    "*-travelingmerchantspawn": {
+      "rotate": true,
+      "rotation": { "x": 0, "y": -90, "z": -178 },
+      "origin": { "x": 0.6, "y": 0.78, "z": 0.5 }
+    },
+    "*-travelingmerchantpottery": {
+      "rotate": true,
+      "rotation": { "x": 0, "y": -90, "z": -178 },
+      "origin": { "x": 0.6, "y": 0.78, "z": 0.5 }
+    },
+    "*-travelingmerchantfarming": {
+      "rotate": true,
+      "rotation": { "x": 0, "y": -90, "z": -178 },
+      "origin": { "x": 0.6, "y": 0.78, "z": 0.5 }
+    },
+    "*-travelingmerchantforestry": {
+      "rotate": true,
+      "rotation": { "x": 0, "y": -90, "z": -178 },
+      "origin": { "x": 0.6, "y": 0.78, "z": 0.5 }
+    },
+    "*-travelingmerchantdigging": {
+      "rotate": true,
+      "rotation": { "x": 0, "y": -90, "z": -178 },
+      "origin": { "x": 0.6, "y": 0.78, "z": 0.5 }
+    },
+    "*-travelingmerchanthusbandry": {
+      "rotate": true,
+      "rotation": { "x": 0, "y": -90, "z": -178 },
+      "origin": { "x": 0.6, "y": 0.78, "z": 0.5 }
+    },
+    "*-treasurehunter": {
+      "rotate": true,
+      "rotation": { "x": 0, "y": -90, "z": -178 },
+      "origin": { "x": 0.6, "y": 0.78, "z": 0.5 }
+    },
+    "*-valleycampguardcaptain": {
+      "rotate": true,
+      "rotation": { "x": 0, "y": -90, "z": -178 },
+      "origin": { "x": 0.6, "y": 0.78, "z": 0.5 }
+    },
+    "*-weaver": {
+      "rotate": true,
+      "rotation": { "x": 0, "y": -90, "z": -178 },
+      "origin": { "x": 0.6, "y": 0.78, "z": 0.5 }
+    }
+  },
+  "tpHandTransformByType": {
+    "*-acorninnkeeper": {
+      "translation": { "x": -0.6, "y": -1.1, "z": -0.4 },
+      "rotation": { "x": -85, "y": -11, "z": 89 },
+      "origin": { "x": 0.5, "y": 1, "z": 0.5 },
+      "scale": 0.7
+    },
+    "*-archaeologist": {
+      "translation": { "x": -0.6, "y": -1.1, "z": -0.4 },
+      "rotation": { "x": -85, "y": -11, "z": 89 },
+      "origin": { "x": 0.5, "y": 1, "z": 0.5 },
+      "scale": 0.7
+    },
+    "*-artificer": {
+      "translation": { "x": -0.6, "y": -1.1, "z": -0.4 },
+      "rotation": { "x": -85, "y": -11, "z": 89 },
+      "origin": { "x": 0.5, "y": 1, "z": 0.5 },
+      "scale": 0.7
+    },
+    "*-baker": {
+      "translation": { "x": -0.6, "y": -1.1, "z": -0.4 },
+      "rotation": { "x": -85, "y": -11, "z": 89 },
+      "origin": { "x": 0.5, "y": 1, "z": 0.5 },
+      "scale": 0.7
+    },
+    "*-beekeeper": {
+      "translation": { "x": -0.6, "y": -1.1, "z": -0.4 },
+      "rotation": { "x": -85, "y": -11, "z": 89 },
+      "origin": { "x": 0.5, "y": 1, "z": 0.5 },
+      "scale": 0.7
+    },
+    "*-blacksmith": {
+      "translation": { "x": -0.6, "y": -1.1, "z": -0.4 },
+      "rotation": { "x": -85, "y": -11, "z": 89 },
+      "origin": { "x": 0.5, "y": 1, "z": 0.5 },
+      "scale": 0.7
+    },
+    "*-carpenter": {
+      "translation": { "x": -0.6, "y": -1.1, "z": -0.4 },
+      "rotation": { "x": -85, "y": -11, "z": 89 },
+      "origin": { "x": 0.5, "y": 1, "z": 0.5 },
+      "scale": 0.7
+    },
+    "*-chef": {
+      "translation": { "x": -0.6, "y": -1.1, "z": -0.4 },
+      "rotation": { "x": -85, "y": -11, "z": 89 },
+      "origin": { "x": 0.5, "y": 1, "z": 0.5 },
+      "scale": 0.7
+    },
+    "*-farmer": {
+      "translation": { "x": -0.6, "y": -1.1, "z": -0.4 },
+      "rotation": { "x": -85, "y": -11, "z": 89 },
+      "origin": { "x": 0.5, "y": 1, "z": 0.5 },
+      "scale": 0.7
+    },
+    "*-fisher": {
+      "translation": { "x": -0.6, "y": -1.1, "z": -0.4 },
+      "rotation": { "x": -85, "y": -11, "z": 89 },
+      "origin": { "x": 0.5, "y": 1, "z": 0.5 },
+      "scale": 0.7
+    },
+    "*-hunter": {
+      "translation": { "x": -0.6, "y": -1.1, "z": -0.4 },
+      "rotation": { "x": -85, "y": -11, "z": 89 },
+      "origin": { "x": 0.5, "y": 1, "z": 0.5 },
+      "scale": 0.7
+    },
+    "*-lumberjack": {
+      "translation": { "x": -0.6, "y": -1.1, "z": -0.4 },
+      "rotation": { "x": -85, "y": -11, "z": 89 },
+      "origin": { "x": 0.5, "y": 1, "z": 0.5 },
+      "scale": 0.7
+    },
+    "*-miner": {
+      "translation": { "x": -0.6, "y": -1.1, "z": -0.4 },
+      "rotation": { "x": -85, "y": -11, "z": 89 },
+      "origin": { "x": 0.5, "y": 1, "z": 0.5 },
+      "scale": 0.7
+    },
+    "*-minersdog": {
+      "translation": { "x": -0.6, "y": -1.1, "z": -0.4 },
+      "rotation": { "x": -85, "y": -11, "z": 89 },
+      "origin": { "x": 0.5, "y": 1, "z": 0.5 },
+      "scale": 0.7
+    },
+    "*-outlooklibrarian": {
+      "translation": { "x": -0.6, "y": -1.1, "z": -0.4 },
+      "rotation": { "x": -85, "y": -11, "z": 89 },
+      "origin": { "x": 0.5, "y": 1, "z": 0.5 },
+      "scale": 0.7
+    },
+    "*-potter": {
+      "translation": { "x": -0.6, "y": -1.1, "z": -0.4 },
+      "rotation": { "x": -85, "y": -11, "z": 89 },
+      "origin": { "x": 0.5, "y": 1, "z": 0.5 },
+      "scale": 0.7
+    },
+    "*-rancher": {
+      "translation": { "x": -0.6, "y": -1.1, "z": -0.4 },
+      "rotation": { "x": -85, "y": -11, "z": 89 },
+      "origin": { "x": 0.5, "y": 1, "z": 0.5 },
+      "scale": 0.7
+    },
+    "*-soldiermining": {
+      "translation": { "x": -0.6, "y": -1.1, "z": -0.4 },
+      "rotation": { "x": -85, "y": -11, "z": 89 },
+      "origin": { "x": 0.5, "y": 1, "z": 0.5 },
+      "scale": 0.7
+    },
+    "*-soldiercooking": {
+      "translation": { "x": -0.6, "y": -1.1, "z": -0.4 },
+      "rotation": { "x": -85, "y": -11, "z": 89 },
+      "origin": { "x": 0.5, "y": 1, "z": 0.5 },
+      "scale": 0.7
+    },
+    "*-soldierpottery": {
+      "translation": { "x": -0.6, "y": -1.1, "z": -0.4 },
+      "rotation": { "x": -85, "y": -11, "z": 89 },
+      "origin": { "x": 0.5, "y": 1, "z": 0.5 },
+      "scale": 0.7
+    },
+    "*-soldierfarming": {
+      "translation": { "x": -0.6, "y": -1.1, "z": -0.4 },
+      "rotation": { "x": -85, "y": -11, "z": 89 },
+      "origin": { "x": 0.5, "y": 1, "z": 0.5 },
+      "scale": 0.7
+    },
+    "*-soldiermetalworking": {
+      "translation": { "x": -0.6, "y": -1.1, "z": -0.4 },
+      "rotation": { "x": -85, "y": -11, "z": 89 },
+      "origin": { "x": 0.5, "y": 1, "z": 0.5 },
+      "scale": 0.7
+    },
+    "*-soldierforestry": {
+      "translation": { "x": -0.6, "y": -1.1, "z": -0.4 },
+      "rotation": { "x": -85, "y": -11, "z": 89 },
+      "origin": { "x": 0.5, "y": 1, "z": 0.5 },
+      "scale": 0.7
+    },
+    "*-soldierdigging": {
+      "translation": { "x": -0.6, "y": -1.1, "z": -0.4 },
+      "rotation": { "x": -85, "y": -11, "z": 89 },
+      "origin": { "x": 0.5, "y": 1, "z": 0.5 },
+      "scale": 0.7
+    },
+    "*-soldierhusbandry": {
+      "translation": { "x": -0.6, "y": -1.1, "z": -0.4 },
+      "rotation": { "x": -85, "y": -11, "z": 89 },
+      "origin": { "x": 0.5, "y": 1, "z": 0.5 },
+      "scale": 0.7
+    },
+    "*-acorninntavernpupper": {
+      "translation": { "x": -0.6, "y": -1.1, "z": -0.4 },
+      "rotation": { "x": -85, "y": -11, "z": 89 },
+      "origin": { "x": 0.5, "y": 1, "z": 0.5 },
+      "scale": 0.7
+    },
+    "*-travelingmerchantmetalworking": {
+      "translation": { "x": -0.6, "y": -1.1, "z": -0.4 },
+      "rotation": { "x": -85, "y": -11, "z": 89 },
+      "origin": { "x": 0.5, "y": 1, "z": 0.5 },
+      "scale": 0.7
+    },
+    "*-travelingmerchantmining": {
+      "translation": { "x": -0.6, "y": -1.1, "z": -0.4 },
+      "rotation": { "x": -85, "y": -11, "z": 89 },
+      "origin": { "x": 0.5, "y": 1, "z": 0.5 },
+      "scale": 0.7
+    },
+    "*-travelingmerchantcooking": {
+      "translation": { "x": -0.6, "y": -1.1, "z": -0.4 },
+      "rotation": { "x": -85, "y": -11, "z": 89 },
+      "origin": { "x": 0.5, "y": 1, "z": 0.5 },
+      "scale": 0.7
+    },
+    "*-travelingmerchantspawn": {
+      "translation": { "x": -0.6, "y": -1.1, "z": -0.4 },
+      "rotation": { "x": -85, "y": -11, "z": 89 },
+      "origin": { "x": 0.5, "y": 1, "z": 0.5 },
+      "scale": 0.7
+    },
+    "*-travelingmerchantpottery": {
+      "translation": { "x": -0.6, "y": -1.1, "z": -0.4 },
+      "rotation": { "x": -85, "y": -11, "z": 89 },
+      "origin": { "x": 0.5, "y": 1, "z": 0.5 },
+      "scale": 0.7
+    },
+    "*-travelingmerchantfarming": {
+      "translation": { "x": -0.6, "y": -1.1, "z": -0.4 },
+      "rotation": { "x": -85, "y": -11, "z": 89 },
+      "origin": { "x": 0.5, "y": 1, "z": 0.5 },
+      "scale": 0.7
+    },
+    "*-travelingmerchantforestry": {
+      "translation": { "x": -0.6, "y": -1.1, "z": -0.4 },
+      "rotation": { "x": -85, "y": -11, "z": 89 },
+      "origin": { "x": 0.5, "y": 1, "z": 0.5 },
+      "scale": 0.7
+    },
+    "*-travelingmerchantdigging": {
+      "translation": { "x": -0.6, "y": -1.1, "z": -0.4 },
+      "rotation": { "x": -85, "y": -11, "z": 89 },
+      "origin": { "x": 0.5, "y": 1, "z": 0.5 },
+      "scale": 0.7
+    },
+    "*-travelingmerchanthusbandry": {
+      "translation": { "x": -0.6, "y": -1.1, "z": -0.4 },
+      "rotation": { "x": -85, "y": -11, "z": 89 },
+      "origin": { "x": 0.5, "y": 1, "z": 0.5 },
+      "scale": 0.7
+    },
+    "*-treasurehunter": {
+      "translation": { "x": -0.6, "y": -1.1, "z": -0.4 },
+      "rotation": { "x": -85, "y": -11, "z": 89 },
+      "origin": { "x": 0.5, "y": 1, "z": 0.5 },
+      "scale": 0.7
+    },
+    "*-valleycampguardcaptain": {
+      "translation": { "x": -0.6, "y": -1.1, "z": -0.4 },
+      "rotation": { "x": -85, "y": -11, "z": 89 },
+      "origin": { "x": 0.5, "y": 1, "z": 0.5 },
+      "scale": 0.7
+    },
+    "*-weaver": {
+      "translation": { "x": -0.6, "y": -1.1, "z": -0.4 },
+      "rotation": { "x": -85, "y": -11, "z": 89 },
+      "origin": { "x": 0.5, "y": 1, "z": 0.5 },
+      "scale": 0.7
+    }
+  },
+  "fpHandTransformByType": {
+    "*-acorninnkeeper": {
+      "translation": { "x": 0.05, "y": -0.3, "z": 0 },
+      "rotation": { "x": 165, "y": 76, "z": -180 }
+    },
+    "*-archaeologist": {
+      "translation": { "x": 0.05, "y": -0.3, "z": 0 },
+      "rotation": { "x": 165, "y": 76, "z": -180 }
+    },
+    "*-artificer": {
+      "translation": { "x": 0.05, "y": -0.3, "z": 0 },
+      "rotation": { "x": 165, "y": 76, "z": -180 }
+    },
+    "*-baker": {
+      "translation": { "x": 0.05, "y": -0.3, "z": 0 },
+      "rotation": { "x": 165, "y": 76, "z": -180 }
+    },
+    "*-beekeeper": {
+      "translation": { "x": 0.05, "y": -0.3, "z": 0 },
+      "rotation": { "x": 165, "y": 76, "z": -180 }
+    },
+    "*-blacksmith": {
+      "translation": { "x": 0.05, "y": -0.3, "z": 0 },
+      "rotation": { "x": 165, "y": 76, "z": -180 }
+    },
+    "*-carpenter": {
+      "translation": { "x": 0.05, "y": -0.3, "z": 0 },
+      "rotation": { "x": 165, "y": 76, "z": -180 }
+    },
+    "*-chef": {
+      "translation": { "x": 0.05, "y": -0.3, "z": 0 },
+      "rotation": { "x": 165, "y": 76, "z": -180 }
+    },
+    "*-farmer": {
+      "translation": { "x": 0.05, "y": -0.3, "z": 0 },
+      "rotation": { "x": 165, "y": 76, "z": -180 }
+    },
+    "*-fisher": {
+      "translation": { "x": 0.05, "y": -0.3, "z": 0 },
+      "rotation": { "x": 165, "y": 76, "z": -180 }
+    },
+    "*-hunter": {
+      "translation": { "x": 0.05, "y": -0.3, "z": 0 },
+      "rotation": { "x": 165, "y": 76, "z": -180 }
+    },
+    "*-lumberjack": {
+      "translation": { "x": 0.05, "y": -0.3, "z": 0 },
+      "rotation": { "x": 165, "y": 76, "z": -180 }
+    },
+    "*-miner": {
+      "translation": { "x": 0.05, "y": -0.3, "z": 0 },
+      "rotation": { "x": 165, "y": 76, "z": -180 }
+    },
+    "*-minersdog": {
+      "translation": { "x": 0.05, "y": -0.3, "z": 0 },
+      "rotation": { "x": 165, "y": 76, "z": -180 }
+    },
+    "*-outlooklibrarian": {
+      "translation": { "x": 0.05, "y": -0.3, "z": 0 },
+      "rotation": { "x": 165, "y": 76, "z": -180 }
+    },
+    "*-potter": {
+      "translation": { "x": 0.05, "y": -0.3, "z": 0 },
+      "rotation": { "x": 165, "y": 76, "z": -180 }
+    },
+    "*-rancher": {
+      "translation": { "x": 0.05, "y": -0.3, "z": 0 },
+      "rotation": { "x": 165, "y": 76, "z": -180 }
+    },
+    "*-soldiermining": {
+      "translation": { "x": 0.05, "y": -0.3, "z": 0 },
+      "rotation": { "x": 165, "y": 76, "z": -180 }
+    },
+    "*-soldiercooking": {
+      "translation": { "x": 0.05, "y": -0.3, "z": 0 },
+      "rotation": { "x": 165, "y": 76, "z": -180 }
+    },
+    "*-soldierpottery": {
+      "translation": { "x": 0.05, "y": -0.3, "z": 0 },
+      "rotation": { "x": 165, "y": 76, "z": -180 }
+    },
+    "*-soldierfarming": {
+      "translation": { "x": 0.05, "y": -0.3, "z": 0 },
+      "rotation": { "x": 165, "y": 76, "z": -180 }
+    },
+    "*-soldiermetalworking": {
+      "translation": { "x": 0.05, "y": -0.3, "z": 0 },
+      "rotation": { "x": 165, "y": 76, "z": -180 }
+    },
+    "*-soldierforestry": {
+      "translation": { "x": 0.05, "y": -0.3, "z": 0 },
+      "rotation": { "x": 165, "y": 76, "z": -180 }
+    },
+    "*-soldierdigging": {
+      "translation": { "x": 0.05, "y": -0.3, "z": 0 },
+      "rotation": { "x": 165, "y": 76, "z": -180 }
+    },
+    "*-soldierhusbandry": {
+      "translation": { "x": 0.05, "y": -0.3, "z": 0 },
+      "rotation": { "x": 165, "y": 76, "z": -180 }
+    },
+    "*-acorninntavernpupper": {
+      "translation": { "x": 0.05, "y": -0.3, "z": 0 },
+      "rotation": { "x": 165, "y": 76, "z": -180 }
+    },
+    "*-travelingmerchantmetalworking": {
+      "translation": { "x": 0.05, "y": -0.3, "z": 0 },
+      "rotation": { "x": 165, "y": 76, "z": -180 }
+    },
+    "*-travelingmerchantmining": {
+      "translation": { "x": 0.05, "y": -0.3, "z": 0 },
+      "rotation": { "x": 165, "y": 76, "z": -180 }
+    },
+    "*-travelingmerchantcooking": {
+      "translation": { "x": 0.05, "y": -0.3, "z": 0 },
+      "rotation": { "x": 165, "y": 76, "z": -180 }
+    },
+    "*-travelingmerchantspawn": {
+      "translation": { "x": 0.05, "y": -0.3, "z": 0 },
+      "rotation": { "x": 165, "y": 76, "z": -180 }
+    },
+    "*-travelingmerchantpottery": {
+      "translation": { "x": 0.05, "y": -0.3, "z": 0 },
+      "rotation": { "x": 165, "y": 76, "z": -180 }
+    },
+    "*-travelingmerchantfarming": {
+      "translation": { "x": 0.05, "y": -0.3, "z": 0 },
+      "rotation": { "x": 165, "y": 76, "z": -180 }
+    },
+    "*-travelingmerchantforestry": {
+      "translation": { "x": 0.05, "y": -0.3, "z": 0 },
+      "rotation": { "x": 165, "y": 76, "z": -180 }
+    },
+    "*-travelingmerchantdigging": {
+      "translation": { "x": 0.05, "y": -0.3, "z": 0 },
+      "rotation": { "x": 165, "y": 76, "z": -180 }
+    },
+    "*-travelingmerchanthusbandry": {
+      "translation": { "x": 0.05, "y": -0.3, "z": 0 },
+      "rotation": { "x": 165, "y": 76, "z": -180 }
+    },
+    "*-treasurehunter": {
+      "translation": { "x": 0.05, "y": -0.3, "z": 0 },
+      "rotation": { "x": 165, "y": 76, "z": -180 }
+    },
+    "*-valleycampguardcaptain": {
+      "translation": { "x": 0.05, "y": -0.3, "z": 0 },
+      "rotation": { "x": 165, "y": 76, "z": -180 }
+    },
+    "*-weaver": {
+      "translation": { "x": 0.05, "y": -0.3, "z": 0 },
+      "rotation": { "x": 165, "y": 76, "z": -180 }
+    }
+  }
+}

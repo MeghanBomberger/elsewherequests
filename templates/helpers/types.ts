@@ -32,7 +32,7 @@ export interface QuestGiver {
 
 export enum QuestGiverShapeType {
   humanoid = "humanoid",
-  land = "land"
+  land = "land",
 }
 
 export interface TextureAlternative {
@@ -68,7 +68,7 @@ export enum CityRoles {
   metalWorking = "Metal Working",
   mining = "Mining",
   pottery = "Pottery",
-  spawn = "Spawn"
+  spawn = "Spawn",
 }
 
 export interface City {
@@ -141,7 +141,7 @@ export interface Animation {
   animation: string;
   animationSpeed?: number;
   weight?: number;
-  blendMode: "addAverage";
+  blendMode: "AddAverage";
   easeInSpeed?: number;
   easeOutSpeed?: number;
   triggeredBy?: {

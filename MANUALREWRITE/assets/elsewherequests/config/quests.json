@@ -1,0 +1,347 @@
+[
+  {
+    "id": "elsewherequests:acorninnwelcome",
+    "cooldown": 999999,
+    "perPlayer": true,
+    "gatherObjectives": [
+      {
+        "validCodes": ["storagevesselcolored-burnt-blurple"],
+        "demand": 1
+      }
+    ],
+    "itemRewards": [
+      {
+        "itemCode": "game:bed-hay-head-north",
+        "amount": 1
+      },
+      {
+        "itemCode": "game:linensack",
+        "amount": 2
+      },
+      {
+        "itemCode": "game:knife-copper",
+        "amount": 1
+      },
+      {
+        "itemCode": "game:axe-copper",
+        "amount": 1
+      },
+      {
+        "itemCode": "bread-spelt-perfect",
+        "amount": 32
+      },
+      { "itemCode": "game:bowl-fired", "amount": 1 },
+      { "itemCode": "game:oillamp-up", "amount": 1 }
+    ]
+  },
+  {
+    "id": "elsewherequests:acorninnfirewood",
+    "cooldown": 20,
+    "perPlayer": true,
+    "gatherObjectives": [
+      {
+        "validCodes": ["firewood"],
+        "demand": 32
+      }
+    ],
+    "itemRewards": [
+      {
+        "itemCode": "game:gear-rusty",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": "elsewherequests:acorninningredients",
+    "predecessor": "elsewherequests:acorninnwelcome",
+    "perPlayer": true,
+    "cooldown": 20,
+    "gatherObjectives": [
+      {
+        "ids": ["redmeat-raw"],
+        "demand": 16,
+        "description": "Gather red meat"
+      },
+      {
+        "ids": ["fruit-cranberry"],
+        "demand": 16,
+        "description": "Gather cranberries"
+      }
+    ],
+    "itemRewards": [
+      {
+        "itemCode": "game:gear-rusty",
+        "amount": 2
+      },
+      {
+        "itemCode": "game:bread-flax-perfect",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": "elsewherequests:acorninnmoreingredients",
+    "cooldown": 20,
+    "perPlayer": true,
+    "predecessor": "elsewherequests:acorninnwelcome",
+    "gatherObjectives": [
+      {
+        "validCodes": [
+          "mushroom-indigomilkcap-normal",
+          "mushroom-greencrackedrussula-normal",
+          "mushroom-lobster-normal",
+          "mushroom-paddystraw-normal",
+          "mushroom-fieldmushroom-normal",
+          "mushroom-almondmushroom-normal",
+          "mushroom-chickenofthewoods-normal-north",
+          "mushroom-dryadsaddle-normal-north",
+          "mushroom-pinkoyster-normal-north",
+          "mushroom-tinderhoof-normal-north",
+          "mushroom-beardedtooth-normal-north",
+          "mushroom-whiteoyster-normal-north",
+          "mushroom-reishi-normal-north",
+          "mushroom-livermushroom-normal-north",
+          "mushroom-shiitake-normal-north",
+          "mushroom-blacktrumpet-normal",
+          "mushroom-chanterelle-normal",
+          "mushroom-commonmorel-normal",
+          "mushroom-indigomilkcap-normal",
+          "mushroom-kingbolete-normal",
+          "mushroom-orangeoakbolete-normal",
+          "mushroom-puffball-normal",
+          "mushroom-redwinecap-normal",
+          "mushroom-saffronmilkcap-normal",
+          "mushroom-violetwebcap-normal",
+          "mushroom-witchhat-normal"
+        ],
+        "demand": 16
+      }
+    ],
+    "itemRewards": [
+      {
+        "itemCode": "game:gear-rusty",
+        "amount": 2
+      },
+      {
+        "itemCode": "game:bread-flax-perfect",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": "elsewherequests:acorninngettingsettled",
+    "perPlayer": true,
+    "cooldown": 20,
+    "predecessor": "elsewherequests:acorninnwelcome",
+    "onAcceptedActions": [
+      {
+        "id": "acceptquest",
+        "args": ["20288", "elsewherequests:valleycampintroduction"]
+      }
+    ],
+    "actionObjectives": [
+      {
+        "id": "hasAttribute",
+        "args": ["talkedto", "20288"]
+      }
+    ],
+    "gatherObjectives": [
+      {
+        "validCodes": ["game:linen-diamond-down"],
+        "demand": 32
+      }
+    ],
+    "itemRewards": [
+      {
+        "itemCode": "game:gear-rusty",
+        "amount": 16
+      }
+    ],
+    "actionRewards": [
+      {
+        "id": "removeplayerattribute",
+        "args": ["talkedto"]
+      }
+    ]
+  },
+
+  {
+    "id": "elsewherequests:valleycampintroduction",
+    "cooldown": 999999,
+    "perPlayer": true,
+    "gatherObjectives": [
+      {
+        "validCodes": ["game:drygrass"],
+        "demand": 32
+      }
+    ],
+    "itemRewards": [
+      {
+        "itemCode": "game:linen-diamond-down",
+        "amount": 16
+      }
+    ],
+    "actionRewards": [
+      {
+        "id": "addplayerattribute",
+        "args": ["talkedto", "20288"]
+      },
+      {
+        "id": "playsound",
+        "args": ["game:sounds/voice/flute"]
+      }
+    ]
+  },
+  {
+    "id": "elsewherequests:valleycampmakingcamp1",
+    "cooldown": 999999,
+    "perPlayer": true,
+    "predecessor": "elsewherequests:valleycampintroduction",
+    "gatherObjectives": [
+      {
+        "validCodes": ["game:log-placed-pine-ud"],
+        "demand": 8
+      }
+    ],
+    "itemRewards": [
+      {
+        "itemCode": "game:woodenfencegate-pine-n-closed",
+        "amount": 2
+      },
+      {
+        "itemCode": "game:woodenfence-pine-ew-free",
+        "amount": 22
+      },
+      {
+        "itemCode": "primitivesurvival:woodenlantern-pine-up",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": "elsewherequests:valleycampmakingcamp2",
+    "cooldown": 999999,
+    "perPlayer": true,
+    "predecessor": "elsewherequests:valleycampmakingcamp1",
+    "gatherObjectives": [
+      {
+        "ids": ["hide-raw-medium"],
+        "demand": 8
+      }
+    ],
+    "killObjectives": [
+      {
+        "ids": ["creature-wolf", "drifter-*"],
+        "demand": 4
+      }
+    ],
+    "itemRewards": [
+      {
+        "itemCode": "game:woodenfence-pine-ew-free",
+        "amount": 4
+      },
+      {
+        "itemCode": "lichen:hideroof-light-up-north-free",
+        "amount": 24
+      }
+    ]
+  },
+  {
+    "id": "elsewherequests:valleycampmakingcamp3",
+    "cooldown": 999999,
+    "perPlayer": true,
+    "predecessor": "elsewherequests:valleycampmakingcamp2",
+    "gatherObjectives": [
+      {
+        "ids": ["hide-raw-huge"],
+        "demand": 1
+      },
+      {
+        "ids": ["fat"],
+        "demand": 1
+      },
+      {
+        "ids": ["rope"],
+        "demand": 1
+      }
+    ],
+    "killObjectives": [
+      {
+        "ids": [
+          "creature-bear-female-black",
+          "creature-bear-female-brown",
+          "creature-bear-female-sun",
+          "creature-bear-female-panda",
+          "creature-bear-female-polar",
+          "creature-bear-male-black",
+          "creature-bear-male-brown",
+          "creature-bear-male-sun",
+          "creature-bear-male-panda",
+          "creature-bear-male-polar"
+        ],
+        "demand": 1
+      }
+    ],
+    "itemRewards": [
+      {
+        "itemCode": "usefulstuff:tentbag-empty",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": "elsewherequests:valleycampfirstaide",
+    "cooldown": 20,
+    "perPlayer": true,
+    "gatherObjectives": [
+      {
+        "ids": ["cattailtops"],
+        "demand": 2
+      },
+      {
+        "ids": ["flower-horsetail-free"],
+        "demand": 4
+      }
+    ],
+    "itemRewards": [
+      {
+        "itemCode": "game:poultice-reed-horsetail",
+        "amount": 4
+      }
+    ]
+  },
+  {
+    "id": "elsewherequests:tavernpuppersmallsnack",
+    "cooldown": 20,
+    "perPlayer": true,
+    "gatherObjectives": [
+      {
+        "ids": ["bone"],
+        "demand": 8
+      }
+    ],
+    "itemRewards": [
+      {
+        "itemCode": "wolftaming:dogtoy",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": "elsewherequests:tavernpuppermissingpuppy",
+    "cooldown": 20,
+    "perPlayer": true,
+    "gatherObjectives": [
+      {
+        "ids": ["creature-tame-wolf-pup"],
+        "demand": 1
+      }
+    ],
+    "itemRewards": [
+      {
+        "itemCode": "game:gear-rusty",
+        "amount": 12
+      }
+    ]
+  }
+]

@@ -17,8 +17,8 @@
       { "itemCode": "game:knife-copper", "amount": 1 },
       { "itemCode": "game:axe-copper", "amount": 1 },
       { "itemCode": "bread-spelt-perfect", "amount": 32 },
-      { "itemCode": "glazedbowl-burnt-clear-blue-plain", "amount": 1 },
-      { "itemCode": "glazedoillamp-clear-blue-up", "amount": 1 }
+      { "itemCode": "game:bowl-fired", "amount": 1 },
+      { "itemCode": "game:oillamp-up", "amount": 1 }
     ],
     "perPlayer": true,
     "cooldown": 999999,

@@ -1,0 +1,129 @@
+[
+  {
+    "id": "acorninnwelcome",
+    "cooldown": 999999,
+    "perPlayer": true,
+    "gatherObjectives": [
+      { "validCodes": ["storagevesselcolored-burnt-blurple"] }
+    ],
+    "killObjectives": [],
+    "itemRewards": [{}, {}, {}, {}, {}, {}, {}]
+  },
+  {
+    "id": "acorninnfirewood",
+    "cooldown": "20",
+    "perPlayer": true,
+    "gatherObjectives": [{ "validCodes": ["firewood"] }],
+    "killObjectives": [],
+    "itemRewards": [{}]
+  },
+  {
+    "id": "acorninnmoreingredients",
+    "cooldown": 20,
+    "perPlayer": true,
+    "gatherObjectives": [
+      {
+        "validCodes": [
+          "mushroom-indigomilkcap-normal",
+          "mushroom-greencrackedrussula-normal",
+          "mushroom-lobster-normal",
+          "mushroom-paddystraw-normal",
+          "mushroom-fieldmushroom-normal",
+          "mushroom-almondmushroom-normal",
+          "mushroom-chickenofthewoods-normal-north",
+          "mushroom-dryadsaddle-normal-north",
+          "mushroom-pinkoyster-normal-north",
+          "mushroom-tinderhoof-normal-north",
+          "mushroom-beardedtooth-normal-north",
+          "mushroom-whiteoyster-normal-north",
+          "mushroom-reishi-normal-north",
+          "mushroom-livermushroom-normal-north",
+          "mushroom-shiitake-normal-north",
+          "mushroom-blacktrumpet-normal",
+          "mushroom-chanterelle-normal",
+          "mushroom-commonmorel-normal",
+          "mushroom-indigomilkcap-normal",
+          "mushroom-kingbolete-normal",
+          "mushroom-orangeoakbolete-normal",
+          "mushroom-puffball-normal",
+          "mushroom-redwinecap-normal",
+          "mushroom-saffronmilkcap-normal",
+          "mushroom-violetwebcap-normal",
+          "mushroom-witchhat-normal"
+        ]
+      }
+    ],
+    "killObjectives": [],
+    "itemRewards": []
+  },
+  {
+    "id": "acorninningredients",
+    "cooldown": 20,
+    "perPlayer": true,
+    "gatherObjectives": [
+      { "validCodes": ["redmeat-raw"] },
+      { "validCodes": ["fruit-cranberry"] }
+    ],
+    "killObjectives": [],
+    "itemRewards": []
+  },
+  {
+    "id": "acorninngettingsettled",
+    "cooldown": 20,
+    "perPlayer": true,
+    "gatherObjectives": [{ "validCodes": ["linen-diamond-down"] }],
+    "killObjectives": [],
+    "itemRewards": []
+  },
+  {
+    "id": "tavernpuppersmallsnack",
+    "cooldown": 20,
+    "perPlayer": true,
+    "gatherObjectives": [{ "validCodes": ["bone"] }],
+    "killObjectives": [],
+    "itemRewards": []
+  },
+  {
+    "id": "tavernpuppermissingpuppy",
+    "cooldown": 20,
+    "perPlayer": true,
+    "gatherObjectives": [{ "validCodes": ["creature-tame-wolf-pup"] }],
+    "killObjectives": [],
+    "itemRewards": []
+  },
+  {
+    "id": "valleycampfirstaide",
+    "cooldown": 20,
+    "perPlayer": true,
+    "gatherObjectives": [
+      { "validCodes": ["cattailtops"] },
+      { "validCodes": ["flower-horsetail-free"] }
+    ],
+    "killObjectives": [],
+    "itemRewards": []
+  },
+  {
+    "id": "valleycampmakingcamp1",
+    "cooldown": 999999,
+    "perPlayer": true,
+    "gatherObjectives": [{ "validCodes": ["drygrass"] }],
+    "killObjectives": [],
+    "itemRewards": []
+  },
+  {
+    "id": "valleycampmakingcamp2",
+    "cooldown": 999999,
+    "perPlayer": true,
+    "gatherObjectives": [{ "validCodes": ["log-placed-pine-ud"] }],
+    "killObjectives": [],
+    "itemRewards": []
+  },
+  {
+    "id": "valleycampmakingcamp3",
+    "cooldown": 999999,
+    "perPlayer": true,
+    "gatherObjectives": [{ "validCodes": ["hide-raw-medium"] }],
+    "killObjectives": [{ "validCodes": ["creature-wolf", "drifter-*"] }],
+    "itemRewards": []
+  }
+]
