@@ -16,13 +16,10 @@
         "carpenter",
         "chef",
         "farmer",
-        "fieldcat",
         "fisher",
         "hunter",
-        "librarycat",
         "lumberjack",
         "miner",
-        "minerscat",
         "minersdog",
         "outlooklibrarian",
         "potter",
@@ -74,25 +71,16 @@
     "*-farmer": {
       "base": "game:entity/humanoid/trader"
     },
-    "*-fieldcat": {
-      "base": "game:entity/humanoid/trader"
-    },
     "*-fisher": {
       "base": "game:entity/humanoid/trader"
     },
     "*-hunter": {
       "base": "game:entity/humanoid/trader"
     },
-    "*-librarycat": {
-      "base": "game:entity/humanoid/trader"
-    },
     "*-lumberjack": {
       "base": "game:entity/humanoid/trader"
     },
     "*-miner": {
-      "base": "game:entity/humanoid/trader"
-    },
-    "*-minerscat": {
       "base": "game:entity/humanoid/trader"
     },
     "*-minersdog": {
@@ -200,11 +188,6 @@
         "base": "game:entity/humanoid/trader"
       }
     },
-    "*-fieldcat": {
-      "skin": {
-        "base": "game:entity/humanoid/trader"
-      }
-    },
     "*-fisher": {
       "skin": {
         "base": "game:entity/humanoid/trader"
@@ -215,22 +198,12 @@
         "base": "game:entity/humanoid/trader"
       }
     },
-    "*-librarycat": {
-      "skin": {
-        "base": "game:entity/humanoid/trader"
-      }
-    },
     "*-lumberjack": {
       "skin": {
         "base": "game:entity/humanoid/trader"
       }
     },
     "*-miner": {
-      "skin": {
-        "base": "game:entity/humanoid/trader"
-      }
-    },
-    "*-minerscat": {
       "skin": {
         "base": "game:entity/humanoid/trader"
       }
@@ -458,19 +431,6 @@
         "z": 0.5
       }
     },
-    "*-fieldcat*": {
-      "rotate": true,
-      "rotation": {
-        "x": 0,
-        "y": -90,
-        "z": -178
-      },
-      "origin": {
-        "x": 0.6,
-        "y": 0.78,
-        "z": 0.5
-      }
-    },
     "*-fisher*": {
       "rotate": true,
       "rotation": {
@@ -497,19 +457,6 @@
         "z": 0.5
       }
     },
-    "*-librarycat*": {
-      "rotate": true,
-      "rotation": {
-        "x": 0,
-        "y": -90,
-        "z": -178
-      },
-      "origin": {
-        "x": 0.6,
-        "y": 0.78,
-        "z": 0.5
-      }
-    },
     "*-lumberjack*": {
       "rotate": true,
       "rotation": {
@@ -524,19 +471,6 @@
       }
     },
     "*-miner*": {
-      "rotate": true,
-      "rotation": {
-        "x": 0,
-        "y": -90,
-        "z": -178
-      },
-      "origin": {
-        "x": 0.6,
-        "y": 0.78,
-        "z": 0.5
-      }
-    },
-    "*-minerscat*": {
       "rotate": true,
       "rotation": {
         "x": 0,
@@ -961,24 +895,6 @@
       },
       "scale": 0.7
     },
-    "*-fieldcat*": {
-      "translation": {
-        "x": -0.6,
-        "y": -1.1,
-        "z": -0.4
-      },
-      "rotation": {
-        "x": -85,
-        "y": -11,
-        "z": 89
-      },
-      "origin": {
-        "x": 0.5,
-        "y": 1,
-        "z": 0.5
-      },
-      "scale": 0.7
-    },
     "*-fisher*": {
       "translation": {
         "x": -0.6,
@@ -1015,24 +931,6 @@
       },
       "scale": 0.7
     },
-    "*-librarycat*": {
-      "translation": {
-        "x": -0.6,
-        "y": -1.1,
-        "z": -0.4
-      },
-      "rotation": {
-        "x": -85,
-        "y": -11,
-        "z": 89
-      },
-      "origin": {
-        "x": 0.5,
-        "y": 1,
-        "z": 0.5
-      },
-      "scale": 0.7
-    },
     "*-lumberjack*": {
       "translation": {
         "x": -0.6,
@@ -1052,24 +950,6 @@
       "scale": 0.7
     },
     "*-miner*": {
-      "translation": {
-        "x": -0.6,
-        "y": -1.1,
-        "z": -0.4
-      },
-      "rotation": {
-        "x": -85,
-        "y": -11,
-        "z": 89
-      },
-      "origin": {
-        "x": 0.5,
-        "y": 1,
-        "z": 0.5
-      },
-      "scale": 0.7
-    },
-    "*-minerscat*": {
       "translation": {
         "x": -0.6,
         "y": -1.1,
@@ -1540,18 +1420,6 @@
         "z": -180
       }
     },
-    "*-fieldcat*": {
-      "translation": {
-        "x": 0.05,
-        "y": -0.3,
-        "z": 0
-      },
-      "rotation": {
-        "x": 165,
-        "y": 76,
-        "z": -180
-      }
-    },
     "*-fisher*": {
       "translation": {
         "x": 0.05,
@@ -1576,18 +1444,6 @@
         "z": -180
       }
     },
-    "*-librarycat*": {
-      "translation": {
-        "x": 0.05,
-        "y": -0.3,
-        "z": 0
-      },
-      "rotation": {
-        "x": 165,
-        "y": 76,
-        "z": -180
-      }
-    },
     "*-lumberjack*": {
       "translation": {
         "x": 0.05,
@@ -1601,18 +1457,6 @@
       }
     },
     "*-miner*": {
-      "translation": {
-        "x": 0.05,
-        "y": -0.3,
-        "z": 0
-      },
-      "rotation": {
-        "x": 165,
-        "y": 76,
-        "z": -180
-      }
-    },
-    "*-minerscat*": {
       "translation": {
         "x": 0.05,
         "y": -0.3,

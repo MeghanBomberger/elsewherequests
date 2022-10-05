@@ -16,6 +16,14 @@
   "elsewherequests:acorninngettingsettled-desc": "You're welcome to stay in one of the available rooms upstairs, but if you're looking for something more permanent I'd go talk to the guard captain in the camp down in the valley. He's got plenty of work to go around, and will help you set up a decent place to stay in the camp.<br><br>While you're there, would you mind asking if my linen shipment has come in?",
   "elsewherequests:acorninngettingsettled-obj": "Find the taverns linen shipment: {0}/16",
 
+  "item-creature-tavernpupper": "Tavern Pupper",
+  "elsewherequests:tavernpuppersmallsnack-title": "A Small Snack",
+  "elsewherequests:tavernpuppersmallsnack-desc": "<i>The dog looks at you and then pointedly at their empty bowl. The innkeeper seems pretty busy. Maybe you should just go grab the dog a snack.</i>",
+  "elsewherequests:tavernpuppersmallsnack-obj": "Gather bones: {0}/8",
+  "elsewherequests:tavernpuppermissingpuppy-title": "Missing Puppy",
+  "elsewherequests:tavernpuppermissingpuppy-desc": "<i>The dog looks very sad. You ask the tavern keeper what is wrong with her. They tell you they sold the dog's litter to one of the traders that passed through and thinks she misses them.</i>",
+  "elsewherequests:tavernpuppermissingpuppy-obj": "Return puppy: {0}/1",
+
   "item-creature-valleycampguardcaptain": "Valley Camp Guard Captain",
   "elsewherequests:valleycampintroduction-title": "Making Camp - Part 1",
   "elsewherequests:valleycampintroduction-desc": "The inn keeper at the Acorn sent you, huh?<br><br>Well, we've still got space down here, and I could use another pair of hands.<br><br>Why don't you clear a space of grass to start with while I see if I can find the Acorn's shipment.<br><br><i>PRE-REQ: Getting Settled from the Acorn Innkeeper</i>",
@@ -32,28 +40,111 @@
   "elsewherequests:valleycampfirstaide-title": "First Aide Supplies",
   "elsewherequests:valleycampfirstaide-desc": "You'd think some of these folks had never held anything sharp before. We're running low on poultices. Bring back some horsetail and reeds would you?",
   "elsewherequests:valleycampfirstaide-obj": "Gather reeds: {0}/2<br>Gather horsetail: {0}/4",
+  "elsewherequests:valleycampsupplyruntoakatin-title": "Supply Run to Atakin",
+  "elsewherequests:valleycampsupplyruntoakatin-desc": "We're running low on salt, and I could probably make some better poultices with a stock of sulfur. Can you do a supply run to Akatin? It's about 20,000 North of here. I can pay you well for the journey.",
+  "elsewherequests:valleycampsupplyruntoakatin-obj": "Talk to the miner in Akatin about a supply of halite ({0}/16) and sulfur ({0}/16)",
+  "elsewherequests:valleycampsupplyruntoandosa-title": "Supply Run to Andosa",
+  "elsewherequests:valleycampsupplyruntoandosa-desc": "We're almost out of hardtack. Don't give me that look, what we've got tastes awful because I had to bake it. If you're up for a journey there is a city called Andosa about 10,000 south west of here. You can bring us back some hardtack actually worth eatting.",
+  "elsewherequests:valleycampsupplyruntoandosa-obj": "Talk to baker in Andosa about a supply of herbal hardtack ({0}/32)",
+  "elsewherequests:valleycampsupplyruntobribus-title": "Supply Run to Bribus",
+  "elsewherequests:valleycampsupplyruntobribus-desc": "I need someone to travel to Bribus and fetch us more storage vessels, and a replacement for my kettle. Some of the new recruiters are turning out to be, well, let's say less than graceful.<br><br> Bribus is about 20,000 west of here.",
+  "elsewherequests:valleycampsupplyruntobribus-obj": "Talk to the pottery in Bribus about a supply of vessels ({0}/4) for the camp, and a replacement kettle ({0}/1) for the captain.",
 
-  "item-creature-tavernpupper": "Tavern Pupper",
-  "elsewherequests:tavernpuppersmallsnack-title": "A Small Snack",
-  "elsewherequests:tavernpuppersmallsnack-desc": "<i>The dog looks at you and then pointedly at their empty bowl. The innkeeper seems pretty busy. Maybe you should just go grab the dog a snack.</i>",
-  "elsewherequests:tavernpuppersmallsnack-obj": "Gather bones: {0}/8",
-  "elsewherequests:tavernpuppermissingpuppy-title": "Missing Puppy",
-  "elsewherequests:tavernpuppermissingpuppy-desc": "<i>The dog looks very sad. You ask the tavern keeper what is wrong with her. They tell you they sold the dog's litter to one of the traders that passed through and thinks she misses them.</i>",
-  "elsewherequests:tavernpuppermissingpuppy-obj": "Return puppy: {0}/1",
+  "elsewherequests:valleycampsupplyruntohialing-title": "Supply Run to Hialing",
+  "elsewherequests:valleycampsupplyruntohialing-desc": "We need more grain. There's a farming settlement about 20,000 south of here. I'll pay you for a supply run for the camp.",
+  "elsewherequests:valleycampsupplyruntohialing-obj": "Talk to the farmer in Hialing about a supply of grain ({0}/64) for the camp.",
+  "elsewherequests:valleycampsupplyruntojul-title": "Supply Run to Jul",
+  "elsewherequests:valleycampsupplyruntojul-desc": "Well, the pully on the lift to bring shipments up the cliff just broke. We're stuck hauling crates up all those stairs until we get a replacement. Probably should get a few spare too.<br><br>I need you to travel to Jul to get us a new supply. It's about 10,000 north east of here.<br><br>Careful near the mountain, they only have nightwatchers setup around the town.",
+  "elsewherequests:valleycampsupplyruntojul-obj": "Talk to the blacksmith in Jul about a supply of pullies ({0}/4)",
+  "elsewherequests:valleycampsupplyruntoprashire-title": "Supply Run to Prashire",
+  "elsewherequests:valleycampsupplyruntoprashire-desc": "We're going to build some wagons, but I don't have the carpentry skill to make some of the pieces we need. I need you to travel to Prashire and get some things made for us. It's about 20,000 east of here.",
+  "elsewherequests:valleycampsupplyruntoprashire-obj": "Talk to carpenter in Prashire about an order of wagon wheels ({0}/8) and shudders ({0}/4).",
+  "elsewherequests:valleycampsupplyruntoucresa-title": "Supply Run to Ucresa",
+  "elsewherequests:valleycampsupplyruntoucresa-desc": "I don't know what it is, some spiny machine thing they found in a ruin up in Ucresa. The Librarian got a letter about it, and, well you know how he is. He doesn't want to wait for the next caravan. I'll need you to travel up to Ucresa. It's about 10,000 north west of here.",
+  "elsewherequests:valleycampsupplyruntoucresa-obj": "Talk to the archaelogist in Ucresa and get the armillary ({0}/1) they found in a dig.",
+  "elsewherequests:valleycampsupplyruntowens-title": "Supply Run to Wens",
+  "elsewherequests:valleycampsupplyruntowens-desc": "We're going to hunt the forest silent at this rate. There's a ranch in Wens that sells cured meat. I need you to travel down there and establish a supply for the camp. It's about 10,000 south east from here. See if they have any live chickens they can part with too. Some eggs would be a good addition to our supplies.",
+  "elsewherequests:valleycampsupplyruntowens-obj": "Talk to the rancher in Wens about a supply of cured meat ({0}/16) and some chickens ({0}/2) to improve the camps food supplies.",
 
-  "item-creature-archaeologist": "Archaeologist",
+  "item-creature-archaelogist": "Archaelogist",
+  "elsewherequests:valleycampsupplyrunfromucresa-title": "Supply Run to Ucresa: Part 2",
+  "elsewherequests:valleycampsupplyrunfromucresa-desc": "Spinny thing?! It's an armillary sphere from before the first rifting! And in working order. Usually I have to send finds like these to Jul for restoration, and we've never found one so old before. Don't let the captain break it. I've heard about the amount of pottery he's having to order from Brisbus these days.",
+  "elsewherequests:valleycampsupplyrunfromucresa-obj": "Spinny thing?! It's an armillary sphere from before the first rifting! And in working order. Usually I have to send finds like these to Jul for restoration, and we've never found one so old before. Don't let the captain break it. I've heard about the amount of pottery he's having to order from Brisbus these days.",
 
   "item-creature-baker": "Baker",
+  "elsewherequests:valleycampsupplyrunfromandosa-title": "Supply Run to Andosa: Part 2",
+  "elsewherequests:valleycampsupplyrunfromandosa-desc": "Oh dear, Captain really tried to bake something himself. Best get you some supplies to take back before he poisons that whole camp. Here, take a couple gozinaki too for your trip back.",
+  "elsewherequests:valleycampsupplyrunfromandosa-obj": "Oh dear, Captain really tried to bake something himself. Best get you some supplies to take back before he poisons that whole camp. Here, take a couple gozinaki too for your trip back.",
 
-  "item-creature-lumberjack": "Lumberjack",
+  "item-creature-beekeeper": "Bee Keeper",
 
   "item-creature-blacksmith": "Blacksmith",
+  "elsewherequests:valleycampsupplyrunfromjul-title": "Supply Run to Jul: Part 2",
+  "elsewherequests:valleycampsupplyrunfromjul-desc": "Yeah, a few extra of pullies would be a good idea. I've seen the cliffs around spawn, and I would not want to haul crates up and down those stairs. Here are some for the repairs, and I'll have the traveling merchants add a few to their regular runs going forward.",
+  "elsewherequests:valleycampsupplyrunfromjul-obj": "Yeah, a few extra of pullies would be a good idea. I've seen the cliffs around spawn, and I would not want to haul crates up and down those stairs. Here are some for the repairs, and I'll have the traveling merchants add a few to their regular runs going forward.",
 
-  "item-creature-Miner": "Miner",
+  "item-creature-artificer": "Artificer",
 
-  "item-creature-potter": "Potter",
+  "item-creature-carpenter": "Carpenter",
+  "elsewherequests:valleycampsupplyrunfromprashire-title": "Supply Run to Prashire: Part 2",
+  "elsewherequests:valleycampsupplyrunfromprashire-desc": "Wagon, huh? Well, that will certainly be more comfortable to travel around in than those tents. I have plenty of wheels and such. The merchants always need them. Would you like a set for yourself? Upgrade that travel kit a bit.",
+  "elsewherequests:valleycampsupplyrunfromprashire-obj": "Wagon, huh? Well, that will certainly be more comfortable to travel around in than those tents. I have plenty of wheels and such. The merchants always need them. Would you like a set for yourself? Upgrade that travel kit a bit.",
+
+  "item-creature-chef": "Chef",
+
+  "item-creature-farmer": "Farmer",
+  "elsewherequests:valleycampsupplyrunfromhialing-title": "Supply Run to Hialing: Part 2",
+  "elsewherequests:valleycampsupplyrunfromhialing-desc": "Here you go. We have amaranth and sunflower right now, so I hope that'll do. Oh, and here. Have a few of these plums for your journey back.",
+  "elsewherequests:valleycampsupplyrunfromhialing-obj": "Here you go. We have amaranth and sunflower grain right now, so I hope that'll do. Oh, and here. Have a few of these plums for your journey back.",
 
   "item-creature-fisher": "Fisher",
 
-  "item-creature-farmer": "Farmer"
+  "item-creature-hunter": "Hunter",
+
+  "item-creature-lumberjack": "Lumberjack",
+
+  "item-creature-miner": "Miner",
+  "elsewherequests:valleycampsupplyrunfromakatin-title": "Supply Run to Akatin: Part 2",
+  "elsewherequests:valleycampsupplyrunfromakatin-desc": "Really, spawn is that low on halite already? And he wants sulfur added to the order too. Must be growing fast down around Spawn.<br><br>Well, let me see. I think I have what you're looking for right here. Don't lose it, Captain pays really well for these runs.",
+  "elsewherequests:valleycampsupplyrunfromakatin-obj": "Really, spawn is that low on halite already? And he wants sulfur added to the order too. Must be growing fast down around Spawn.<br><br>Well, let me see. I think I have what you're looking for right here. Don't lose it, Captain pays really well for these runs.",
+
+  "item-creature-minersdog": "Miner's Dog",
+
+  "item-creature-outlooklibrarian": "Outlook Librarian",
+
+  "item-creature-potter": "Potter",
+  "elsewherequests:valleycampsupplyrunfrombribus-title": "Supply Run to Bribus: Part 2",
+  "elsewherequests:valleycampsupplyrunfrombribus-desc": "More vessels? And he's tea pot again! Are you new comers using them as target practice.",
+  "elsewherequests:valleycampsupplyrunfrombribus-obj": "More vessels? And he's tea pot again! Are you new comers using them as target practice.",
+
+  "item-creature-rancher": "Rancher",
+  "elsewherequests:valleycampsupplyrunfromwens-title": "Supply Run to Wens: Part 2",
+  "elsewherequests:valleycampsupplyrunfromwens-desc": "The captain is right to worry about over hunting the area around Spawn. Here is a batch of meat that should be well cured by now, and I'll work on arranging a regular supply with the traveling merchants.<br><br>As for the chickens, I can spare two. I should have more in the spring, but for now I need the rest to produce for my contracts with the cooks in Andosa.",
+  "elsewherequests:valleycampsupplyrunfromwens-obj": "The captain is right to worry about over hunting the area around Spawn. Here is a batch of meat that should be well cured by now, and I'll work on arranging a regular supply with the traveling merchants.<br><br>As for the chickens, I can spare two. I should have more in the spring, but for now I need the rest to produce for my contracts with the cooks in Andosa.",
+
+  "item-creature-soldiermetalworking": "Jul Soldier",
+
+  "item-creature-soldiermining": "Akatin Soldier",
+
+  "item-creature-travelingmerchantspawn": "Traveling Merchant",
+
+  "item-creature-travelingmerchantcooking": "Traveling Merchant",
+
+  "item-creature-travelingmerchantdigging": "Traveling Merchant",
+
+  "item-creature-travelingmerchantfarming": "Traveling Merchant",
+
+  "item-creature-travelingmerchantforestry": "Traveling Merchant",
+
+  "item-creature-travelingmerchanthusbandry": "Traveling Merchant",
+
+  "item-creature-travelingmerchantmetalworking": "Traveling Merchant",
+
+  "item-creature-travelingmerchantmining": "Traveling Merchant",
+
+  "item-creature-travelingmerchantpottery": "Traveling Merchant",
+
+  "item-creature-treasurehunter": "Treasure Hunter",
+
+  "item-creature-weaver": "Weaver"
 }
