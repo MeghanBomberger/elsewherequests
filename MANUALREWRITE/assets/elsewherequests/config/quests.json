@@ -1,7 +1,7 @@
 [
   {
     "id": "elsewherequests:acorninnwelcome",
-    "cooldown": 999999,
+    "cooldown": 2,
     "perPlayer": true,
     "gatherObjectives": [
       {
@@ -16,7 +16,11 @@
       },
       {
         "itemCode": "game:linensack",
-        "amount": 2
+        "amount": 1
+      },
+      {
+        "itemCode": "game:linensack",
+        "amount": 1
       },
       {
         "itemCode": "game:knife-copper",
@@ -30,13 +34,17 @@
         "itemCode": "bread-spelt-perfect",
         "amount": 32
       },
+      {
+        "itemCode": "game:gear-temporal",
+        "amount": 2
+      },
       { "itemCode": "game:bowl-fired", "amount": 1 },
       { "itemCode": "game:oillamp-up", "amount": 1 }
     ]
   },
   {
     "id": "elsewherequests:acorninnfirewood",
-    "cooldown": 20,
+    "cooldown": 1,
     "perPlayer": true,
     "gatherObjectives": [
       {
@@ -53,17 +61,16 @@
   },
   {
     "id": "elsewherequests:acorninningredients",
-    "predecessor": "elsewherequests:acorninnwelcome",
     "perPlayer": true,
-    "cooldown": 20,
+    "cooldown": 1,
     "gatherObjectives": [
       {
-        "ids": ["redmeat-raw"],
+        "validCodes": ["redmeat-raw"],
         "demand": 16,
         "description": "Gather red meat"
       },
       {
-        "ids": ["fruit-cranberry"],
+        "validCodes": ["fruit-cranberry"],
         "demand": 16,
         "description": "Gather cranberries"
       }
@@ -81,9 +88,8 @@
   },
   {
     "id": "elsewherequests:acorninnmoreingredients",
-    "cooldown": 20,
+    "cooldown": 1,
     "perPlayer": true,
-    "predecessor": "elsewherequests:acorninnwelcome",
     "gatherObjectives": [
       {
         "validCodes": [
@@ -131,24 +137,11 @@
   {
     "id": "elsewherequests:acorninngettingsettled",
     "perPlayer": true,
-    "cooldown": 20,
-    "predecessor": "elsewherequests:acorninnwelcome",
-    "onAcceptedActions": [
-      {
-        "id": "acceptquest",
-        "args": ["20288", "elsewherequests:valleycampintroduction"]
-      }
-    ],
-    "actionObjectives": [
-      {
-        "id": "hasAttribute",
-        "args": ["talkedto", "20288"]
-      }
-    ],
+    "cooldown": 1,
     "gatherObjectives": [
       {
-        "validCodes": ["game:linen-diamond-down"],
-        "demand": 32
+        "validCodes": ["linen-diamond-down"],
+        "demand": 16
       }
     ],
     "itemRewards": [
@@ -156,22 +149,49 @@
         "itemCode": "game:gear-rusty",
         "amount": 16
       }
-    ],
-    "actionRewards": [
-      {
-        "id": "removeplayerattribute",
-        "args": ["talkedto"]
-      }
     ]
   },
-
   {
-    "id": "elsewherequests:valleycampintroduction",
-    "cooldown": 999999,
+    "id": "elsewherequests:tavernpuppersmallsnack",
+    "cooldown": 1,
     "perPlayer": true,
     "gatherObjectives": [
       {
-        "validCodes": ["game:drygrass"],
+        "validCodes": ["bone"],
+        "demand": 8
+      }
+    ],
+    "itemRewards": [
+      {
+        "itemCode": "wolftaming:dogtoy",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": "elsewherequests:tavernpuppermissingpuppy",
+    "cooldown": 1,
+    "perPlayer": true,
+    "gatherObjectives": [
+      {
+        "validCodes": ["creature-tame-wolf-pup"],
+        "demand": 1
+      }
+    ],
+    "itemRewards": [
+      {
+        "itemCode": "game:gear-rusty",
+        "amount": 12
+      }
+    ]
+  },
+  {
+    "id": "elsewherequests:valleycampintroduction",
+    "cooldown": 2,
+    "perPlayer": true,
+    "gatherObjectives": [
+      {
+        "validCodes": ["drygrass"],
         "demand": 32
       }
     ],
@@ -180,32 +200,22 @@
         "itemCode": "game:linen-diamond-down",
         "amount": 16
       }
-    ],
-    "actionRewards": [
-      {
-        "id": "addplayerattribute",
-        "args": ["talkedto", "20288"]
-      },
-      {
-        "id": "playsound",
-        "args": ["game:sounds/voice/flute"]
-      }
     ]
   },
   {
     "id": "elsewherequests:valleycampmakingcamp1",
-    "cooldown": 999999,
+    "cooldown": 2,
     "perPlayer": true,
     "predecessor": "elsewherequests:valleycampintroduction",
     "gatherObjectives": [
       {
-        "validCodes": ["game:log-placed-pine-ud"],
+        "validCodes": ["log-placed-pine-ud"],
         "demand": 8
       }
     ],
     "itemRewards": [
       {
-        "itemCode": "game:woodenfencegate-pine-n-closed",
+        "itemCode": "game:woodenfencegate-pine-n-closed-left-free",
         "amount": 2
       },
       {
@@ -213,71 +223,71 @@
         "amount": 22
       },
       {
-        "itemCode": "primitivesurvival:woodenlantern-pine-up",
+        "itemCode": "primitivesurvival:woodlantern-pine-up",
         "amount": 1
       }
     ]
   },
   {
     "id": "elsewherequests:valleycampmakingcamp2",
-    "cooldown": 999999,
+    "cooldown": 2,
     "perPlayer": true,
     "predecessor": "elsewherequests:valleycampmakingcamp1",
     "gatherObjectives": [
       {
-        "ids": ["hide-raw-medium"],
-        "demand": 8
+        "validCodes": ["hide-raw-medium"],
+        "demand": 1
       }
     ],
     "killObjectives": [
       {
-        "ids": ["creature-wolf", "drifter-*"],
+        "validCodes": ["wolf-male", "wolf-female"],
         "demand": 4
       }
     ],
     "itemRewards": [
       {
-        "itemCode": "game:woodenfence-pine-ew-free",
-        "amount": 4
+        "itemCode": "lichen:hideroof-light-up-north-free",
+        "amount": 20
       },
       {
-        "itemCode": "lichen:hideroof-light-up-north-free",
-        "amount": 24
+        "itemCode": "lichen:hidewall-light-ew-free",
+        "amount": 17
       }
     ]
   },
   {
     "id": "elsewherequests:valleycampmakingcamp3",
-    "cooldown": 999999,
+    "cooldown": 2,
     "perPlayer": true,
     "predecessor": "elsewherequests:valleycampmakingcamp2",
     "gatherObjectives": [
       {
-        "ids": ["hide-raw-huge"],
+        "validCodes": ["hide-raw-huge"],
         "demand": 1
       },
       {
-        "ids": ["fat"],
+        "validCodes": ["fat"],
         "demand": 1
       },
       {
-        "ids": ["rope"],
+        "validCodes": ["rope"],
         "demand": 1
       }
     ],
     "killObjectives": [
       {
-        "ids": [
-          "creature-bear-female-black",
-          "creature-bear-female-brown",
-          "creature-bear-female-sun",
-          "creature-bear-female-panda",
-          "creature-bear-female-polar",
-          "creature-bear-male-black",
-          "creature-bear-male-brown",
-          "creature-bear-male-sun",
-          "creature-bear-male-panda",
-          "creature-bear-male-polar"
+        "validCodes": [
+          "bear-female-black",
+          "bear-female-brown",
+          "bear-female-sun",
+          "bear-female-panda",
+          "bear-female-polar",
+          "bear-male-black",
+          "bear-male-brown",
+          "bear-male-sun",
+          "bear-male-panda",
+          "bear-male-polar"
         ],
         "demand": 1
       }
@@ -291,15 +301,16 @@
   },
   {
     "id": "elsewherequests:valleycampfirstaide",
-    "cooldown": 20,
+    "cooldown": 1,
     "perPlayer": true,
+    "predecessor": "elsewherequests:valleycampintroduction",
     "gatherObjectives": [
       {
-        "ids": ["cattailtops"],
+        "validCodes": ["cattailtops"],
         "demand": 2
       },
       {
-        "ids": ["flower-horsetail-free"],
+        "validCodes": ["flower-horsetail-free"],
         "demand": 4
       }
     ],
@@ -311,36 +322,20 @@
     ]
   },
   {
-    "id": "elsewherequests:tavernpuppersmallsnack",
-    "cooldown": 20,
+    "id": "elsewherequests:valleycampfishsupper",
+    "cooldown": 10,
     "perPlayer": true,
+    "predecessor": "elsewherequests:valleycampintroduction",
     "gatherObjectives": [
       {
-        "ids": ["bone"],
+        "validCodes": ["fishfillet-raw"],
         "demand": 8
       }
     ],
     "itemRewards": [
       {
-        "itemCode": "wolftaming:dogtoy",
-        "amount": 1
-      }
-    ]
-  },
-  {
-    "id": "elsewherequests:tavernpuppermissingpuppy",
-    "cooldown": 20,
-    "perPlayer": true,
-    "gatherObjectives": [
-      {
-        "ids": ["creature-tame-wolf-pup"],
-        "demand": 1
-      }
-    ],
-    "itemRewards": [
-      {
         "itemCode": "game:gear-rusty",
-        "amount": 12
+        "amount": 2
       }
     ]
   },
@@ -348,27 +343,15 @@
   {
     "id": "elsewherequests:valleycampsupplyruntoakatin",
     "perPlayer": true,
-    "cooldown": 999999,
+    "cooldown": 2,
     "predecessor": "elsewherequests:valleycampintroduction",
-    "onAcceptedActions": [
-      {
-        "id": "acceptquest",
-        "args": ["26163", "elsewherequests:valleycampsupplyrunfromakatin"]
-      }
-    ],
-    "actionObjectives": [
-      {
-        "id": "hasAttribute",
-        "args": ["talkedto", "26163"]
-      }
-    ],
     "gatherObjectives": [
       {
-        "validCodes": ["game:stone-halite"],
+        "validCodes": ["stone-halite"],
         "demand": 16
       },
       {
-        "validCodes": ["game:ore-sulfur"],
+        "validCodes": ["ore-sulfur"],
         "demand": 16
       }
     ],
@@ -377,17 +360,11 @@
         "itemCode": "game:gear-rusty",
         "amount": 20
       }
-    ],
-    "actionRewards": [
-      {
-        "id": "removeplayerattribute",
-        "args": ["talkedto"]
-      }
     ]
   },
   {
     "id": "elsewherequests:valleycampsupplyrunfromakatin",
-    "cooldown": 999999,
+    "cooldown": 2,
     "perPlayer": true,
     "itemRewards": [
       {
@@ -404,23 +381,11 @@
   {
     "id": "elsewherequests:valleycampsupplyruntoandosa",
     "perPlayer": true,
-    "cooldown": 999999,
+    "cooldown": 2,
     "predecessor": "elsewherequests:valleycampintroduction",
-    "onAcceptedActions": [
-      {
-        "id": "acceptquest",
-        "args": ["26152", "elsewherequests:valleycampsupplyrunfromandosa"]
-      }
-    ],
-    "actionObjectives": [
-      {
-        "id": "hasAttribute",
-        "args": ["talkedto", "26152"]
-      }
-    ],
     "gatherObjectives": [
       {
-        "validCodes": ["expandedfoods:herbalhardtack-casava-bake4"],
+        "validCodes": ["herbalhardtack-cassava-bake4"],
         "demand": 16
       }
     ],
@@ -429,21 +394,15 @@
         "itemCode": "game:gear-rusty",
         "amount": 20
       }
-    ],
-    "actionRewards": [
-      {
-        "id": "removeplayerattribute",
-        "args": ["talkedto"]
-      }
     ]
   },
   {
     "id": "elsewherequests:valleycampsupplyrunfromandosa",
-    "cooldown": 999999,
+    "cooldown": 2,
     "perPlayer": true,
     "itemRewards": [
       {
-        "itemCode": "expandedfoods:herbalhardtack-casava-bake4",
+        "itemCode": "expandedfoods:herbalhardtack-cassava-bake4",
         "amount": 16
       },
       {
@@ -454,25 +413,13 @@
   },
 
   {
-    "id": "elsewherequests:valleycampsupplyruntobrisbus",
+    "id": "elsewherequests:valleycampsupplyruntobribus",
     "perPlayer": true,
-    "cooldown": 999999,
+    "cooldown": 2,
     "predecessor": "elsewherequests:valleycampintroduction",
-    "onAcceptedActions": [
-      {
-        "id": "acceptquest",
-        "args": ["26167", "elsewherequests:valleycampsupplyrunfrombrisbus"]
-      }
-    ],
-    "actionObjectives": [
-      {
-        "id": "hasAttribute",
-        "args": ["talkedto", "26167"]
-      }
-    ],
     "gatherObjectives": [
       {
-        "validCodes": ["bricklayers:coloredsmallpot-burnt-palegreen"],
+        "validCodes": ["coloredsmallpot-burnt-palegreen-plain-plain"],
         "demand": 1
       },
       {
@@ -485,25 +432,19 @@
         "itemCode": "game:gear-rusty",
         "amount": 20
       }
-    ],
-    "actionRewards": [
-      {
-        "id": "removeplayerattribute",
-        "args": ["talkedto"]
-      }
     ]
   },
   {
-    "id": "elsewherequests:valleycampsupplyrunfrombrisbus",
-    "cooldown": 999999,
+    "id": "elsewherequests:valleycampsupplyrunfrombribus",
+    "cooldown": 2,
     "perPlayer": true,
     "itemRewards": [
       {
-        "itemCode": "bricklayers:coloredsmallpot-burnt-palegreen",
+        "itemCode": "bricklayers:coloredsmallpot-burnt-palegreen-plain-plain",
         "amount": 1
       },
       {
-        "itemCode": "storagevesselcolored-burnt-blurple",
+        "itemCode": "bricklayers:storagevesselcolored-burnt-blurple",
         "amount": 4
       }
     ]
@@ -512,23 +453,11 @@
   {
     "id": "elsewherequests:valleycampsupplyruntohialing",
     "perPlayer": true,
-    "cooldown": 999999,
+    "cooldown": 2,
     "predecessor": "elsewherequests:valleycampintroduction",
-    "onAcceptedActions": [
-      {
-        "id": "acceptquest",
-        "args": ["26157", "elsewherequests:valleycampsupplyrunfromhialing"]
-      }
-    ],
-    "actionObjectives": [
-      {
-        "id": "hasAttribute",
-        "args": ["talkedto", "26157"]
-      }
-    ],
     "gatherObjectives": [
       {
-        "validCodes": ["game:grain-amaranth", "game:grain-sunflower"],
+        "validCodes": ["grain-amaranth", "grain-sunflower"],
         "demand": 64
       }
     ],
@@ -537,17 +466,11 @@
         "itemCode": "game:gear-rusty",
         "amount": 20
       }
-    ],
-    "actionRewards": [
-      {
-        "id": "removeplayerattribute",
-        "args": ["talkedto"]
-      }
     ]
   },
   {
     "id": "elsewherequests:valleycampsupplyrunfromhialing",
-    "cooldown": 999999,
+    "cooldown": 2,
     "perPlayer": true,
     "itemRewards": [
       {
@@ -566,77 +489,17 @@
   },
 
   {
-    "id": "elsewherequests:valleycampsupplyruntojul",
-    "perPlayer": true,
-    "cooldown": 999999,
-    "predecessor": "elsewherequests:valleycampintroduction",
-    "onAcceptedActions": [
-      {
-        "id": "acceptquest",
-        "args": ["26154", "elsewherequests:valleycampsupplyrunfromjul"]
-      }
-    ],
-    "actionObjectives": [
-      {
-        "id": "hasAttribute",
-        "args": ["talkedto", "26154"]
-      }
-    ],
-    "gatherObjectives": [
-      {
-        "validCodes": [8488],
-        "demand": 4
-      }
-    ],
-    "itemRewards": [
-      {
-        "itemCode": "game:gear-rusty",
-        "amount": 20
-      }
-    ],
-    "actionRewards": [
-      {
-        "id": "removeplayerattribute",
-        "args": ["talkedto"]
-      }
-    ]
-  },
-  {
-    "id": "elsewherequests:valleycampsupplyrunfromjul",
-    "cooldown": 999999,
-    "perPlayer": true,
-    "itemRewards": [
-      {
-        "itemCode": 8488,
-        "amount": 4
-      }
-    ]
-  },
-
-  {
     "id": "elsewherequests:valleycampsupplyruntoprashire",
     "perPlayer": true,
-    "cooldown": 999999,
+    "cooldown": 2,
     "predecessor": "elsewherequests:valleycampintroduction",
-    "onAcceptedActions": [
-      {
-        "id": "acceptquest",
-        "args": ["26155", "elsewherequests:valleycampsupplyrunfromprashire"]
-      }
-    ],
-    "actionObjectives": [
-      {
-        "id": "hasAttribute",
-        "args": ["talkedto", "26155"]
-      }
-    ],
     "gatherObjectives": [
       {
-        "validCodes": ["game:wagonwheels-spoked-west"],
+        "validCodes": ["wagonwheels-spoked-west"],
         "demand": 8
       },
       {
-        "validCodes": ["buildersblock:shudder-closed-up-oak"],
+        "validCodes": ["shudder-closed-up-north-oak"],
         "demand": 4
       }
     ],
@@ -644,18 +507,12 @@
       {
         "itemCode": "game:gear-rusty",
         "amount": 20
-      }
-    ],
-    "actionRewards": [
-      {
-        "id": "removeplayerattribute",
-        "args": ["talkedto"]
       }
     ]
   },
   {
     "id": "elsewherequests:valleycampsupplyrunfromprashire",
-    "cooldown": 999999,
+    "cooldown": 2,
     "perPlayer": true,
     "itemRewards": [
       {
@@ -663,7 +520,7 @@
         "amount": 12
       },
       {
-        "itemCode": "buildersblock:shudder-closed-up-oak",
+        "itemCode": "buildersblocks:shudder-closed-up-north-oak",
         "amount": 6
       }
     ]
@@ -672,23 +529,11 @@
   {
     "id": "elsewherequests:valleycampsupplyruntoucresa",
     "perPlayer": true,
-    "cooldown": 999999,
+    "cooldown": 2,
     "predecessor": "elsewherequests:valleycampintroduction",
-    "onAcceptedActions": [
-      {
-        "id": "acceptquest",
-        "args": ["26150", "elsewherequests:valleycampsupplyrunfromucresa"]
-      }
-    ],
-    "actionObjectives": [
-      {
-        "id": "hasAttribute",
-        "args": ["talkedto", "26150"]
-      }
-    ],
     "gatherObjectives": [
       {
-        "validCodes": [8488],
+        "validCodes": ["terrarium-51"],
         "demand": 1
       }
     ],
@@ -697,69 +542,15 @@
         "itemCode": "game:gear-rusty",
         "amount": 20
       }
-    ],
-    "actionRewards": [
-      {
-        "id": "removeplayerattribute",
-        "args": ["talkedto"]
-      }
     ]
   },
   {
     "id": "elsewherequests:valleycampsupplyrunfromucresa",
-    "cooldown": 999999,
+    "cooldown": 2,
     "perPlayer": true,
     "itemRewards": [
       {
-        "itemCode": 8488,
-        "amount": 1
-      }
-    ]
-  },
-
-  {
-    "id": "elsewherequests:valleycampsupplyruntoucresa",
-    "perPlayer": true,
-    "cooldown": 999999,
-    "predecessor": "elsewherequests:valleycampintroduction",
-    "onAcceptedActions": [
-      {
-        "id": "acceptquest",
-        "args": ["26150", "elsewherequests:valleycampsupplyrunfromucresa"]
-      }
-    ],
-    "actionObjectives": [
-      {
-        "id": "hasAttribute",
-        "args": ["talkedto", "26150"]
-      }
-    ],
-    "gatherObjectives": [
-      {
-        "validCodes": [8488],
-        "demand": 1
-      }
-    ],
-    "itemRewards": [
-      {
-        "itemCode": "game:gear-rusty",
-        "amount": 20
-      }
-    ],
-    "actionRewards": [
-      {
-        "id": "removeplayerattribute",
-        "args": ["talkedto"]
-      }
-    ]
-  },
-  {
-    "id": "elsewherequests:valleycampsupplyrunfromucresa",
-    "cooldown": 999999,
-    "perPlayer": true,
-    "itemRewards": [
-      {
-        "itemCode": 8488,
+        "itemCode": "buildersblocks:terrarium-51",
         "amount": 1
       }
     ]
@@ -768,27 +559,15 @@
   {
     "id": "elsewherequests:valleycampsupplyruntowens",
     "perPlayer": true,
-    "cooldown": 999999,
+    "cooldown": 2,
     "predecessor": "elsewherequests:valleycampintroduction",
-    "onAcceptedActions": [
-      {
-        "id": "acceptquest",
-        "args": ["26168", "elsewherequests:valleycampsupplyrunfromwens"]
-      }
-    ],
-    "actionObjectives": [
-      {
-        "id": "hasAttribute",
-        "args": ["talkedto", "26168"]
-      }
-    ],
     "gatherObjectives": [
       {
-        "validCodes": ["game:creature-chicken-hen"],
+        "validCodes": ["creature-chicken-hen"],
         "demand": 2
       },
       {
-        "validCodes": ["game:redmeat-cured"],
+        "validCodes": ["redmeat-cured"],
         "demand": 16
       }
     ],
@@ -797,17 +576,11 @@
         "itemCode": "game:gear-rusty",
         "amount": 20
       }
-    ],
-    "actionRewards": [
-      {
-        "id": "removeplayerattribute",
-        "args": ["talkedto"]
-      }
     ]
   },
   {
     "id": "elsewherequests:valleycampsupplyrunfromwens",
-    "cooldown": 999999,
+    "cooldown": 2,
     "perPlayer": true,
     "itemRewards": [
       {
@@ -817,6 +590,36 @@
       {
         "itemCode": "game:creature-chicken-hen",
         "amount": 2
+      }
+    ]
+  },
+
+  {
+    "id": "elsewherequests:valleycampsupplyruntojul",
+    "perPlayer": true,
+    "cooldown": 2,
+    "predecessor": "elsewherequests:valleycampintroduction",
+    "gatherObjectives": [
+      {
+        "validCodes": ["chainlinks-iron"],
+        "demand": 16
+      }
+    ],
+    "itemRewards": [
+      {
+        "itemCode": "game:gear-rusty",
+        "amount": 20
+      }
+    ]
+  },
+  {
+    "id": "elsewherequests:valleycampsupplyrunfromjul",
+    "cooldown": 2,
+    "perPlayer": true,
+    "itemRewards": [
+      {
+        "itemCode": "game:chainlinks-iron",
+        "amount": 16
       }
     ]
   }

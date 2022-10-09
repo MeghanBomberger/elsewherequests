@@ -112,8 +112,8 @@
       },
       {
         "code": "health",
-        "currenthealth": 100,
-        "maxhealth": 100
+        "currenthealth": 1000,
+        "maxhealth": 1000
       },
       {
         "code": "emotionstates",
@@ -201,8 +201,8 @@
       {
         "code": "questgiver",
         "quests": [
-          "vsquestexample:tavernpuppersmallsnack",
-          "vsquestexample:tavernpuppermissingpuppy"
+          "elsewherequests:tavernpuppersmallsnack",
+          "elsewherequests:tavernpuppermissingpuppy"
         ],
         "selectrandom": false,
         "selectrandomcount": 1

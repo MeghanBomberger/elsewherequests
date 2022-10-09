@@ -26,6 +26,7 @@
         "minersdog",
         "outlooklibrarian",
         "potter",
+        "quartermaster",
         "rancher",
         "soldiermetalworking",
         "soldiermining",
@@ -99,6 +100,9 @@
       "base": "game:entity/humanoid/trader"
     },
     "*-outlooklibrarian": {
+      "base": "game:entity/humanoid/trader"
+    },
+    "*-quartermaster": {
       "base": "game:entity/humanoid/trader"
     },
     "*-potter": {
@@ -246,6 +250,11 @@
       }
     },
     "*-potter": {
+      "skin": {
+        "base": "game:entity/humanoid/trader"
+      }
+    },
+    "*-quartermaster": {
       "skin": {
         "base": "game:entity/humanoid/trader"
       }
@@ -576,6 +585,19 @@
       }
     },
     "*-potter*": {
+      "rotate": true,
+      "rotation": {
+        "x": 0,
+        "y": -90,
+        "z": -178
+      },
+      "origin": {
+        "x": 0.6,
+        "y": 0.78,
+        "z": 0.5
+      }
+    },
+    "*-quartermaster*": {
       "rotate": true,
       "rotation": {
         "x": 0,
@@ -1141,6 +1163,24 @@
       },
       "scale": 0.7
     },
+    "*-quartermaster*": {
+      "translation": {
+        "x": -0.6,
+        "y": -1.1,
+        "z": -0.4
+      },
+      "rotation": {
+        "x": -85,
+        "y": -11,
+        "z": 89
+      },
+      "origin": {
+        "x": 0.5,
+        "y": 1,
+        "z": 0.5
+      },
+      "scale": 0.7
+    },
     "*-rancher*": {
       "translation": {
         "x": -0.6,
@@ -1649,6 +1689,18 @@
       }
     },
     "*-potter*": {
+      "translation": {
+        "x": 0.05,
+        "y": -0.3,
+        "z": 0
+      },
+      "rotation": {
+        "x": 165,
+        "y": 76,
+        "z": -180
+      }
+    },
+    "*-quartermaster*": {
       "translation": {
         "x": 0.05,
         "y": -0.3,

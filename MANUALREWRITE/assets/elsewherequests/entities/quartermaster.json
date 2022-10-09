@@ -1,5 +1,5 @@
 {
-  "code": "artificer",
+  "code": "quartermaster",
   "class": "EntityAgent",
   "canClimb": true,
   "hitboxSize": {
@@ -378,9 +378,11 @@
       },
       {
         "code": "questgiver",
-        "quests": [],
+        "quests": [
+          "elsewherequests:acorninnwelcome"
+        ],
         "selectrandom": false,
-        "selectrandomcount": 3
+        "selectrandomcount": 1
       }
     ]
   },
